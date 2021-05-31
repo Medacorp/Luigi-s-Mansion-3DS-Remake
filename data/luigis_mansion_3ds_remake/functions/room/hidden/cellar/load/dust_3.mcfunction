@@ -1,0 +1,1 @@
+execute if entity @a[tag=!blackout,limit=1] positioned 746 2 -56 run function luigis_mansion_3ds_remake:room/hidden/cellar/spawn_dust

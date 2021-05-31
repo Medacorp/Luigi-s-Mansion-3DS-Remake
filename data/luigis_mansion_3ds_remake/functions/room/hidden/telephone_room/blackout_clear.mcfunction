@@ -1,0 +1,1 @@
+function luigis_mansion_3ds_remake:room/hidden/telephone_room/remove_blockade

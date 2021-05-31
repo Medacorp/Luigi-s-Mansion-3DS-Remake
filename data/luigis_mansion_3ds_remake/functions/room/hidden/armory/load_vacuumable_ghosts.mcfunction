@@ -1,0 +1,2 @@
+execute unless score #armory Vacuumables matches 1 unless data storage luigis_mansion:data current_state.current_data.rooms.armory{cleared:1b} if entity @a[tag=!blackout,limit=1] run function luigis_mansion_3ds_remake:room/hidden/armory/vacuumable_ghosts
+execute unless score #armory Vacuumables matches 1 if entity @a[tag=blackout,limit=1] run function luigis_mansion_3ds_remake:room/hidden/armory/vacuumable_ghosts

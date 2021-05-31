@@ -1,0 +1,1 @@
+function luigis_mansion:entities/lydia/close_curtain/normal

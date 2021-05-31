@@ -1,0 +1,1 @@
+function luigis_mansion:entities/boo/warp/move/normal

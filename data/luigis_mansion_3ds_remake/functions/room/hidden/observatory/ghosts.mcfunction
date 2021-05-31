@@ -1,0 +1,1 @@
+execute if entity @a[tag=blackout] unless score #observatory Wave matches 1.. run function luigis_mansion_3ds_remake:room/hidden/observatory/blackout
