@@ -129,7 +129,7 @@ execute if entity @s[scores={Dialog=2273}] if score #training GhostCaught matche
 execute if entity @s[scores={Dialog=2273}] if score #training GhostCaught matches 4.. if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.24.good.more"}]}
 execute if entity @s[scores={Dialog=2345}] run scoreboard players set @a[tag=same_room] Health 100
 execute if entity @s[scores={Dialog=2345}] if data storage luigis_mansion:data rooms.training_room{cleared:1b} as @a[tag=same_room,tag=looking_at_map] run function luigis_mansion:items/gameboy_horror/map/close
-execute if entity @s[scores={Dialog=2345}] if data storage luigis_mansion:data rooms.training_room{cleared:1b} as @a[tag=same_room] run function luigis_mansion:entities/e_gadd/to_lab
+execute if entity @s[scores={Dialog=2345}] if data storage luigis_mansion:data rooms.training_room{cleared:1b} as @a[tag=same_room] run function luigis_mansion:room/underground_lab/warp_to
 execute if entity @s[scores={Dialog=2345}] if data storage luigis_mansion:data rooms.training_room{cleared:0b} if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.25"}]}
 execute if entity @s[scores={Dialog=2345}] if data storage luigis_mansion:data rooms.training_room{cleared:0b} if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.25.more"}]}
 execute if entity @s[scores={Dialog=2433}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.26"}]}
@@ -137,7 +137,7 @@ execute if entity @s[scores={Dialog=2761}] run data modify storage luigis_mansio
 execute if entity @s[scores={Dialog=2761}] run advancement grant @a[tag=same_room] until luigis_mansion:lab/training_room
 execute if entity @s[scores={Dialog=2761}] if entity @a[tag=looking_at_map,limit=1] run function luigis_mansion:items/gameboy_horror/map/display/lab/training_room
 execute if entity @s[scores={Dialog=2761}] as @a[tag=same_room,tag=looking_at_map] run function luigis_mansion:items/gameboy_horror/map/close
-execute if entity @s[scores={Dialog=2761}] as @a[tag=same_room] run function luigis_mansion_3ds_remake:entities/e_gadd/to_gallery
+execute if entity @s[scores={Dialog=2761}] as @a[tag=same_room] run function luigis_mansion_3ds_remake:room/gallery/warp_to
 execute if entity @s[scores={Dialog=2762}] run tag @e[tag=e_gadd,scores={Room=-4}] add talk
 tag @s[scores={Dialog=2812}] add shake
 execute if entity @s[scores={Dialog=2812}] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0

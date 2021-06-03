@@ -1,1 +1,1 @@
-execute if entity @s[tag=gameboy_horror_part] run function luigis_mansion:items/gameboy_horror_part
+execute if entity @s[tag=gameboy_horror_part] run function luigis_mansion_3ds_remake:items/gameboy_horror_part

@@ -1,0 +1,10 @@
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:-1b}} if entity @a[advancements={luigis_mansion:portrait_ghosts/henry_and_orville/gold=true},limit=1] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:2b}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:-1b}} if entity @a[advancements={luigis_mansion:portrait_ghosts/henry_and_orville/silver=true},limit=1] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:1b}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:-1b}} if entity @a[advancements={luigis_mansion:portrait_ghosts/henry_and_orville/bronze=true},limit=1] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:0b}}
+
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:0b}} run data merge entity @e[x=749.5,y=14,z=-30.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:19}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:1b}} run data merge entity @e[x=749.5,y=14,z=-30.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:21}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{henry_and_orville:2b}} run data merge entity @e[x=749.5,y=14,z=-30.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:20}}}
+
+execute positioned 749 13 -31 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
+execute positioned 749 13 -31 run tag @e[distance=..0.7,tag=gallery_check] add 16

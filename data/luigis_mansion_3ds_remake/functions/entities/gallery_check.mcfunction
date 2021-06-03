@@ -1,0 +1,1 @@
+execute if entity @s[tag=gallery_check] run function luigis_mansion_3ds_remake:entities/gallery_check/tick

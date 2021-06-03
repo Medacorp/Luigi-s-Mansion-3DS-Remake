@@ -1,0 +1,20 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:quartz"
+        },
+        "show_toast": false,
+        "title": {
+            "translate": "luigis_mansion_3ds_remake:advancements.portrait_ghosts.miss_petunia.platinum"
+        },
+        "description": {
+            "translate": "luigis_mansion_3ds_remake:advancements.portrait_ghosts.miss_petunia.platinum.description"
+        }
+    },
+	"parent": "luigis_mansion:portrait_ghosts/miss_petunia/gold",
+    "criteria": {
+        "portrificationized": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

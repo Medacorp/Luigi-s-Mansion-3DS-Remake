@@ -1,0 +1,1 @@
+data merge entity @e[x=745.5,y=19,z=-23.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:carved_pumpkin",Count:1b}}

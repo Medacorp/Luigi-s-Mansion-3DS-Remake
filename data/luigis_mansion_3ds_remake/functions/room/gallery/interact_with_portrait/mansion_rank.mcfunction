@@ -1,0 +1,17 @@
+execute if entity @s[advancements={luigis_mansion:lab/a_rank=true},scores={FrameChoice=8}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:7b}}
+execute if entity @s[advancements={luigis_mansion:lab/b_rank=true},scores={FrameChoice=7}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:6b}}
+execute if entity @s[advancements={luigis_mansion:lab/c_rank=true},scores={FrameChoice=6}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:5b}}
+execute if entity @s[advancements={luigis_mansion:lab/d_rank=true},scores={FrameChoice=5}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:4b}}
+execute if entity @s[advancements={luigis_mansion:lab/e_rank=true},scores={FrameChoice=4}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:3b}}
+execute if entity @s[advancements={luigis_mansion:lab/f_rank=true},scores={FrameChoice=3}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:2b}}
+execute if entity @s[advancements={luigis_mansion:lab/g_rank=true},scores={FrameChoice=2}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:1b}}
+execute if entity @s[advancements={luigis_mansion:lab/h_rank=true},scores={FrameChoice=1}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:0b}}
+
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:7b}} run data merge entity @e[x=766.5,y=4,z=-50.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:46}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:6b}} run data merge entity @e[x=766.5,y=4,z=-50.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:47}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:5b}} run data merge entity @e[x=766.5,y=4,z=-50.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:48}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:4b}} run data merge entity @e[x=766.5,y=4,z=-50.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:49}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:3b}} run data merge entity @e[x=766.5,y=4,z=-50.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:50}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:2b}} run data merge entity @e[x=766.5,y=4,z=-50.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:51}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:1b}} run data merge entity @e[x=766.5,y=4,z=-16.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:52}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:0b}} run data merge entity @e[x=766.5,y=4,z=-50.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:53}}}

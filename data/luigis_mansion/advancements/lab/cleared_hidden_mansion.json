@@ -7,7 +7,7 @@
         "hidden": true,
         "frame": "challenge",
         "title": {
-            "translate": "luigis_mansion_3ds_remake:advancements.lab.cleared_hidden_mansion"
+            "translate": "luigis_mansion:advancements.lab.cleared_hidden_mansion"
         },
         "description": {
             "translate": "luigis_mansion_3ds_remake:advancements.lab.cleared_hidden_mansion.description"

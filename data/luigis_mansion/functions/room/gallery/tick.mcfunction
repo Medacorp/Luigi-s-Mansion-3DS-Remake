@@ -1,0 +1,1 @@
+execute as @a[gamemode=!spectator,x=729,y=77,z=-40,dx=48,dy=9,dz=23] run function luigis_mansion_3ds_remake:room/gallery/warp_to

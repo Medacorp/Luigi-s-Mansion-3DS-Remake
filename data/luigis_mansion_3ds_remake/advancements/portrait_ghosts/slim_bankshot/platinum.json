@@ -1,0 +1,20 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:quartz"
+        },
+        "show_toast": false,
+        "title": {
+            "translate": "luigis_mansion_3ds_remake:advancements.portrait_ghosts.slim_bankshot.platinum"
+        },
+        "description": {
+            "translate": "luigis_mansion_3ds_remake:advancements.portrait_ghosts.slim_bankshot.platinum.description"
+        }
+    },
+	"parent": "luigis_mansion:portrait_ghosts/slim_bankshot/gold",
+    "criteria": {
+        "portrificationized": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}

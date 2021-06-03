@@ -1,0 +1,20 @@
+{
+    "display": {
+        "icon": {
+            "item": "minecraft:quartz"
+        },
+        "show_toast": false,
+        "title": {
+            "translate": "luigis_mansion_3ds_remake:advancements.portrait_ghosts.sir_weston.platinum"
+        },
+        "description": {
+            "translate": "luigis_mansion_3ds_remake:advancements.portrait_ghosts.sir_weston.platinum.description"
+        }
+    },
+	"parent": "luigis_mansion:portrait_ghosts/sir_weston/gold",
+    "criteria": {
+        "portrificationized": {
+            "trigger": "minecraft:impossible"
+        }
+    }
+}
