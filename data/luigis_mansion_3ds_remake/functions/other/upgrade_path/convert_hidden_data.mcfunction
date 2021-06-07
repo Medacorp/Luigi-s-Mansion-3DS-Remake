@@ -124,3 +124,4 @@ data modify storage luigis_mansion:data current_state.current_data.boos[{name:"b
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"bootique",health:30000}].health set value 45000
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"bootique",health:20000}].health set value 45000
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"bootique"}].speed set value 6
+data modify storage luigis_mansion:data current_state.current_data.boos[{name:"booligan"}].name set value boolldog

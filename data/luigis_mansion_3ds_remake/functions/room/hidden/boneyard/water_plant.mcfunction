@@ -2,3 +2,4 @@ execute unless data storage luigis_mansion:data current_state.current_data.techn
 execute if data storage luigis_mansion:data current_state.current_data.technical_data{watered_boneyard_plant_1:1b,cleared_area_3_blockade:1b} unless data storage luigis_mansion:data current_state.current_data.technical_data{cleared_area_4_blockade:1b} run function luigis_mansion_3ds_remake:room/hidden/boneyard/water_plant_2
 execute if data storage luigis_mansion:data current_state.current_data.technical_data{watered_boneyard_plant_2:1b,cleared_area_4_blockade:1b} unless data storage luigis_mansion:data current_state.current_data.money_spawned{boneyard_plant:1b} run function luigis_mansion_3ds_remake:room/hidden/boneyard/water_plant_3
 execute if block 676 102 41 minecraft:structure_block run setblock 676 103 41 minecraft:redstone_block
+data modify storage luigis_mansion_3ds_remake:data trophy.beginner.watered_plant set value 1b

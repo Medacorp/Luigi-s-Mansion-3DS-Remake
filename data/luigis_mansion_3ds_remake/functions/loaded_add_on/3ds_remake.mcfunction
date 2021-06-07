@@ -5,3 +5,4 @@ scoreboard objectives add StrobulbCharge dummy
 scoreboard objectives add SelectedFrame dummy
 scoreboard objectives add FrameChoice trigger
 scoreboard objectives add PortraitBattle trigger
+execute unless score #can_get_platinum_boss Selected 0..1 run scoreboard players set #can_get_platinum_boss Selected 0

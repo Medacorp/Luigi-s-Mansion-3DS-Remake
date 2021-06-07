@@ -34,6 +34,42 @@ execute if entity @s[tag=tamboorine] run data remove storage luigis_mansion:data
 execute if entity @s[tag=turboo] run data remove storage luigis_mansion:data current_state.current_data.boos[{name:"turboo"}]
 execute if entity @s[tag=underboo] run data remove storage luigis_mansion:data current_state.current_data.boos[{name:"underboo"}]
 
+execute if entity @s[tag=bamboo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {bamboo:1b}
+execute if entity @s[tag=boo_b_hatch] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boo_b_hatch:1b}
+execute if entity @s[tag=boo_la_la] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boo_la_la:1b}
+execute if entity @s[tag=boodacious] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boodacious:1b}
+execute if entity @s[tag=booffant] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {booffant:1b}
+execute if entity @s[tag=boogie] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boogie:1b}
+execute if entity @s[tag=boohoo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boohoo:1b}
+execute if entity @s[tag=booigi] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {booigi:1b}
+execute if entity @s[tag=boolderdash] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boolderdash:1b}
+execute if entity @s[tag=boolicious] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boolicious:1b}
+execute if entity @s[tag=boolldog] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boolldog:1b}
+execute if entity @s[tag=boolivia] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boolivia:1b}
+execute if entity @s[tag=boomeo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boomeo:1b}
+execute if entity @s[tag=boomerang] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boomerang:1b}
+execute if entity @s[tag=boonita] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boonita:1b}
+execute if entity @s[tag=boonswoggle] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {boonswoggle:1b}
+execute if entity @s[tag=booregard] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {booregard:1b}
+execute if entity @s[tag=booripedes] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {booripedes:1b}
+execute if entity @s[tag=booris] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {booris:1b}
+execute if entity @s[tag=booscaster] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {booscaster:1b}
+execute if entity @s[tag=bootha] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {bootha:1b}
+execute if entity @s[tag=bootique] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {bootique:1b}
+execute if entity @s[tag=gameboo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {gameboo:1b}
+execute if entity @s[tag=gameboo_advance] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {gameboo_advance:1b}
+execute if entity @s[tag=gumboo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {gumboo:1b}
+execute if entity @s[tag=kung_boo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {kung_boo:1b}
+execute if entity @s[tag=limbooger] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {limbooger:1b}
+execute if entity @s[tag=little_boo_peep] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {little_boo_peep:1b}
+execute if entity @s[tag=mr_boojangles] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {mr_boojangles:1b}
+execute if entity @s[tag=peekaboo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {peekaboo:1b}
+execute if entity @s[tag=shamboo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {shamboo:1b}
+execute if entity @s[tag=taboo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {taboo:1b}
+execute if entity @s[tag=tamboorine] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {tamboorine:1b}
+execute if entity @s[tag=turboo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {turboo:1b}
+execute if entity @s[tag=underboo] run data modify storage luigis_mansion_3ds_remake:data boos_caught merge value {underboo:1b}
+
 execute if entity @s[tag=bamboo] run kill @e[tag=bamboo_trap]
 execute if entity @s[tag=boo_b_hatch] run kill @e[tag=boo_b_hatch_trap]
 execute if entity @s[tag=boo_la_la] run kill @e[tag=boo_la_la_trap]

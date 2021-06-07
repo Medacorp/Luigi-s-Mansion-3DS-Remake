@@ -11,3 +11,4 @@ scoreboard players set #multiply_damage Selected 125
 scoreboard players set #can_warp Selected 1
 scoreboard players set #changing_max_health Selected 0
 scoreboard players set #can_clear_hidden Selected 0
+scoreboard players set #can_get_platinum_boss Selected 1
