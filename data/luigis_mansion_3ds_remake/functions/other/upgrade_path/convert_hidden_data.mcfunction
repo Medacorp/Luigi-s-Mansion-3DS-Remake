@@ -125,3 +125,5 @@ data modify storage luigis_mansion:data current_state.current_data.boos[{name:"b
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"bootique",health:20000}].health set value 45000
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"bootique"}].speed set value 6
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"booligan"}].name set value boolldog
+execute if data storage luigis_mansion:data current_state.current_data.money_spawned{courtyard_chest:1b} run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {projection_room_chest:1b}
+execute if data storage luigis_mansion:data current_state.current_data.money_spawned{billiards_room_chest:1b} run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {twins_room_chest:1b}

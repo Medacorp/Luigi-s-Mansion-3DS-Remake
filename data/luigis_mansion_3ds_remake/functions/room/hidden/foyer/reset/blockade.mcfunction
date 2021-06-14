@@ -1,1 +1,0 @@
-function luigis_mansion_3ds_remake:room/hidden/foyer/remove_blockade

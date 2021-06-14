@@ -74,14 +74,14 @@ execute if entity @s[scores={Dialog=1542}] run playsound luigis_mansion:entity.c
 tag @s[scores={Dialog=1562}] remove scream
 teleport @s[scores={Dialog=1562..1581}] ~ ~-0.1 ~
 teleport @s[scores={Dialog=1582}] ~ ~ ~ 0 0
-tag @s[scores={Dialog=1582}] add fast_bounce
+tag @s[scores={Dialog=1582}] add bounce
 scoreboard players set @s[scores={Dialog=1582}] PathStep 0
 scoreboard players add @s[scores={Dialog=1583}] PathStep 1
-teleport @s[scores={Dialog=1583,PathStep=1..5}] ^ ^0.4 ^0.4
-teleport @s[scores={Dialog=1583,PathStep=6..10}] ^ ^-0.4 ^0.4
-execute at @s[scores={Dialog=1583,PathStep=10}] as @e[distance=..1,tag=gameboy_horror_location] run function luigis_mansion:entities/gameboy_horror_location/bring_player_back
-execute at @s[scores={Dialog=1583,PathStep=10}] run effect give @a[distance=..1,gamemode=!spectator] minecraft:instant_damage 1 0 true
-execute at @s[scores={Dialog=1583,PathStep=10}] run scoreboard players set @a[distance=..1,gamemode=!spectator] ForcedDamage 4
+teleport @s[scores={Dialog=1583,PathStep=1..10}] ^ ^0.2 ^0.8
+teleport @s[scores={Dialog=1583,PathStep=11..20}] ^ ^-0.2 ^0.8
+execute at @s[scores={Dialog=1583,PathStep=20}] as @e[distance=..1,tag=gameboy_horror_location] run function luigis_mansion:entities/gameboy_horror_location/bring_player_back
+execute at @s[scores={Dialog=1583,PathStep=20}] run effect give @a[distance=..1,gamemode=!spectator] minecraft:instant_damage 1 0 true
+execute at @s[scores={Dialog=1583,PathStep=20}] run scoreboard players set @a[distance=..1,gamemode=!spectator] ForcedDamage 4
 execute at @s[y_rotation=-45..45,scores={Dialog=1583}] unless block ^ ^1 ^2 #luigis_mansion:all_ignore run teleport @s ~ ~ ~ ~-90 0
 execute at @s[y_rotation=-135..-45,scores={Dialog=1583}] unless block ^ ^1 ^2 #luigis_mansion:all_ignore run teleport @s ~ ~ ~ ~-90 0
 execute at @s[y_rotation=135..-135,scores={Dialog=1583}] unless block ^ ^1 ^2 #luigis_mansion:all_ignore run teleport @s ~ ~ ~ ~-90 0
@@ -90,7 +90,7 @@ scoreboard players set @s[scores={Dialog=1583,PathStep=10}] PathStep 0
 teleport @s[scores={Dialog=1584}] 792.0 20 64.0
 execute if entity @s[scores={Dialog=1585..}] facing entity @e[tag=same_room,tag=!spectator,sort=nearest,limit=1] feet run teleport @s ~ ~ ~ ~ 0
 scoreboard players set @s[scores={Dialog=1585}] AnimationProg 0
-tag @s[scores={Dialog=1585}] remove fast_bounce
+tag @s[scores={Dialog=1585}] remove bounce
 scoreboard players set @s[scores={Dialog=1614}] AnimationProg 0
 tag @s[scores={Dialog=1614}] add scream
 execute if entity @s[scores={Dialog=1614}] run playsound luigis_mansion:entity.chauncey.scream hostile @a[tag=same_room] ~ ~ ~ 3
