@@ -16,9 +16,9 @@ The hidden mansion is replaced, but only a handful of the original files are ove
 
 The new hidden mansion's functions are under `luigis_mansion_3ds_remake:room/hidden/`.
 
-The new hidden mansion simply re-used the `luigis_mansion:normal` dimension.
+The new hidden mansion simply re-uses the `luigis_mansion:normal` dimension.
 
-Portrait ghosts in the hidden mansion will reuse the normal mansion behavior, aside from the slightly different function calls and non-mirroring AI changes (such as chauncey's battle).
+Portrait ghosts in the hidden mansion will re-use the normal mansion behavior, aside from the slightly different function calls and non-mirroring AI changes (such as chauncey's battle).
 
 # Functions and tags of interest
 * `#luigis_mansion_3ds_remake:get_lowest_scores` same as `#luigis_mansion:get_high_scores`, but then retreiving the `lowest_value`.

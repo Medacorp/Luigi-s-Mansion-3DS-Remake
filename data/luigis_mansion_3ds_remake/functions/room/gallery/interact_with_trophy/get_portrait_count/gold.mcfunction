@@ -1,5 +1,5 @@
 execute if entity @s[advancements={luigis_mansion:portrait_ghosts/neville/gold=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/nydia/gold=true}] run scoreboard players add #temp Time 1
+execute if entity @s[advancements={luigis_mansion:portrait_ghosts/lydia/gold=true}] run scoreboard players add #temp Time 1
 execute if entity @s[advancements={luigis_mansion:portrait_ghosts/chauncey/gold=true}] run scoreboard players add #temp Time 1
 execute if entity @s[advancements={luigis_mansion:portrait_ghosts/floating_whirlindas/gold=true}] run scoreboard players add #temp Time 1
 execute if entity @s[advancements={luigis_mansion:portrait_ghosts/shivers/gold=true}] run scoreboard players add #temp Time 1

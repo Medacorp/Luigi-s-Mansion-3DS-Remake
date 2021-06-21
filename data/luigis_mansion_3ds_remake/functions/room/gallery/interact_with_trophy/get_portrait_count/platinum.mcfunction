@@ -1,5 +1,5 @@
 execute if entity @s[advancements={luigis_mansion_3ds_remake:portrait_ghosts/neville/platinum=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion_3ds_remake:portrait_ghosts/nydia/platinum=true}] run scoreboard players add #temp Time 1
+execute if entity @s[advancements={luigis_mansion_3ds_remake:portrait_ghosts/lydia/platinum=true}] run scoreboard players add #temp Time 1
 execute if entity @s[advancements={luigis_mansion_3ds_remake:portrait_ghosts/chauncey/platinum=true}] run scoreboard players add #temp Time 1
 execute if entity @s[advancements={luigis_mansion_3ds_remake:portrait_ghosts/floating_whirlindas/platinum=true}] run scoreboard players add #temp Time 1
 execute if entity @s[advancements={luigis_mansion_3ds_remake:portrait_ghosts/shivers/platinum=true}] run scoreboard players add #temp Time 1
