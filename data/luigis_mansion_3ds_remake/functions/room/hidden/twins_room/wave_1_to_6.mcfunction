@@ -1,4 +1,4 @@
-summon minecraft:marker 744 20 41 {Tags:["ghost_marker","ghost","me"],Rotation:[0.0f,90.0f]}
+summon minecraft:marker 744 20 41 {Tags:["ghost_marker","ghost","hidden","me"],Rotation:[0.0f,90.0f]}
 
 summon minecraft:marker 738 20 40 {Tags:["option"]}
 summon minecraft:marker 742 20 46 {Tags:["option"]}

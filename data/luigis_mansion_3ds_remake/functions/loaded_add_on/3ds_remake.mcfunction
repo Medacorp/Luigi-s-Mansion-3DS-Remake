@@ -8,3 +8,5 @@ scoreboard objectives add PortraitBattle trigger
 team add NoCollision
 team modify NoCollision collisionRule never
 execute unless score #can_get_platinum_boss Selected matches 0..1 run scoreboard players set #can_get_platinum_boss Selected 0
+
+execute as @a[tag=portrait_battle] at @s run function luigis_mansion_3ds_remake:room/portrait_battle

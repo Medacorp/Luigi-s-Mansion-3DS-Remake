@@ -7,4 +7,5 @@ execute store result score #multiply_damage Selected run data get storage luigis
 execute store result score #can_warp Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.can_warp
 execute store result score #changing_max_health Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.changing_max_health
 execute store result score #can_get_platinum_boss Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.can_get_platinum_boss
-data modify storage luigis_mansion_3ds_remake:data loaded_mansion set value {settings:{mansion_type:-1,mansion_data_index:-1,mirrored:-1,multiply_hurt:-1,multiply_damage:-1,can_warp:-1,changing_max_health:-1,can_get_platinum_boss:-1},data:{}}
+execute store result score #ghost_heart_size Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.ghost_heart_size
+data modify storage luigis_mansion_3ds_remake:data loaded_mansion set value {settings:{mansion_type:-1,mansion_data_index:-1,mirrored:-1,multiply_hurt:-1,multiply_damage:-1,can_warp:-1,changing_max_health:-1,can_get_platinum_boss:-1,ghost_heart_size:-1},data:{}}
