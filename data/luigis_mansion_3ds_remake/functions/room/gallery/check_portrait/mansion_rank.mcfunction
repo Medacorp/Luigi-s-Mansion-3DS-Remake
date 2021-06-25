@@ -27,8 +27,8 @@ execute if entity @a[advancements={luigis_mansion:lab/b_rank=true},limit=1] run 
 execute if entity @a[advancements={luigis_mansion:lab/a_rank=true},limit=1] run scoreboard players add #temp Time 1
 execute if entity @a[advancements={luigis_mansion_3ds_remake:lab/s_rank=true},limit=1] run scoreboard players add #temp Time 2
 execute if score #temp Time matches 2.. run tellraw @p[gamemode=!spectator] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion_3ds_remake:message.gallery.change_frame"}]}
-execute if score #temp Time matches 2.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.change_frame.lower","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 1"}}
-execute if score #temp Time matches 2.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.change_frame.higher","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 2"}}
+execute if score #temp Time matches 2.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.change_frame.higher","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 1"}}
+execute if score #temp Time matches 2.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.change_frame.lower","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 2"}}
 execute if score #temp Time matches 1.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.get_score.highest","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 3"}}
 execute if score #temp Time matches 1.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.get_score.lowest","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 4"}}
 scoreboard players reset #temp Time

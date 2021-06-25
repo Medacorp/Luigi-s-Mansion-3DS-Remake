@@ -1,1 +1,1 @@
-scoreboard players set #gallery Ticking 1
+scoreboard players set #gallery Ticking 2

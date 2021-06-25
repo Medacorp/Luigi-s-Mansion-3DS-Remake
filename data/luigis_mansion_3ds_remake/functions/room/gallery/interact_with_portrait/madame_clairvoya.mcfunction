@@ -3,9 +3,9 @@ execute if entity @s[advancements={luigis_mansion:portrait_ghosts/madame_clairvo
 execute if entity @s[advancements={luigis_mansion:portrait_ghosts/madame_clairvoya/silver=true},scores={FrameChoice=2}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:1b}}
 execute if entity @s[advancements={luigis_mansion:portrait_ghosts/madame_clairvoya/bronze=true},scores={FrameChoice=1}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:0b}}
 
-execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:0b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:13}}}
-execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:1b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:15}}}
-execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:2b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:14}}}
-execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:3b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:filled_map",Count:1b,tag:{map:14}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:0b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:138}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:1b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:139}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:2b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:140}}}
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:3b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:141}}}
 
 execute if entity @s[scores={FrameChoice=5}] run function #luigis_mansion_3ds_remake:room/gallery/portrait_battle/option/madame_clairvoya
