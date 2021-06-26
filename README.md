@@ -42,7 +42,7 @@ Portrait ghosts store in which `mansion_data_index` they have been defeated, NOT
 If you want the battle to be selected separately, use a new data index.
 
 # Functions and tags of interest
-* `#luigis_mansion_3ds_remake:get_lowest_scores` same as `#luigis_mansion:get_high_scores`, but then retreiving the `lowest_value`.
+* `#luigis_mansion_3ds_remake:get_lowest_scores` same as `#luigis_mansion:get_high_scores`, but then retrieving the `lowest_value`.
 * `#luigis_mansion_3ds_remake:room/gallery/check_portrait/boos` Adding Boos here will make them show in the boo painting check messages.
 * `#luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_boo_count` Adding Boos here will make them count towards the trophy task goals.
 * `#luigis_mansion_3ds_remake:room/gallery/load_boo_painting` Adding Boos here will make them visibly show in the boo painting.
