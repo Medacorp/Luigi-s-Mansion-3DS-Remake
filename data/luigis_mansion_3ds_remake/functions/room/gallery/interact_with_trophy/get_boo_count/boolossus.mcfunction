@@ -1,1 +1,1 @@
-execute if entity @a[advancements={luigis_mansion:portrait_ghosts/boolossus=true}] run scoreboard players add #temp Time 15
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{boolossus:-1b} unless data storage luigis_mansion:data current_state.current_data.portrait_ghosts.boolossus{health:0} run scoreboard players add #temp Time 15

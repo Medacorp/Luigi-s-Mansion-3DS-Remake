@@ -1,23 +1,23 @@
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/neville/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/lydia/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/chauncey/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/floating_whirlindas/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/shivers/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/melody_pianissima/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/mr_luggs/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/spooky/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/bogmire/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/biff_atlas/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/miss_petunia/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/nana/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/slim_bankshot/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/henry_and_orville/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/madame_clairvoya/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/boolossus/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/uncle_grimmly/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/clockwork_soldiers/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/sue_pea/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/jarvis/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/sir_weston/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/vincent_van_gore/bronze=true}] run scoreboard players add #temp Time 1
-execute if entity @s[advancements={luigis_mansion:portrait_ghosts/king_boo/bronze=true}] run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{neville:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{lydia:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{chauncey:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{floating_whirlindas:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{shivers:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{melody_pianissima:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{mr_luggs:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{spooky:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{bogmire:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{biff_atlas:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{miss_petunia:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{nana:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{slim_bankshot:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{henry_and_orville:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{madame_clairvoya:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{boolossus:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{uncle_grimmly:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{clockwork_soldiers:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{sue_pea:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{jarvis:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{sir_weston:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{vincent_van_gore:-1b} run scoreboard players add #temp Time 1
+execute unless data storage luigis_mansion:data portrait_ghost_ranks{king_boo:-1b} run scoreboard players add #temp Time 1

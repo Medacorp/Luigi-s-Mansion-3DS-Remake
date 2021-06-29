@@ -6,7 +6,6 @@ execute if entity @s[scores={TopVacuumDamage=9000..13999}] run data modify stora
 execute if entity @s[scores={TopVacuumDamage=5000..8999}] run data modify storage luigis_mansion:data current_state.current_data.portrait_ghosts.mr_luggs.rank set value 1b
 execute if entity @s[scores={TopVacuumDamage=..4999}] run data modify storage luigis_mansion:data current_state.current_data.portrait_ghosts.mr_luggs.rank set value 0b
 execute store result storage luigis_mansion:data current_state.current_data.portrait_ghosts.mr_luggs.health int 1 run scoreboard players set @s Health 0
-advancement grant @a only luigis_mansion:portrait_ghosts/mr_luggs
 data modify storage luigis_mansion_3ds_remake:data portrait_ghost set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.mr_luggs
 function luigis_mansion_3ds_remake:other/save_portrait_ghost_defeat
 data modify storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.mr_luggs set from storage luigis_mansion_3ds_remake:data portrait_ghost
