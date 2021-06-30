@@ -1,3 +1,4 @@
+execute unless entity @s[scores={Dialog=1..}] run scoreboard players set #freeze_timer Selected 1
 execute if score #conservatory Wave matches -1 run scoreboard players add @s[tag=!1,tag=!2] Dialog 1
 execute if score #conservatory Wave matches 2 run scoreboard players add @s[tag=!1,tag=!2] Dialog 1
 execute if score #conservatory Wave matches 3 run scoreboard players add @s[tag=!1,tag=!2] Dialog 1
@@ -44,7 +45,6 @@ execute if entity @s[scores={Dialog=1304}] run scoreboard players set #conservat
 execute if entity @s[scores={Dialog=1304}] as @a[scores={MusicType=23},gamemode=!spectator] run function luigis_mansion:other/music/set/room
 scoreboard players set @s[scores={Dialog=1304}] AnimationProg 0
 tag @s[scores={Dialog=1304}] add vanish
-tag @s[scores={Dialog=1364}] add remove_from_existence
 
 scoreboard players set @s[scores={Dialog=2000}] AnimationProg 0
 tag @s[scores={Dialog=2000}] remove listen
@@ -69,4 +69,4 @@ execute if entity @s[scores={Dialog=2216}] positioned 656 10 -26 rotated 0 0 run
 execute if entity @s[scores={Dialog=2216}] positioned 656 10 -27 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
 scoreboard players reset @s[scores={Dialog=2216}] Dialog
 
-execute if score #conservatory Wave matches 4 if entity @s[tag=!fleeing,tag=!hurt,tag=!vanish,scores={StunTime=0}] run function luigis_mansion:entities/melody_pianissima/battle
+execute if score #conservatory Wave matches 4 run function luigis_mansion:entities/melody_pianissima/battle

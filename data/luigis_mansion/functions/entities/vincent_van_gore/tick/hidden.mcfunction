@@ -1,3 +1,4 @@
+execute unless entity @s[scores={Dialog=333}] unless entity @s[scores={Dialog=646}] run scoreboard players set #freeze_timer Selected 1
 execute if score #artists_studio Wave matches 9 run scoreboard players add @s[scores={Dialog=333..645}] Dialog 1
 scoreboard players add @s[scores={Dialog=1..332}] Dialog 1
 execute if entity @e[tag=same_room,tag=!spectator,limit=1] unless entity @s[scores={Dialog=1..}] run scoreboard players add @s Dialog 1
