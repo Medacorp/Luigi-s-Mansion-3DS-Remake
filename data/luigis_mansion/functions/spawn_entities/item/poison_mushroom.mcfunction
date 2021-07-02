@@ -1,0 +1,2 @@
+execute if score #spawn_super_mushrooms Selected matches 0 run function luigis_mansion_3ds_remake:spawn_entities/item/poison_mushroom
+execute if score #spawn_super_mushrooms Selected matches 1 run function luigis_mansion_3ds_remake:spawn_entities/item/super_mushroom

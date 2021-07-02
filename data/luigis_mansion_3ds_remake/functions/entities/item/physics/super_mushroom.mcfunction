@@ -1,0 +1,1 @@
+execute if entity @s[tag=super_mushroom] run function luigis_mansion:entities/item/heart_physics
