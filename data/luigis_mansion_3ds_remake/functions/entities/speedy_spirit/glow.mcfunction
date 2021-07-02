@@ -1,0 +1,2 @@
+execute if entity @s[tag=spawn] run function luigis_mansion_3ds_remake:entities/speedy_spirit/glow/remove
+execute if entity @s[tag=!spawn] run function luigis_mansion_3ds_remake:entities/speedy_spirit/glow/add

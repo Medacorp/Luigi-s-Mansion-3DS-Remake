@@ -1,16 +1,5 @@
 scoreboard players set #3ds_remake Loaded 1
 execute unless data storage luigis_mansion_3ds_remake:data shown_gameboy_horror_part run function luigis_mansion_3ds_remake:other/upgrade_path/newly_installed
-execute if data storage luigis_mansion_3ds_remake:data {shown_gameboy_horror_part:0b} run tag @a[tag=scanning] remove scanning
-scoreboard objectives add StrobulbCharge dummy
-scoreboard objectives add SelectedFrame dummy
-scoreboard objectives add FrameChoice trigger
-scoreboard objectives add PortraitBattle trigger
-team add NoCollision
-team modify NoCollision collisionRule never
-execute unless score #can_get_platinum_boss Selected matches 0..1 run scoreboard players set #can_get_platinum_boss Selected 0
-execute unless score #luigi_amiibo Selected matches 0..1 run scoreboard players set #luigi_amiibo Selected 0
-execute unless score #mario_amiibo Selected matches 0..1 run scoreboard players set #mario_amiibo Selected 0
-execute unless score #toad_amiibo Selected matches 0..1 run scoreboard players set #toad_amiibo Selected 0
-execute unless score #boo_amiibo Selected matches 0..1 run scoreboard players set #boo_amiibo Selected 0
+function luigis_mansion_3ds_remake:anti_cheating/scores
 
 execute as @a[tag=portrait_battle] at @s run function luigis_mansion_3ds_remake:room/portrait_battle
