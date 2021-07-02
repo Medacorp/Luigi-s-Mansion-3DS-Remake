@@ -1,6 +1,7 @@
 {
 	"values": [
 		"luigis_mansion_3ds_remake:entities/weak_flashlight",
-		"luigis_mansion_3ds_remake:entities/gallery_check"
+		"luigis_mansion_3ds_remake:entities/gallery_check",
+		"luigis_mansion_3ds_remake:entities/gameboy_horror_boo"
 	]
 }
