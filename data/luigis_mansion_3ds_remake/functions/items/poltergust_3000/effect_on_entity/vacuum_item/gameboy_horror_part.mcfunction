@@ -1,1 +1,1 @@
-execute positioned ~ ~-0.1 ~ as @e[tag=vacuumable,distance=..1.4,tag=item,tag=gameboy_horror_part] positioned as @s run function luigis_mansion:entities/item/pull_key
+execute positioned ~ ~-1.1 ~ as @e[tag=vacuumable,distance=..1.4,tag=item,tag=gameboy_horror_part] positioned as @s run function luigis_mansion:entities/item/pull
