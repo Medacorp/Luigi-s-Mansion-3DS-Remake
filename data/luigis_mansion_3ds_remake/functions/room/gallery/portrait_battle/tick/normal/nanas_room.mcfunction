@@ -1,0 +1,1 @@
+execute if score #nanas_room_table_1 Searching matches 1.. run function luigis_mansion:room/normal/nanas_room/search_table_1
