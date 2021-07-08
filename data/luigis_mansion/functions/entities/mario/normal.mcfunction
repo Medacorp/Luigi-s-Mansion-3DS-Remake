@@ -58,8 +58,5 @@ execute if entity @s[scores={Dialog=639}] if score #temp Money matches 142390.. 
 execute if entity @s[scores={Dialog=639}] if score #temp Money matches 186440.. run advancement grant @a only luigis_mansion:challenges/scrooge_mcduck_it_up
 execute if entity @s[scores={Dialog=639}] run scoreboard players reset #temp Money
 execute if entity @s[scores={Dialog=639}] run function #luigis_mansion:cleared_mansion
-execute if entity @s[scores={Dialog=639}] run function luigis_mansion:entities/player/reset_mansion
-execute if entity @s[scores={Dialog=639}] run scoreboard players set #mansion_type Selected -1
-execute if entity @s[scores={Dialog=639}] run scoreboard players set #mansion_data_index Selected -1
-execute if entity @s[scores={Dialog=639}] run scoreboard players set #previous_mansion_index Selected -1
+execute if entity @s[scores={Dialog=639}] run tag @e[tag=e_gadd,scores={Room=-3},limit=1] add gooigi_results
 tag @s[scores={Dialog=640}] add remove_from_existence
