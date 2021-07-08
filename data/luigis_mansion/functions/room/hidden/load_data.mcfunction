@@ -10,8 +10,9 @@ scoreboard players set #multiply_hurt Selected 200
 scoreboard players set #multiply_damage Selected 125
 scoreboard players set #can_warp Selected 1
 scoreboard players set #ghost_heart_size Selected 20
-scoreboard players set #changing_max_health Selected 0
 scoreboard players set #gbh_clock_increase Selected 0
 scoreboard players set #gbh_clock Selected 0
+scoreboard players set #radar_type Selected 0
+scoreboard players set #changing_max_health Selected 0
 scoreboard players set #can_get_platinum_boss Selected 1
 scoreboard players set #can_clear_hidden Selected 0
