@@ -1,4 +1,5 @@
 scoreboard players operation @s LastRoom = @s Room
+execute as @a[tag=gooigi] run function luigis_mansion_3ds_remake:entities/player/un_gooigi
 tag @e[tag=pearl_dropper] remove pearl_dropper
 execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:10} run function #luigis_mansion_3ds_remake:spawn_portrait_battle_blockades
 function #luigis_mansion_3ds_remake:portrait_battle_tick

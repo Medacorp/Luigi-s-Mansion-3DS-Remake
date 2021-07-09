@@ -19,3 +19,7 @@ data remove storage luigis_mansion:data current_state.my_money
 data modify storage luigis_mansion:data current_state.current_data.money_grabbed append from storage luigis_mansion:data current_state.my_money_data
 data remove storage luigis_mansion:data current_state.my_money_data
 scoreboard players reset #temp Time
+
+scoreboard players set #temp Time 100
+execute as @a[tag=same_room,tag=!spectator,sort=nearest,limit=1] if entity @s[tag=gooigi] run function luigis_mansion_3ds_remake:items/gooigi_get_money
+scoreboard players reset #temp Time
