@@ -3,5 +3,5 @@ execute if entity @s[tag=looking_at_map] run function luigis_mansion:items/gameb
 execute if score #gallery Loaded matches 1 run function #luigis_mansion:room/gallery/reset
 execute if data storage luigis_mansion_3ds_remake:data {gallery_generated:0b} run function luigis_mansion_3ds_remake:room/gallery/generate
 execute in minecraft:overworld run teleport @s 772 2 -20 0 0
-scoreboard players reset @s Element
+experience set @s 0 levels
 execute if entity @a[nbt={Inventory:[{tag:{luigis_mansion:{id:"luigis_mansion:poltergust_3000"}}}]}] run function luigis_mansion:items/poltergust_3000/no_element

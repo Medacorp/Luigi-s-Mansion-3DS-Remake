@@ -1,6 +1,5 @@
 function luigis_mansion_3ds_remake:room/gallery/portrait_battle/save_current_mansion
 scoreboard players set #mansion_type Selected 0
-scoreboard objectives setdisplay sidebar Element
 function luigis_mansion:room/normal/default_data
 scoreboard players set #mansion_data_index Selected 0
 scoreboard players set #mirrored Selected 0
