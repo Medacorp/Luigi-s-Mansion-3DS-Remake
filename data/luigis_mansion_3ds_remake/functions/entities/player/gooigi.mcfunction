@@ -1,7 +1,4 @@
-scoreboard players operation #temp ID = @s ID
-execute as @e[tag=model_piece,scores={ID=-2147483648..}] if score @s ID = #temp ID run tag @s add this_model
-
-execute unless entity @e[tag=this_model,limit=1] run function luigis_mansion_3ds_remake:spawn_entities/gooigi/player
+execute unless entity @e[tag=gooigi_model,limit=1] run function luigis_mansion_3ds_remake:spawn_entities/gooigi/player
 
 execute if entity @a[tag=same_room,tag=!gooigi,limit=1] run scoreboard players operation @s FollowID = @a[tag=same_room,tag=!gooigi,limit=1] ID
 execute if score #players Totals matches 1.. unless entity @a[tag=same_room,tag=!gooigi,limit=1] run function luigis_mansion_3ds_remake:entities/player/gooigi_follow
@@ -29,6 +26,4 @@ trigger Toad5Choice add 0
 trigger TrainingOption add 0
 trigger TwinsChoice add 0
 
-scoreboard players reset #temp ID
-tag @e[tag=this_model] add found_owner
-tag @e[tag=this_model] remove this_model
+function luigis_mansion_3ds_remake:animations/gooigi

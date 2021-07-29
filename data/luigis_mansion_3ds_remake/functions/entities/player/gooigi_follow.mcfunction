@@ -8,4 +8,4 @@ scoreboard players operation @s Room = @a[tag=follow_me,limit=1] Room
 tag @a[tag=follow_me,limit=1] remove follow_me
 scoreboard players reset #temp FollowID
 
-tag @e[tag=this_model] add dead
+tag @e[tag=gooigi_model] add dead

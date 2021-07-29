@@ -52,9 +52,11 @@ execute if entity @s[scores={Dialog=74}] if entity @a[scores={EGaddLabChoice=5},
 execute if entity @s[scores={Dialog=58}] if entity @a[scores={EGaddLabChoice=6},limit=1] if entity @a[tag=gooigi] run tag @s add gooigi_exists
 execute if entity @s[scores={Dialog=58}] if entity @a[scores={EGaddLabChoice=6},limit=1] if score #players Totals matches 1 run tag @s add cannot_change
 execute if entity @s[scores={Dialog=58},tag=gooigi_exists] if entity @a[scores={EGaddLabChoice=6},limit=1] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.underground_lab.leave_gooigi.1"}]}
-execute if entity @s[scores={Dialog=82},tag=gooigi_exists] as @a[tag=gooigi,limit=1] run function luigis_mansion_3ds_remake:entities/player/un_gooigi
+execute if entity @s[scores={Dialog=82},tag=gooigi_exists] if entity @a[scores={EGaddLabChoice=6},limit=1] as @a[tag=gooigi,limit=1] run function luigis_mansion_3ds_remake:entities/player/un_gooigi
+execute if entity @s[scores={Dialog=82},tag=gooigi_exists] if entity @a[scores={EGaddLabChoice=6},limit=1] positioned 784 77 12 run function luigis_mansion_3ds_remake:spawn_entities/gooigi/lab
 execute if entity @s[scores={Dialog=82},tag=gooigi_exists] if entity @a[scores={EGaddLabChoice=6},limit=1] run scoreboard players set @s Dialog -1
 execute if entity @s[scores={Dialog=58},tag=!gooigi_exists,tag=!cannot_change] if entity @a[scores={EGaddLabChoice=6},limit=1] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.underground_lab.use_gooigi.1"}]}
+execute if entity @s[scores={Dialog=82},tag=!gooigi_exists,tag=!cannot_change] as @a[scores={EGaddLabChoice=6},limit=1] run kill @e[tag=gooigi,limit=1]
 execute if entity @s[scores={Dialog=82},tag=!gooigi_exists,tag=!cannot_change] as @a[scores={EGaddLabChoice=6},limit=1] run function luigis_mansion_3ds_remake:entities/player/gooigi_fy
 execute if entity @s[scores={Dialog=82},tag=!gooigi_exists,tag=!cannot_change] if entity @a[scores={EGaddLabChoice=6},limit=1] run scoreboard players set @s Dialog -1
 execute if entity @s[scores={Dialog=58},tag=!gooigi_exists,tag=cannot_change] if entity @a[scores={EGaddLabChoice=6},limit=1] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.underground_lab.use_gooigi.1.alt"}]}

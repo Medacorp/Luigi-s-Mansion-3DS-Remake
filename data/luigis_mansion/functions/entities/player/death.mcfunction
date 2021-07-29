@@ -6,6 +6,6 @@ scoreboard players set @s Music 100
 gamemode spectator @s
 scoreboard players set @s[tag=gooigi] RespawnTimer 0
 
-tellraw @s[tag=!gooigi] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:dialog.reset_mansion.1"}]}
-tellraw @s[tag=!gooigi] {"translate":"luigis_mansion:dialog.reset_mansion.yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger ResetChoice set 1"},"extra":[{"text":"\n"},{"translate":"luigis_mansion:dialog.reset_mansion.no","clickEvent":{"action":"run_command","value":"/trigger ResetChoice set 2"}}]}
-scoreboard players enable @s[tag=!gooigi] ResetChoice
+tellraw @s[tag=!gooigi,tag=!portrait_battle] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:dialog.reset_mansion.1"}]}
+tellraw @s[tag=!gooigi,tag=!portrait_battle] {"translate":"luigis_mansion:dialog.reset_mansion.yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger ResetChoice set 1"},"extra":[{"text":"\n"},{"translate":"luigis_mansion:dialog.reset_mansion.no","clickEvent":{"action":"run_command","value":"/trigger ResetChoice set 2"}}]}
+scoreboard players enable @s[tag=!gooigi,tag=!portrait_battle] ResetChoice
