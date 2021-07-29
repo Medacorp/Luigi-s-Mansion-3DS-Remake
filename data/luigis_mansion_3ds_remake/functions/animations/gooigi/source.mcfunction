@@ -30,7 +30,7 @@ tag @s remove moving_backwards
 
 # Move with
 execute rotated as @s run teleport @s[tag=!sneak_pos] ^ ^-0.35 ^
-execute rotated as @s run teleport @s[tag=sneak_pos] ^ ^-0.4 ^
+execute rotated as @s run teleport @s[tag=sneak_pos] ^ ^-0.6 ^
 execute at @s if entity @a[tag=gooigi,limit=1] run teleport @s ^ ^ ^-.25
 
 execute unless data storage luigis_mansion_3ds_remake:data gooigi{swimming:0b,gliding:0b} run teleport @s ~ ~-1 ~

@@ -2,6 +2,7 @@ scoreboard objectives add FollowID dummy
 scoreboard objectives add FrameChoice trigger
 scoreboard objectives add Glowing dummy
 scoreboard objectives add GooigiRotation dummy
+scoreboard objectives add IncreaseAmount dummy
 scoreboard objectives add PortraitBattle trigger
 scoreboard objectives add Range dummy
 scoreboard objectives add RespawnTimer dummy
