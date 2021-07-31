@@ -1,3 +1,6 @@
+tag @s remove dark_room
+function #luigis_mansion:room/dark_room
+
 execute if entity @s[tag=!looking_at_map] run function #luigis_mansion:items
 function luigis_mansion:items/gameboy_horror
 function luigis_mansion:blocks/gravity_swap

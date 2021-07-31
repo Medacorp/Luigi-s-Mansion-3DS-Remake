@@ -33,7 +33,7 @@ execute rotated as @s run teleport @s[tag=!looking_at_map,tag=!sneak_pos,nbt=!{S
 execute rotated as @s run teleport @s[tag=!looking_at_map,tag=sneak_pos,nbt=!{Small:1b}] ^ ^1.4 ^
 execute rotated as @s run teleport @s[tag=!looking_at_map,tag=!sneak_pos,nbt={Small:1b}] ^ ^1.15 ^
 execute rotated as @s run teleport @s[tag=!looking_at_map,tag=sneak_pos,nbt={Small:1b}] ^ ^1 ^
-execute at @s run teleport @s[tag=!looking_at_map] ^ ^ ^-.25
+execute at @s if entity @a[tag=gooigi,limit=1] run teleport @s[tag=!looking_at_map] ^ ^ ^-.25
 
 execute unless data storage luigis_mansion:data luigi{swimming:0b,gliding:0b} run teleport @s ~ ~-1 ~
 execute unless data storage luigis_mansion:data luigi{swimming:0b,gliding:0b} if entity @s[tag=!looking_at_map] run data modify entity @s Rotation[1] set from entity @e[tag=gooigi,limit=1] Rotation[1]
