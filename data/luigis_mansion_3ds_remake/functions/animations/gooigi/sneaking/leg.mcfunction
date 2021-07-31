@@ -1,2 +1,0 @@
-execute if entity @s[tag=left] run function luigis_mansion_3ds_remake:animations/gooigi/sneaking/leg/left
-execute if entity @s[tag=!left] run function luigis_mansion_3ds_remake:animations/gooigi/sneaking/leg/right

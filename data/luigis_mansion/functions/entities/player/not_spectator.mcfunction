@@ -68,3 +68,6 @@ scoreboard players reset @s[tag=!mirrored] ReflectionNr
 execute if entity @s[tag=mirrored] run function luigis_mansion:entities/reflection/player
 execute at @s[scores={LightX=-2147483648..},nbt=!{ActiveEffects:[{Id:14b}]}] run function luigis_mansion:other/cast_shadow/2_tall
 tag @s remove spectator
+
+effect give @s minecraft:invisibility 1000000 0 true
+execute if entity @s[tag=!gooigi] run function luigis_mansion:animations/luigi
