@@ -12,11 +12,11 @@ tag @s remove seen_room_name
 
 function #luigis_mansion:load_data
 
-tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:item.flashlight","color":"green"},{"translate":"luigis_mansion:message.flashlight_type"}]}
-function #luigis_mansion:items/flashlight/available
-
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.format_explanation.click","color":"green","clickEvent":{"action":"run_command","value":"/trigger ClickEventCheck set 1"}}]}
 tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.hover_event","with":[{"translate":"luigis_mansion:message.format_explanation.hover","hoverEvent":{"action":"show_text","contents":{"translate":"luigis_mansion:message.format_explanation.check"}}}]}]}
+
+tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:item.flashlight","color":"green"},{"translate":"luigis_mansion:message.flashlight_type"}]}
+function #luigis_mansion:items/flashlight/available
 
 execute if entity @a[tag=portrait_battle,limit=1] run gamemode spectator @s
 execute unless entity @a[tag=portrait_battle,limit=1] run tellraw @s[gamemode=spectator,tag=!gooigi] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:dialog.reset_mansion.1"}]}
