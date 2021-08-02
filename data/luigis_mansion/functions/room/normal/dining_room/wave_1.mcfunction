@@ -1,3 +1,4 @@
+execute unless data storage luigis_mansion:data current_state.current_data.money_spawned{dining_room_speedy_spirit:1b} positioned 699 11 52 run function luigis_mansion:spawn_entities/ghost/speedy_spirit
 execute positioned 706 11 31 run function luigis_mansion:spawn_entities/banana_peel
 execute positioned 707 11 34 run function luigis_mansion:spawn_entities/banana_peel
 execute positioned 708 11 55 run function luigis_mansion:spawn_entities/banana_peel
