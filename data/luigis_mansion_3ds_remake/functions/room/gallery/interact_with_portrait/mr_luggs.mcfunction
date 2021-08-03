@@ -1,4 +1,4 @@
-execute store result score #temp Time run data get storage luigis_mansion:data portrait_ghost_ranks.mr_luggs
+execute store result score #temp Time run data get storage luigis_mansion:data current_state.portrait_ghost_ranks.mr_luggs
 execute if score #temp Time matches 3.. if entity @s[scores={FrameChoice=4}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mr_luggs:3b}}
 execute if score #temp Time matches 2.. if entity @s[scores={FrameChoice=3}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mr_luggs:2b}}
 execute if score #temp Time matches 1.. if entity @s[scores={FrameChoice=2}] run data merge storage luigis_mansion_3ds_remake:data {selected_portraits:{mr_luggs:1b}}

@@ -2,4 +2,4 @@ execute unless entity @e[type=minecraft:armor_stand,tag=key,tag=hallway_8,limit=
 execute if score #temp Searched matches 1 run summon minecraft:armor_stand ~ ~ ~ {CustomName:'{"translate":"luigis_mansion:item.key"}',Pose:{Head:[0.0f,0.0f,0.01f]},Marker:1b,Invisible:1b,Silent:1b,ArmorItems:[{},{},{},{id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:5,CustomModelData:15}}],Small:1b,Tags:["item","key","eternal","hallway_8"],DisabledSlots:2039583}
 execute unless score #temp Searched matches 1 run tag @e[tag=selected] add nothing
 scoreboard players reset #temp Searched
-data modify storage luigis_mansion_3ds_remake:data trophy.normal.rec_room_key set value 1b
+function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/5

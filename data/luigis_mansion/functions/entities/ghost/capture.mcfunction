@@ -29,3 +29,12 @@ data remove storage luigis_mansion:data current_state.ghost_caught
 data remove storage luigis_mansion:data current_state.new_ghosts_caught
 
 execute if entity @a[tag=killer,tag=gooigi,limit=1] run function luigis_mansion_3ds_remake:entities/ghost/capture_gooigi
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_1:0b} if data storage luigis_mansion:data current_state.ghosts_caught[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_ghost_count/total
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_1:0b} if data storage luigis_mansion:data current_state.new_ghosts_caught run data modify storage luigis_mansion:data current_state.ghosts_caught set from storage luigis_mansion:data current_state.new_ghosts_caught
+data remove storage luigis_mansion:data current_state.new_ghosts_caught
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.beginner{task_1:0b} if score #temp Time matches 50.. run function luigis_mansion_3ds_remake:room/gallery/clear_task/beginner/1
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.easy{task_1:0b} if score #temp Time matches 100.. run function luigis_mansion_3ds_remake:room/gallery/clear_task/easy/1
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.normal{task_1:0b} if score #temp Time matches 250.. run function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/1
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.hard{task_1:0b} if score #temp Time matches 500.. run function luigis_mansion_3ds_remake:room/gallery/clear_task/hard/1
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_1:0b} if score #temp Time matches 1000.. run function luigis_mansion_3ds_remake:room/gallery/clear_task/master/1
+scoreboard players reset #temp Time

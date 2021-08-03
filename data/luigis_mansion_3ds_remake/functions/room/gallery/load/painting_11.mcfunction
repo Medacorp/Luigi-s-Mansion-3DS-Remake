@@ -1,4 +1,4 @@
-execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{king_boo:-1b}} run data modify storage luigis_mansion_3ds_remake:data selected_portraits.king_boo set from storage luigis_mansion:data portrait_ghost_ranks.king_boo
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{king_boo:-1b}} run data modify storage luigis_mansion_3ds_remake:data current_state.selected_portraits.king_boo set from storage luigis_mansion:data current_state.portrait_ghost_ranks.king_boo
 
 execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{king_boo:0b}} run data merge entity @e[x=734.5,y=6,z=-27.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:170}}}
 execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{king_boo:1b}} run data merge entity @e[x=734.5,y=6,z=-27.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:171}}}

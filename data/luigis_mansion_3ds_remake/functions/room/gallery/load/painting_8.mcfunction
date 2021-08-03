@@ -1,4 +1,4 @@
-execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{sue_pea:-1b}} run data modify storage luigis_mansion_3ds_remake:data selected_portraits.sue_pea set from storage luigis_mansion:data portrait_ghost_ranks.sue_pea
+execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{sue_pea:-1b}} run data modify storage luigis_mansion_3ds_remake:data current_state.selected_portraits.sue_pea set from storage luigis_mansion:data current_state.portrait_ghost_ranks.sue_pea
 
 execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{sue_pea:0b}} run data merge entity @e[x=745.5,y=19,z=-25.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:154}}}
 execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{sue_pea:1b}} run data merge entity @e[x=745.5,y=19,z=-25.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:155}}}

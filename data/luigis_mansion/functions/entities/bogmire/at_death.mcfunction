@@ -9,7 +9,7 @@ execute if score #temp Damage matches 20..49 run data modify storage luigis_mans
 execute if score #temp Damage matches 50.. run data modify storage luigis_mansion:data current_state.current_data.portrait_ghosts.bogmire.rank set value 0b
 scoreboard players reset #temp Damage
 execute store result storage luigis_mansion:data current_state.current_data.portrait_ghosts.bogmire.health int 1 run scoreboard players set @s Health 0
-data modify storage luigis_mansion_3ds_remake:data portrait_ghost set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.bogmire
+data modify storage luigis_mansion_3ds_remake:data portrait_ghost set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.bogmire
 function luigis_mansion_3ds_remake:other/save_portrait_ghost_defeat
-data modify storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.bogmire set from storage luigis_mansion_3ds_remake:data portrait_ghost
+data modify storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.bogmire set from storage luigis_mansion_3ds_remake:data portrait_ghost
 data remove storage luigis_mansion_3ds_remake:data portrait_ghost

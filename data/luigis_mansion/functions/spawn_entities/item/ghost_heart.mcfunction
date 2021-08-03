@@ -14,4 +14,4 @@ execute as @e[tag=this_entity,limit=1] run data modify entity @s Rotation[1] set
 kill @e[distance=..0.7,type=minecraft:item,nbt={Item:{id:"minecraft:carved_pumpkin"}}]
 tag @e[tag=this_entity,limit=1] remove this_entity
 execute if score #ghost_heart_size Selected matches 1.. run playsound luigis_mansion:item.heart.spawn player @a ~ ~ ~ 1
-data modify storage luigis_mansion_3ds_remake:data trophy.easy.caught_two_ghosts_at_once set value 1b
+function luigis_mansion_3ds_remake:room/gallery/clear_task/easy/4

@@ -17,5 +17,8 @@
         "portrificationized": {
             "trigger": "minecraft:impossible"
         }
-    }
+    },
+	"reward": {
+		"function": "luigis_mansion_3ds_remake:advancements/lab/s_rank"
+	}
 }

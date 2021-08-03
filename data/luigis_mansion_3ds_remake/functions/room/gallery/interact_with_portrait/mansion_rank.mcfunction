@@ -1,6 +1,6 @@
-execute store result score #temp Time run data get storage luigis_mansion_3ds_remake:data selected_portraits.mansion_rank
-execute if entity @s[scores={FrameChoice=1}] if score #temp Time matches ..7 store result storage luigis_mansion_3ds_remake:data selected_portraits.mansion_rank byte 1 run scoreboard players add #temp Time 1
-execute if entity @s[scores={FrameChoice=2}] if score #temp Time matches 1.. store result storage luigis_mansion_3ds_remake:data selected_portraits.mansion_rank byte 1 run scoreboard players remove #temp Time 1
+execute store result score #temp Time run data get storage luigis_mansion_3ds_remake:data current_state.selected_portraits.mansion_rank
+execute if entity @s[scores={FrameChoice=1}] if score #temp Time matches ..7 store result storage luigis_mansion_3ds_remake:data current_state.selected_portraits.mansion_rank byte 1 run scoreboard players add #temp Time 1
+execute if entity @s[scores={FrameChoice=2}] if score #temp Time matches 1.. store result storage luigis_mansion_3ds_remake:data current_state.selected_portraits.mansion_rank byte 1 run scoreboard players remove #temp Time 1
 scoreboard players reset #temp Time
 
 execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mansion_rank:8b}} if entity @a[advancements={luigis_mansion_3ds_remake:lab/s_rank=true},limit=1] run data merge entity @e[x=766.5,y=4,z=-50.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:175}}}

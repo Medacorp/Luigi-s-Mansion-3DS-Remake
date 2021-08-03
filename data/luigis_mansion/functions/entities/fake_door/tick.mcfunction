@@ -3,7 +3,7 @@ execute if entity @s[tag=dead,tag=north] positioned ~ ~ ~1 run particle minecraf
 execute if entity @s[tag=dead,tag=south] positioned ~ ~ ~-1 run particle minecraft:dust 0.7 1 1 1 ~-0.1 ~1 ~0.1 0.2 1 0.2 1 30
 execute if entity @s[tag=dead,tag=west] positioned ~1 ~ ~ run particle minecraft:dust 0.7 1 1 1 ~-0.1 ~1 ~0.1 0.2 1 0.2 1 30
 execute if entity @s[tag=dead,tag=laundry_room] positioned ~1 ~ ~ run particle minecraft:dust 0.7 1 1 1 ~-0.1 ~1 ~0.1 0.2 1 0.2 1 30
-execute if entity @s[tag=dead] run data modify storage luigis_mansion_3ds_remake:data trophy.beginner.burned_fake_door set value 1b
+execute if entity @s[tag=dead] run function luigis_mansion_3ds_remake:room/gallery/clear_task/beginner/8
 tag @s[tag=remove_from_existence] add dead
 execute if entity @s[tag=dead] run function luigis_mansion:entities/fake_door/clean_up
 

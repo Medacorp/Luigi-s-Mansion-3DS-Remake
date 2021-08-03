@@ -1,92 +1,92 @@
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.neville
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.neville
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.lydia
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.lydia
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.chauncey
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.chauncey
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.floating_whirlindas
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.floating_whirlindas
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.shivers
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.shivers
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.melody_pianissima
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.melody_pianissima
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.mr_luggs
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.mr_luggs
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.spooky
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.spooky
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.bogmire
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.bogmire
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.biff_atlas
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.biff_atlas
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.miss_petunia
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.miss_petunia
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.nana
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.nana
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.slim_bankshot
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.slim_bankshot
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.henry_and_orville
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.henry_and_orville
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.madame_clairvoya
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.madame_clairvoya
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.boolossus
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.boolossus
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.uncle_grimmly
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.uncle_grimmly
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.clockwork_soldiers
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.clockwork_soldiers
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.sue_pea
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.sue_pea
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.jarvis
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.jarvis
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.sir_weston
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.sir_weston
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.vincent_van_gore
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.vincent_van_gore
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1
-data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data portrait_ghosts_defeated_in.king_boo
+data modify storage luigis_mansion_3ds_remake:data currently_checked set from storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.king_boo
 scoreboard players set #temp2 Money 2147483647
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_time/portrait_battle
 execute if score #temp2 Money > #temp Money run scoreboard players set #temp Time -1

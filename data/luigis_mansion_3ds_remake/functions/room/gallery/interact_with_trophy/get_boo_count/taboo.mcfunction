@@ -1,1 +1,1 @@
-execute if data storage luigis_mansion_3ds_remake:data boos_caught{taboo:1b} run scoreboard players add #temp Time 1
+execute if data storage luigis_mansion_3ds_remake:data current_state.boos_caught{taboo:1b} run scoreboard players add #temp Time 1
