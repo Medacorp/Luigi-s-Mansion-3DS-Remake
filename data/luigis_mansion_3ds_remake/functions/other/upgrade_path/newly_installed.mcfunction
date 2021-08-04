@@ -48,7 +48,7 @@ execute if data storage luigis_mansion:data current_state.current_data{data_inde
 execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].items{fire_element_medal:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.has_element_medal.fire set value 1b
 execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].items{water_element_medal:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.has_element_medal.water set value 1b
 execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].items{ice_element_medal:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.has_element_medal.ice set value 1b
-execute if data luigis_mansion_3ds_remake:data current_state.trophy.easy.has_element_medals{fire:1b,water:1b,ice:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.task_3 set value 1b
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.easy.has_element_medals{fire:1b,water:1b,ice:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.task_3 set value 1b
 execute if data storage luigis_mansion:data current_state.ghosts_caught[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_ghost_count/gold_mouse
 execute if data storage luigis_mansion:data current_state.new_ghosts_caught run data modify storage luigis_mansion:data current_state.ghosts_caught set from storage luigis_mansion:data current_state.new_ghosts_caught
 data remove storage luigis_mansion:data current_state.new_ghosts_caught
@@ -98,7 +98,7 @@ scoreboard players set #temp Time 2147483647
 execute if data storage luigis_mansion:data high_scores[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_quickest_time
 execute if data storage luigis_mansion:data new_high_scores run data modify storage luigis_mansion:data high_scores set from storage luigis_mansion:data new_high_scores
 data remove storage luigis_mansion:data new_high_scores
-execute if score #temp Time matche ..216000 if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_7:0b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.master.task_7 set value 1b
+execute if score #temp Time matches ..216000 if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_7:0b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.master.task_7 set value 1b
 scoreboard players reset #temp Time
 scoreboard players reset #temp Money
 execute if score #mansion_type Selected matches 1 run function luigis_mansion_3ds_remake:other/upgrade_path/convert_hidden_data
