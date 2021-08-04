@@ -1,1 +1,1 @@
-function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/7
+function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/task_7

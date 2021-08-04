@@ -23,7 +23,7 @@ data remove storage luigis_mansion:data current_state.new_money_grabbed
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.beginner{task_6:0b} if score #temp Time matches 1.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.beginner.task_6 set value 1b
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_5:0b} if score #temp Time matches 100.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.master.task_5 set value 1b
 scoreboard players reset #temp Time
-execute unless data storage luigis_mansion:data current_state.current_state.portrait_ghost_ranks{chauncey:-1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.beginner.task_3 set value 1b
+execute unless data storage luigis_mansion:data current_state.portrait_ghost_ranks{chauncey:-1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.beginner.task_3 set value 1b
 execute if data storage luigis_mansion:data current_state.current_data{data_index:0}.portrait_ghosts.chauncey{health:0} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.beginner.task_3 set value 1b
 execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].portrait_ghosts.chauncey{health:0} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.beginner.task_3 set value 1b
 execute if data storage luigis_mansion:data current_state.ghosts_caught[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_ghost_count/gold_ghost

@@ -36,4 +36,4 @@ execute unless score #projection_room_screen Searched matches 1 run summon minec
 execute unless score #projection_room_screen Searched matches 1 run summon minecraft:item_frame 676 12 34 {Facing:5b,Silent:1b,Invisible:1b,Fixed:1b,CustomName:'{"translate":"luigis_mansion:entity.poster"}',Item:{id:"minecraft:filled_map",Count:1b,tag:{map:221}}}
 scoreboard players set #projection_room_screen Searched 1
 data modify storage luigis_mansion_3ds_remake:data current_state.trophy.master.found_posters.projection_room set value 1b
-execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master.found_posters{washroom_2:1b,projection_room:1b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/master/9
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master.found_posters{washroom_2:1b,projection_room:1b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/master/task_9

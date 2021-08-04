@@ -4,4 +4,4 @@ execute if entity @e[type=minecraft:marker,tag=chance,tag=selected,tag=money] po
 execute unless entity @e[type=minecraft:marker,tag=chance,tag=selected,tag=!nothing] positioned 686 111 55 run function luigis_mansion:blocks/dust
 kill @e[type=minecraft:marker,tag=chance]
 scoreboard players set #master_bedroom_plant Searched 1
-function luigis_mansion_3ds_remake:room/gallery/clear_task/beginner/5
+function luigis_mansion_3ds_remake:room/gallery/clear_task/beginner/task_5

@@ -55,4 +55,4 @@ execute positioned 678 105 43 run function luigis_mansion:spawn_entities/item/go
 data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {boneyard_plant:1b}
 playsound luigis_mansion:music.solve_puzzle music @a[scores={Room=28}] ~ ~ ~ 1000
 scoreboard players set @a[scores={Room=28,Music=..29}] Music 30
-function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/6
+function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/task_6
