@@ -1,15 +1,15 @@
 scoreboard players add @s[scores={Dialog=1973..}] Dialog 1
-execute unless entity @e[tag=gold_dummy_ghost,limit=1] run scoreboard players add @s[scores={Dialog=1972}] Dialog 1
+execute unless entity @e[tag=ghost,scores={Room=-2},limit=1] run scoreboard players add @s[scores={Dialog=1972}] Dialog 1
 scoreboard players add @s[scores={Dialog=1827..1971}] Dialog 1
-execute unless entity @e[tag=gold_dummy_ghost,limit=1] run scoreboard players add @s[scores={Dialog=1826}] Dialog 1
+execute unless entity @e[tag=ghost,scores={Room=-2},limit=1] run scoreboard players add @s[scores={Dialog=1826}] Dialog 1
 scoreboard players add @s[scores={Dialog=1697..1825}] Dialog 1
-execute unless entity @e[tag=gold_dummy_ghost,limit=1] run scoreboard players add @s[scores={Dialog=1696}] Dialog 1
+execute unless entity @e[tag=ghost,scores={Room=-2},limit=1] run scoreboard players add @s[scores={Dialog=1696}] Dialog 1
 scoreboard players add @s[scores={Dialog=1550..1695}] Dialog 1
-execute unless entity @e[tag=gold_dummy_ghost,limit=1] run scoreboard players add @s[scores={Dialog=1549}] Dialog 1
+execute unless entity @e[tag=ghost,scores={Room=-2},limit=1] run scoreboard players add @s[scores={Dialog=1549}] Dialog 1
 scoreboard players add @s[scores={Dialog=1356..1548}] Dialog 1
-execute if score #training_room GhostCaught matches 2 run scoreboard players add @s[scores={Dialog=1355}] Dialog 1
+execute if score #training_room GhostCaught matches 2 unless entity @e[tag=ghost,scores={Room=-2},limit=1] run scoreboard players add @s[scores={Dialog=1355}] Dialog 1
 scoreboard players add @s[scores={Dialog=1274..1354}] Dialog 1
-execute if score #training_room GhostCaught matches 1 run scoreboard players add @s[scores={Dialog=1273}] Dialog 1
+execute if score #training_room GhostCaught matches 1 unless entity @e[tag=ghost,scores={Room=-2},limit=1] run scoreboard players add @s[scores={Dialog=1273}] Dialog 1
 scoreboard players add @s[scores={Dialog=..1272}] Dialog 1
 scoreboard players add @s[scores={Dialog=2812..}] Dialog 1
 execute if entity @a[scores={Health=1},tag=same_room] run scoreboard players set @s[scores={Dialog=..2812}] Dialog 2812
@@ -34,10 +34,10 @@ execute if entity @s[scores={Dialog=992}] if score #players Totals matches 2.. r
 execute if entity @s[scores={Dialog=1136}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.10"}]}
 execute if entity @s[scores={Dialog=1136}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.10.more"}]}
 execute if entity @s[scores={Dialog=1272}] run function luigis_mansion:room/training_room/turn_lights/off
-execute if entity @s[scores={Dialog=1273}] unless entity @e[tag=gold_dummy_ghost,limit=1] unless score #training_room GhostCaught matches 1 run function luigis_mansion:room/training_room/spawn_1_ghost
+execute if entity @s[scores={Dialog=1273}] unless entity @e[tag=ghost,scores={Room=-2},limit=1] unless score #training_room GhostCaught matches 1 run function luigis_mansion:room/training_room/spawn_1_ghost
 execute if entity @s[scores={Dialog=1274}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.training_room.11","with":[{"selector":"@a[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=1274}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.training_room.11.more"}]}
-execute if entity @s[scores={Dialog=1355}] unless entity @e[tag=gold_dummy_ghost,limit=1] if score #training_room GhostCaught matches 1 run function luigis_mansion:room/training_room/spawn_1_ghost
+execute if entity @s[scores={Dialog=1355}] unless entity @e[tag=ghost,scores={Room=-2},limit=1] if score #training_room GhostCaught matches 1 run function luigis_mansion:room/training_room/spawn_1_ghost
 execute if entity @s[scores={Dialog=1356}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.training_room.12"}]}
 execute if entity @s[scores={Dialog=1500}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.training_room.13"}]}
 execute if entity @s[scores={Dialog=1548}] run scoreboard players set #training_room GhostCaught 0
@@ -110,7 +110,7 @@ execute if entity @s[scores={Dialog=2812}] run scoreboard players set @a[tag=sam
 execute if entity @s[scores={Dialog=2812}] run scoreboard players set @a[tag=same_room] Pull 0
 execute if entity @s[scores={Dialog=2812}] run scoreboard players set #training_room GhostCaught 0
 execute if entity @s[scores={Dialog=2812}] as @a[tag=same_room] at @s run function luigis_mansion:entities/player/poltergust_breakage
-execute if entity @s[scores={Dialog=2812}] run tag @e[tag=gold_dummy_ghost,tag=!fleeing] add vanish
+execute if entity @s[scores={Dialog=2812}] run tag @e[tag=ghost,scores={Room=-2},tag=!fleeing] add vanish
 execute if entity @s[scores={Dialog=2812}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.0","with":[{"selector":"@a[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=2812}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.0.more"}]}
 execute if entity @s[scores={Dialog=2936}] run scoreboard players set @s Dialog 735
