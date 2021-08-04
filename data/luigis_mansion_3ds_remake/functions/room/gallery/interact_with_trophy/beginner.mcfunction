@@ -1,3 +1,4 @@
+scoreboard players set #temp Time 0
 execute if data storage luigis_mansion:data current_state.ghosts_caught[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_ghost_count/total
 execute if data storage luigis_mansion:data current_state.new_ghosts_caught run data modify storage luigis_mansion:data current_state.ghosts_caught set from storage luigis_mansion:data current_state.new_ghosts_caught
 data remove storage luigis_mansion:data current_state.new_ghosts_caught
@@ -5,6 +6,7 @@ execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.begi
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.beginner{task_1:1b} run tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.hover_event","with":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.beginner.novice_hunter","color":"gold","hoverEvent":{"action":"show_text","contents":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.beginner.novice_hunter.description"},{"text":"\n"},{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.progress","with":[{"text":"50"},{"text":"50"}]}]}}]}]}
 scoreboard players reset #temp Time
 scoreboard players reset #temp Money
+scoreboard players set #temp Time 0
 execute if data storage luigis_mansion:data current_state.money_grabbed[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_money_count/total
 execute if data storage luigis_mansion:data current_state.new_money_grabbed run data modify storage luigis_mansion:data current_state.money_grabbed set from storage luigis_mansion:data current_state.new_money_grabbed
 data remove storage luigis_mansion:data current_state.new_money_grabbed
@@ -14,6 +16,7 @@ scoreboard players reset #temp Time
 scoreboard players reset #temp Money
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.beginner{task_3:0b} run tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.hover_event","with":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.beginner.area_1_cleared","hoverEvent":{"action":"show_text","contents":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.beginner.area_1_cleared.description"}]}}]}]}
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.beginner{task_3:1b} run tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.hover_event","with":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.beginner.area_1_cleared","color":"gold","hoverEvent":{"action":"show_text","contents":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.beginner.area_1_cleared.description"}]}}]}]}
+scoreboard players set #temp Time 0
 execute if data storage luigis_mansion:data current_state.ghosts_caught[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_ghost_count/gold_ghost
 execute if data storage luigis_mansion:data current_state.new_ghosts_caught run data modify storage luigis_mansion:data current_state.ghosts_caught set from storage luigis_mansion:data current_state.new_ghosts_caught
 data remove storage luigis_mansion:data current_state.new_ghosts_caught
