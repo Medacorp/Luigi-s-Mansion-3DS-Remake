@@ -10,4 +10,4 @@ execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{king
 
 execute positioned 734 6 -28 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
 execute positioned 734 6 -29 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 734 6 -28 run tag @e[distance=..2,tag=gallery_check] add 11
+execute positioned 734 6 -28 run tag @e[distance=..2,tag=gallery_check] add king_boo_painting

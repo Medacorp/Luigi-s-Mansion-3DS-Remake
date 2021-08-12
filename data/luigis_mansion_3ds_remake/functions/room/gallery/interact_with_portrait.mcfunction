@@ -22,6 +22,6 @@ execute if entity @s[scores={SelectedFrame=21}] run function luigis_mansion_3ds_
 execute if entity @s[scores={SelectedFrame=22}] run function luigis_mansion_3ds_remake:room/gallery/interact_with_portrait/uncle_grimmly
 execute if entity @s[scores={SelectedFrame=23}] run function luigis_mansion_3ds_remake:room/gallery/interact_with_portrait/spooky
 execute if entity @s[scores={SelectedFrame=25}] run function luigis_mansion_3ds_remake:room/gallery/interact_with_portrait/mansion_rank
-execute if entity @s[scores={SelectedFrame=-1}] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy
+execute if entity @s[scores={SelectedFrame=-1}] run function #luigis_mansion_3ds_remake:room/gallery/interact_with_trophy
 scoreboard players reset @s FrameChoice
 scoreboard players enable @s FrameChoice

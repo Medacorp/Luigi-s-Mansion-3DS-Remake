@@ -21,4 +21,4 @@ execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mans
 execute positioned 766 3 -50 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
 execute positioned 766 3 -51 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
 execute positioned 766 3 -52 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 766 3 -51 run tag @e[distance=..2,tag=gallery_check] add 25
+execute positioned 766 3 -51 run tag @e[distance=..2,tag=gallery_check] add mansion_rank_painting

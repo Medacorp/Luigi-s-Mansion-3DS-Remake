@@ -1,3 +1,4 @@
+execute unless entity @e[x=749.5,y=14,z=-21.5,type=minecraft:item_frame,distance=..0.7,limit=1] run function luigis_mansion_3ds_remake:room/gallery/generate
 execute unless entity @s[scores={Room=-4}] run title @s title {"translate":"luigis_mansion:location.gallery"}
 scoreboard players set @s Room -4
 scoreboard players set @s PrevRoom -4

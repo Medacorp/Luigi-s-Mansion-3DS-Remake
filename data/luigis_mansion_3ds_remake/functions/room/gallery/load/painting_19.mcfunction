@@ -6,4 +6,4 @@ execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{mada
 execute if data storage luigis_mansion_3ds_remake:data {selected_portraits:{madame_clairvoya:3b}} run data merge entity @e[x=749.5,y=14,z=-32.5,type=minecraft:item_frame,distance=..0.7,limit=1] {Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:141}}}
 
 execute positioned 749 13 -33 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 749 13 -33 run tag @e[distance=..0.7,tag=gallery_check] add 19
+execute positioned 749 13 -33 run tag @e[distance=..0.7,tag=gallery_check] add madame_clairvoya_painting
