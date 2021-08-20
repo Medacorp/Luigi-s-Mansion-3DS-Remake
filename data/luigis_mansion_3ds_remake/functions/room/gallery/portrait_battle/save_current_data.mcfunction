@@ -1,4 +1,5 @@
 data modify storage luigis_mansion_3ds_remake:data loaded_mansion.data set from storage luigis_mansion:data current_state.current_data
+function #luigis_mansion:mansion_remove_forceloaded_chunks
 execute store result storage luigis_mansion_3ds_remake:data loaded_mansion.mansion_type int 1 run scoreboard players get #mansion_type Selected
 execute store result storage luigis_mansion_3ds_remake:data loaded_mansion.mansion_data_index int 1 run scoreboard players get #mansion_data_index Selected
 execute store result storage luigis_mansion_3ds_remake:data loaded_mansion.mirrored int 1 run scoreboard players get #mirrored Selected

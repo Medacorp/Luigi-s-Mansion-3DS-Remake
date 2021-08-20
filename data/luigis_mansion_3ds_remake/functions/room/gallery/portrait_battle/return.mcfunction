@@ -7,7 +7,9 @@ kill @e[tag=cannot_be_removed]
 gamemode adventure @a[gamemode=spectator]
 scoreboard players set @a Health 100
 function luigis_mansion:items/poltergust_3000/no_element
+function #luigis_mansion:mansion_remove_forceloaded_chunks
 function luigis_mansion_3ds_remake:room/gallery/portrait_battle/load_current_data
+function #luigis_mansion:mansion_forceload_chunks
 execute if data storage luigis_mansion:data current_state.current_data.dead_players[-1] as @a run function luigis_mansion:entities/player/load_health
 
 scoreboard players set #temp Money 6000

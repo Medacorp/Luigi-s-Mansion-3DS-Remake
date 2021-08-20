@@ -10,7 +10,7 @@ execute if entity @s[scores={Dialog=848}] if score #players Totals matches 1 run
 execute if entity @s[scores={Dialog=848}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gallery.5.more"}]}
 execute if entity @s[scores={Dialog=1056}] run data modify storage luigis_mansion:data rooms.gallery merge value {cleared:1b}
 execute if entity @s[scores={Dialog=1056}] run advancement grant @a until luigis_mansion:lab/gallery
-execute if entity @s[scores={Dialog=1056}] if entity @a[tag=looking_at_map,limit=1] run function luigis_mansion:items/gameboy_horror/map/display/lab/gallery
+execute if entity @s[scores={Dialog=1056}] if entity @a[tag=looking_at_map,limit=1] run function luigis_mansion:items/gameboy_horror/map/display/lab/generate
 tag @s[scores={Dialog=1056}] remove talk
 scoreboard players set @s[tag=!talk] Dialog 0
 tag @s[tag=!talk] remove nod

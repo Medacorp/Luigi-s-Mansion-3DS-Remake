@@ -127,3 +127,7 @@ data modify storage luigis_mansion:data current_state.current_data.boos[{name:"b
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"booligan"}].name set value boolldog
 execute if data storage luigis_mansion:data current_state.current_data.money_spawned{courtyard_chest:1b} run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {projection_room_chest:1b}
 execute if data storage luigis_mansion:data current_state.current_data.money_spawned{billiards_room_chest:1b} run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {twins_room_chest:1b}
+execute in luigis_mansion:hidden run forceload remove 831 159 432 16
+execute in luigis_mansion:hidden run forceload remove 831 15 432 -80
+execute in luigis_mansion:normal run forceload add 831 -144 432 -1
+execute in luigis_mansion:normal run forceload add 831 0 432 95

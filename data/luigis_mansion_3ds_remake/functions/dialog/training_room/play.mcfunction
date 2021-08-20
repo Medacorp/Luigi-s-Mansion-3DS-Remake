@@ -101,7 +101,7 @@ execute if entity @s[scores={Dialog=2369}] if data storage luigis_mansion:data r
 execute if entity @s[scores={Dialog=2457}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.training_room.26"}]}
 execute if entity @s[scores={Dialog=2785}] run data modify storage luigis_mansion:data rooms.training_room merge value {cleared:1b}
 execute if entity @s[scores={Dialog=2785}] run advancement grant @a[tag=same_room] until luigis_mansion:lab/training_room
-execute if entity @s[scores={Dialog=2785}] if entity @a[tag=looking_at_map,limit=1] run function luigis_mansion:items/gameboy_horror/map/display/lab/training_room
+execute if entity @s[scores={Dialog=2785}] if entity @a[tag=looking_at_map,limit=1] run function luigis_mansion:items/gameboy_horror/map/display/lab/generate
 execute if entity @s[scores={Dialog=2785}] as @a[tag=same_room,tag=looking_at_map] run function luigis_mansion:items/gameboy_horror/map/close
 execute if entity @s[scores={Dialog=2785}] as @a[tag=same_room] run function luigis_mansion_3ds_remake:room/gallery/warp_to
 execute if entity @s[scores={Dialog=2786}] run tag @e[tag=e_gadd,scores={Room=-4}] add talk
