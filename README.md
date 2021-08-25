@@ -50,3 +50,19 @@ If you want the battle to be selected separately, use a new data index.
 * `#luigis_mansion_3ds_remake:room/gallery/load_small_ghost_painting` Adding ghosts here will make them visibly show in the ghost painting.
 * `#luigis_mansion_3ds_remake:spawn_portrait_battle_blockades`, `#luigis_mansion_3ds_remake:remove_portrait_battle_blockades` These tags spawn and remove blockades in the corresponding rooms during portrait battles.
 * `#luigis_mansion_3ds_remake:room/gallery/portrait_battle/`, `luigis_mansion_3ds_remake:room/gallery/portrait_battle/` These tags and functions allow for portrait battles.
+* `#luigis_mansion_3ds_remake:room/gallery/check_painting`, This tag allows adding paintings to the interaction list.
+* `#luigis_mansion_3ds_remake:room/gallery/check_trophy`, `#luigis_mansion_3ds_remake:room/gallery/interact_with_trophy`, These tags allow adding tasks to the trophy.
+
+# Predefined collections
+
+## Trophy tasks
+Values here refers to the FrameChoice score.
+
+```
+Values | Add-on             | Namespace                 | Data pack name
+1-5    | 3ds_remake         | luigis_mansion_3ds_remake | "file/Luigi's Mansion 3DS Remake"
+6      | trill_tower        | trill_tower               | "file/Thrill Tower"
+7      | evershade_tower    | evershade_tower           | "file/Evershade Tower"
+8      | last_resort_tower  | last_resort_tower         | "file/Last Resort Tower"
+9      | extensive_training | extensive_training        | "file/Extensive Training"
+```
