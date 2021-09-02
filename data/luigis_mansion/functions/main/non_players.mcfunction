@@ -14,13 +14,13 @@ scoreboard players reset #temp Move
 execute store result score #temp Time run data get entity @s ArmorItems[3].tag.CustomModelData
 execute if score #temp Time matches 96..97 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
 execute if score #temp Time matches 47..63 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 76
-execute if score #temp Time matches 86..87 store result entity @s HandItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 54
+execute if score #temp Time matches 86..87 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 54
 execute store result score #temp Time run data get entity @s HandItems[0].tag.CustomModelData
-execute if score #temp Time matches 96 store result entity @s ArmorItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
+execute if score #temp Time matches 96 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
 execute if score #temp Time matches 47..62 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 76
 execute if score #temp Time matches 86 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 54
 execute store result score #temp Time run data get entity @s HandItems[1].tag.CustomModelData
-execute if score #temp Time matches 96 store result entity @s ArmorItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
+execute if score #temp Time matches 96 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
 execute if score #temp Time matches 47..62 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 76
 execute if score #temp Time matches 86 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 54
 scoreboard players reset #temp Time
@@ -29,6 +29,11 @@ tag @s[tag=!reflection,scores={MirrorX=-2147483648..}] add mirrored
 tag @s[tag=!reflection,scores={MirrorZ=-2147483648..}] add mirrored
 execute if entity @s[tag=mirrored] run function luigis_mansion:entities/reflection/non_player
 tag @s[tag=mirrored] remove mirrored
+scoreboard players reset @s[tag=model_piece] LightX
+scoreboard players reset @s[tag=model_piece] LightY
+scoreboard players reset @s[tag=model_piece] LightZ
+scoreboard players reset @s[tag=model_piece] MirrorX
+scoreboard players reset @s[tag=model_piece] MirrorZ
 
 data merge entity @s[type=minecraft:item] {Invulnerable:1b,Air:0}
 data merge entity @s[type=minecraft:item] {Air:1}
