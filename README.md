@@ -61,8 +61,7 @@ Values here refers to the FrameChoice score.
 ```
 Values | Add-on             | Namespace                 | Data pack name
 1-5    | 3ds_remake         | luigis_mansion_3ds_remake | "file/Luigi's Mansion 3DS Remake"
-6      | trill_tower        | trill_tower               | "file/Thrill Tower"
-7      | evershade_tower    | evershade_tower           | "file/Evershade Tower"
-8      | last_resort_tower  | last_resort_tower         | "file/Last Resort Tower"
-9      | extensive_training | extensive_training        | "file/Extensive Training"
+6      | beta_mansion       | beta_mansion              | "file/Luigi's Beta Mansion"
+7      | trill_tower        | trill_tower               | "file/Thrill Tower"
+8      | extensive_training | extensive_training        | "file/Extensive Training"
 ```
