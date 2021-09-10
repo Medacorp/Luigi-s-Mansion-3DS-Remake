@@ -12,17 +12,17 @@ execute if entity @s[tag=burning_floor] run function luigis_mansion:blocks/burni
 function #luigis_mansion:entities
 scoreboard players reset #temp Move
 execute store result score #temp Time run data get entity @s ArmorItems[3].tag.CustomModelData
-execute if score #temp Time matches 96..97 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
-execute if score #temp Time matches 47..63 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 76
-execute if score #temp Time matches 86..87 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 54
+execute if score #temp Time matches 47..63 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 78
+execute if score #temp Time matches 86..87 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 56
+execute if score #temp Time matches 98..99 store result entity @s ArmorItems[3].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
 execute store result score #temp Time run data get entity @s HandItems[0].tag.CustomModelData
-execute if score #temp Time matches 96 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
-execute if score #temp Time matches 47..62 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 76
-execute if score #temp Time matches 86 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 54
+execute if score #temp Time matches 47..62 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 78
+execute if score #temp Time matches 86 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 56
+execute if score #temp Time matches 98 store result entity @s HandItems[0].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
 execute store result score #temp Time run data get entity @s HandItems[1].tag.CustomModelData
-execute if score #temp Time matches 96 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
-execute if score #temp Time matches 47..62 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 76
-execute if score #temp Time matches 86 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 54
+execute if score #temp Time matches 47..62 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 78
+execute if score #temp Time matches 86 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 56
+execute if score #temp Time matches 98 store result entity @s HandItems[1].tag.CustomModelData int 1 run scoreboard players add #temp Time 46
 scoreboard players reset #temp Time
 
 tag @s[tag=!reflection,scores={MirrorX=-2147483648..}] add mirrored
