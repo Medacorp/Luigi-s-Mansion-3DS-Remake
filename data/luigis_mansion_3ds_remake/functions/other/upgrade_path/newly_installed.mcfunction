@@ -32,6 +32,12 @@ data remove storage luigis_mansion:data current_state.new_ghosts_caught
 execute if score #temp Time matches 10.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.beginner.task_4 set value 1b
 scoreboard players reset #temp Time
 scoreboard players reset #temp Money
+execute if data storage luigis_mansion:data current_state.ghosts_caught[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_ghost_count/fake_door
+execute if data storage luigis_mansion:data current_state.new_ghosts_caught run data modify storage luigis_mansion:data current_state.ghosts_caught set from storage luigis_mansion:data current_state.new_ghosts_caught
+data remove storage luigis_mansion:data current_state.new_ghosts_caught
+execute if score #temp Time matches 1.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.beginner.task_8 set value 1b
+scoreboard players reset #temp Time
+scoreboard players reset #temp Money
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_portrait_count/bronze
 execute if score #temp Time matches 5.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.beginner.task_9 set value 1b
 execute if score #temp Time matches 23.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.normal.task_3 set value 1b

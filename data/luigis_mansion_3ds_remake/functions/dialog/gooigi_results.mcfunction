@@ -1,4 +1,5 @@
-scoreboard players add @s[scores={Dialog=1..}] Dialog 1
+execute if entity @a[scores={EGaddGPRChoice=1..},limit=1] run scoreboard players add @s[scores={Dialog=562..}] Dialog 1
+scoreboard players add @s[scores={Dialog=1..561}] Dialog 1
 execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s Dialog 1
 scoreboard players set #force_gbh_screen Selected 1
 execute if entity @s[scores={Dialog=1}] as @a[scores={Room=-3}] run function luigis_mansion_3ds_remake:other/music/set/future_e_gadd
@@ -14,10 +15,15 @@ execute if entity @s[scores={Dialog=336}] if score #players Totals matches 1 run
 execute if entity @s[scores={Dialog=336}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.2.more"}]}
 execute if entity @s[scores={Dialog=456}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.3","with":[{"selector":"@a[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=456}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.3.more"}]}
-tag @s[scores={Dialog=560}] remove gooigi_results
 execute if entity @s[scores={Dialog=560}] as @a[scores={Room=-3}] run function luigis_mansion:other/music/set/credits
-execute if entity @s[scores={Dialog=560}] run function luigis_mansion:entities/player/reset_mansion
+execute if entity @s[scores={Dialog=560}] run function luigis_mansion:entities/mario/delete_mansion_data
 execute if entity @s[scores={Dialog=560}] run scoreboard players set #mansion_type Selected -1
 execute if entity @s[scores={Dialog=560}] run scoreboard players set #mansion_data_index Selected -1
 execute if entity @s[scores={Dialog=560}] run scoreboard players set #previous_mansion_index Selected -1
-scoreboard players reset @s[scores={Dialog=560}] Dialog
+execute if entity @s[scores={Dialog=561}] run tellraw @a[tag=same_room] {"translate":"luigis_mansion:message.save.yes","color":"green","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 1"},"extra":[{"text":"\n"},{"translate":"luigis_mansion:message.save.no","clickEvent":{"action":"run_command","value":"/trigger EGaddGPRChoice set 2"}}]}
+execute if entity @s[scores={Dialog=561}] run scoreboard players enable @a[tag=same_room] EGaddGPRChoice
+execute if entity @s[scores={Dialog=562}] unless entity @a[tag=same_room,limit=1] run scoreboard players set @s Dialog 563
+execute if entity @s[scores={Dialog=563}] as @a[scores={EGaddGPRChoice=1},limit=1] run function luigis_mansion:data/save
+tag @s[scores={Dialog=563}] remove gooigi_results
+execute if entity @s[scores={Dialog=563}] run scoreboard players reset @a[tag=same_room] EGaddGPRChoice
+scoreboard players reset @s[scores={Dialog=563}] Dialog
