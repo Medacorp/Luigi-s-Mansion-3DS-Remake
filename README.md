@@ -2,6 +2,8 @@ To receive development build updates, pull from https://github.com/Dhranios/Luig
 
 Official add-on for [Luigi's Mansion](https://github.com/Dhranios/Luigi-s-Mansion), see that repository for more information.
 
+WARNING! This data pack will always load itself at position 2!
+
 # Changes
 Ghost behavioral changes the add-on applies:
 * Using a flashlight on a temper terror, flash or blue blaze makes them "smug", laugh and then disappear, rather than ignore and continue moving/attacking; the functions for being smug exist in the base map.
@@ -13,7 +15,11 @@ Room -4 is the gallery, regardless of add-on or not. The add-on will simply tele
 
 The new gallery's functions are under `luigis_mansion_3ds_remake:room/gallery/`.
 
-The hidden mansion is replaced, but only a handful of the original files are overwritten to do so, allowing other add-ons to change both hidden mansions separately.
+The hidden mansion is replaced, but only a small amount of the original files are overwritten to do so, allowing other add-ons to change both hidden mansions separately.
+
+If you make any add-ons that change the hidden mansion, overwrite the file with the following commands to support both versions:
+`execute unless score #3ds_remake Loaded matches 1.. run function <vanilla version>'
+`execute if score #3ds_remake Loaded matches 1.. run function <3ds version>'
 
 The new hidden mansion's functions are under `luigis_mansion_3ds_remake:room/hidden/`.
 

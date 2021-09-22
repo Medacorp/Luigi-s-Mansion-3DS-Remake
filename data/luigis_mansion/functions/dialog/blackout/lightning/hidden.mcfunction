@@ -1,1 +1,1 @@
-function luigis_mansion:dialog/blackout/lightning
+function luigis_mansion:dialog/blackout/lightning/normal
