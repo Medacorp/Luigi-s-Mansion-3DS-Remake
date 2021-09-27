@@ -1,8 +1,9 @@
 execute if entity @a[scores={EGaddGPRChoice=1..},limit=1] run scoreboard players add @s[scores={Dialog=562..}] Dialog 1
 scoreboard players add @s[scores={Dialog=1..561}] Dialog 1
 execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s Dialog 1
-scoreboard players set #force_gbh_screen Selected 1
-execute if entity @s[scores={Dialog=1}] as @a[scores={Room=-3}] run function luigis_mansion_3ds_remake:other/music/set/future_e_gadd
+scoreboard players set @a[tag=same_room] ForceScreen 1
+execute facing entity @e[tag=same_room,tag=!spectator,sort=nearest,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
+execute if entity @s[scores={Dialog=1..559}] as @a[tag=same_room] unless entity @s[scores={MusicGroup=1,MusicType=1}] run function luigis_mansion_3ds_remake:other/music/set/future_e_gadd
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.1","with":[{"selector":"@a[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.1.more"}]}
 execute if entity @s[scores={Dialog=136}] unless data storage luigis_mansion:data current_state.current_data.gooigi_stats if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.no","with":[{"selector":"@a[gamemode=!spectator]"}]}]}
@@ -15,7 +16,7 @@ execute if entity @s[scores={Dialog=336}] if score #players Totals matches 1 run
 execute if entity @s[scores={Dialog=336}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.2.more"}]}
 execute if entity @s[scores={Dialog=456}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.3","with":[{"selector":"@a[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=456}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.3.more"}]}
-execute if entity @s[scores={Dialog=560}] as @a[scores={Room=-3}] run function luigis_mansion:other/music/set/credits
+execute if entity @s[scores={Dialog=560..563}] as @a[tag=same_room] unless entity @s[scores={MusicGroup=0,MusicType=40}] run function luigis_mansion:other/music/set/credits
 execute if entity @s[scores={Dialog=560}] run function luigis_mansion:entities/mario/delete_mansion_data
 execute if entity @s[scores={Dialog=560}] run scoreboard players set #mansion_type Selected -1
 execute if entity @s[scores={Dialog=560}] run scoreboard players set #mansion_data_index Selected -1

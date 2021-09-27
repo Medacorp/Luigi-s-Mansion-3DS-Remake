@@ -8,13 +8,13 @@ execute if entity @s[scores={Dialog=1}] if score #players Totals matches 1 run t
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.1.more"}]}
 tag @s[scores={Dialog=56}] remove nod
 execute if entity @s[scores={Dialog=56}] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0
-execute if entity @s[scores={Dialog=56}] as @a[scores={Room=-1}] run function luigis_mansion:other/music/set/non_overwritten_silence
-execute if entity @s[scores={Dialog=56..168}] if score #temp Dialog matches 0..4 run scoreboard players set #force_gbh_screen Selected 1
-execute if entity @s[scores={Dialog=169..1564}] run scoreboard players set #force_gbh_screen Selected 1
+execute if entity @s[scores={Dialog=56..168}] as @a[tag=this_model] unless entity @s[scores={MusicGroup=0,MusicType=-1}] run function luigis_mansion:other/music/set/non_overwritten_silence
+execute if entity @s[scores={Dialog=56..168}] if score #temp Dialog matches 0..4 run scoreboard players set @a[tag=same_room] ForceScreen 1
+execute if entity @s[scores={Dialog=169..1564}] run scoreboard players set @a[tag=same_room] ForceScreen 1
 tag @s[scores={Dialog=96}] add listen
 execute if entity @s[scores={Dialog=96}] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0
 execute if entity @s[scores={Dialog=96}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.2"}]}
-execute if entity @s[scores={Dialog=168}] as @a[scores={Room=-1}] run function luigis_mansion_3ds_remake:other/music/set/future_e_gadd
+execute if entity @s[scores={Dialog=168..1564}] as @a[tag=same_room] unless entity @s[scores={MusicGroup=1,MusicType=1}] run function luigis_mansion_3ds_remake:other/music/set/future_e_gadd
 execute if entity @s[scores={Dialog=208}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.3"}]}
 tag @s[scores={Dialog=228}] remove listen
 tag @s[scores={Dialog=228}] add hit
@@ -48,8 +48,7 @@ execute if entity @s[scores={Dialog=1236}] run tellraw @a[tag=same_room] {"trans
 execute if entity @s[scores={Dialog=1324}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.17"}]}
 execute if entity @s[scores={Dialog=1420}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.18"}]}
 execute if entity @s[scores={Dialog=1524}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.19"}]}
-execute if entity @s[scores={Dialog=1564}] as @a[scores={Room=-1}] run function luigis_mansion:other/music/set/non_overwritten_silence
-execute if entity @s[scores={Dialog=1564}] as @a[scores={Room=-1}] run function luigis_mansion:other/music/set/lab
+execute if entity @s[scores={Dialog=1564}] as @a[tag=same_room] run function luigis_mansion:other/music/set/silence
 tag @s[scores={Dialog=1584}] add nod
 execute if entity @s[scores={Dialog=1584}] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0
 execute if entity @s[scores={Dialog=1584}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.20"}]}

@@ -12,4 +12,4 @@ execute in minecraft:overworld run setblock 27 0 0 minecraft:oak_sign{Text1:'{"e
 execute in minecraft:overworld run data modify entity @e[tag=gooigi_model,tag=source,tag=new,limit=1] CustomName set from block 27 0 0 Text1
 execute in minecraft:overworld run setblock 27 0 0 minecraft:bedrock
 kill @e[distance=..0.1,type=minecraft:item,limit=1]
-tag @e[tag=luigi_model,tag=new] remove new
+tag @e[tag=gooigi_model,tag=new] remove new

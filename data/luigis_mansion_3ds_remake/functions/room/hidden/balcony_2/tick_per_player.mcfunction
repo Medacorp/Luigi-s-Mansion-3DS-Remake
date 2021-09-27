@@ -4,4 +4,4 @@ tag @s add seen_room_name
 
 execute if data storage luigis_mansion:data current_state.current_data.rooms.balcony_2{seen:0b} run function luigis_mansion_3ds_remake:room/hidden/balcony_2/set_seen
 
-execute if entity @e[tag=boolossus,limit=1] run scoreboard players set #force_radar Selected 1
+execute if entity @e[tag=boolossus,limit=1] run scoreboard players set @s ForceRadar 1
