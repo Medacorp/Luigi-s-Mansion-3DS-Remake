@@ -2,7 +2,7 @@ To receive development build updates, pull from https://github.com/Dhranios/Luig
 
 Official add-on for [Luigi's Mansion](https://github.com/Dhranios/Luigi-s-Mansion), see that repository for more information.
 
-WARNING! This data pack will always load itself at position 2!
+WARNING! This data pack will always load itself right after the Luigi's Mansion data pack!
 
 # Changes
 Ghost behavioral changes the add-on applies:
