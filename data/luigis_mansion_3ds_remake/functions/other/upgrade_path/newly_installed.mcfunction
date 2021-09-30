@@ -74,6 +74,8 @@ execute if data storage luigis_mansion:data current_state.current_data{data_inde
 execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].rooms.hidden_room{seen:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.task_8 set value 1b
 execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].rooms.sealed_room{seen:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.task_8 set value 1b
 execute if data storage luigis_mansion:data current_state.high_scores[{data_index:0}] run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.normal.task_4 set value 1b
+execute if data storage luigis_mansion:data current_state.current_data{data_index:0}.obtained_keys{hallway_8:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.normal.task_5 set value 1b
+execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].obtained_keys{hallway_8:1b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.normal.task_5 set value 1b
 execute if data storage luigis_mansion:data current_state.high_scores[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_highest_score
 execute if data storage luigis_mansion:data new_high_scores run data modify storage luigis_mansion:data current_state.high_scores set from storage luigis_mansion:data new_high_scores
 data remove storage luigis_mansion:data new_high_scores
@@ -109,9 +111,11 @@ execute if score #temp Time matches ..216000 if data storage luigis_mansion_3ds_
 scoreboard players reset #temp Time
 scoreboard players reset #temp Money
 execute if score #mansion_type Selected matches 1 run function luigis_mansion_3ds_remake:other/upgrade_path/convert_hidden_data
+execute if entity @a[advancements={luigis_mansion:lab/cleared_hidden_mansion=true}] unless data storage luigis_mansion:data current_state.high_scores[{data_index:1}] run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.hard.task_5 set value 1b
+execute if entity @a[advancements={luigis_mansion:lab/cleared_hidden_mansion=true}] unless data storage luigis_mansion:data current_state.high_scores[{data_index:1}] if data storage luigis_mansion:data current_state.high_scores[{data_index:0}] run function luigis_mansion_3ds_remake:other/upgrade_path/clone_high_score
+execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.hard{task_5:1b} run advancement grant @a only luigis_mansion_3ds_remake:lab/cleared_hidden_mansion
 execute if data storage luigis_mansion:data rooms.training_room{cleared:1b} run data merge storage luigis_mansion_3ds_remake:data {obtained_gameboy_horror_part:1b,shown_gameboy_horror_part:1b,spoke_with_future_e_gadd:1b}
 execute if data storage luigis_mansion:data saved_state.mansion_data[{data_index:0}].boos[{name:"booligan"}] run data modify storage luigis_mansion:data saved_state.mansion_data[{data_index:0}].boos[{name:"booligan"}].name set value boolldog
 execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].boos[{name:"booligan"}] run data modify storage luigis_mansion:data current_state.mansion_data[{data_index:0}].boos[{name:"booligan"}].name set value boolldog
 execute if data storage luigis_mansion:data current_state.current_data{data_index:0}.boos[{name:"booligan"}] run data modify storage luigis_mansion:data current_state.current_data{data_index:0}.boos[{name:"booligan"}].name set value boolldog
-scoreboard players set #can_clear_hidden Selected 0
 scoreboard players set #can_get_platinum_boss Selected 1
