@@ -1,14 +1,14 @@
 tag @s remove dark_room
 function #luigis_mansion:room/dark_room
 
-execute if entity @s[tag=!looking_at_map] run function #luigis_mansion:items
-function luigis_mansion:items/gameboy_horror
-function luigis_mansion:blocks/gravity_swap
-function luigis_mansion:blocks/blockade
+execute if entity @s[tag=!looking_at_map,tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function #luigis_mansion:items
+execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function luigis_mansion:items/gameboy_horror
+execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function luigis_mansion:blocks/gravity_swap
+execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function luigis_mansion:blocks/blockade
 execute if entity @s[tag=warp] run function luigis_mansion:items/gameboy_horror/warp
 execute if entity @s[tag=grabbed] run function luigis_mansion:entities/player/grabbed
 
-execute if entity @s[scores={Talk=1..},tag=!gooigi] run function luigis_mansion:target_villager
+execute if entity @s[scores={Talk=1..},tag=!death_animation,tag=!revive_animation,tag=!gooigi] run function luigis_mansion:target_villager
 scoreboard players set @s[scores={Talk=1..}] Talk 0
 
 execute rotated ~ 0 positioned ^ ^ ^-4 run function luigis_mansion:entities/player/spawn_ghosts
@@ -24,7 +24,7 @@ execute if entity @s[scores={Pull=20..},gamemode=!creative] run function luigis_
 scoreboard players remove @s[scores={Pull=1..}] Pull 1
 tag @s remove pulled
 
-execute if entity @s[scores={Health=..0}] run function luigis_mansion:entities/player/death
+execute if entity @s[scores={Health=..0},tag=!death_animation,tag=!revive_animation] run function luigis_mansion:entities/player/death
 execute if entity @s[scores={Health=1..},tag=already_added_to_list] run function luigis_mansion:entities/player/remove_dead_entry
 tag @s[scores={Health=1..}] remove already_added_to_list
 
@@ -71,7 +71,10 @@ tag @s[scores={MirrorZ=-2147483648..},nbt=!{ActiveEffects:[{Id:14b}]}] add mirro
 scoreboard players reset @s[tag=!mirrored] ReflectionNr
 execute if entity @s[tag=mirrored] run function luigis_mansion:entities/reflection/player
 execute at @s[scores={LightX=-2147483648..},nbt=!{ActiveEffects:[{Id:14b}]}] run function luigis_mansion:other/cast_shadow/2_tall
-tag @s remove spectator
+tag @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] remove spectator
 
 effect give @s minecraft:invisibility 1000000 0 true
 execute if entity @s[tag=!gooigi] run function luigis_mansion:animations/luigi
+execute if entity @s[tag=death_animation,tag=!gooigi] run function luigis_mansion:entities/player/death_animation
+execute if entity @s[tag=revive_animation] run function luigis_mansion:entities/player/revive_animation
+execute if entity @s[tag=polterpup_reviving] run function luigis_mansion_3ds_remake:dialog/polterpup_revival

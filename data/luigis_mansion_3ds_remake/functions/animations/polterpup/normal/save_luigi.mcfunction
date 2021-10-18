@@ -165,7 +165,9 @@ execute at @s[scores={AnimationProg=186..190}] run teleport @s ^ ^ ^0.1
 execute at @s[scores={AnimationProg=191..195}] run teleport @s ~ ~ ~ ~-36 ~
 execute at @s[scores={AnimationProg=196..200}] run teleport @s ^ ^0.15 ^-0.13
 execute at @s[scores={AnimationProg=251..255}] run teleport @s ^ ^-0.15 ^0.13
+execute at @s[scores={AnimationProg=255}] run teleport @s ~ ~ ~ ~10 ~
 execute at @s[scores={AnimationProg=256..265}] run teleport @s ^ ^0.05 ^0.1
+execute at @s[scores={AnimationProg=266}] run teleport @s ~ ~ ~ ~-10 ~
 execute at @s[scores={AnimationProg=300..309}] run teleport @s ^ ^-0.05 ^0.1
 execute at @s[scores={AnimationProg=310..330}] run teleport @s ^ ^ ^0.1
 execute at @s[scores={AnimationProg=331..340}] run teleport @s ^ ^-0.2 ^0.1

@@ -13,3 +13,4 @@ execute in minecraft:overworld run data modify entity @e[tag=gooigi_model,tag=so
 execute in minecraft:overworld run setblock 27 0 0 minecraft:bedrock
 kill @e[distance=..0.1,type=minecraft:item,limit=1]
 tag @e[tag=gooigi_model,tag=new] remove new
+tag @s add spawn_animation

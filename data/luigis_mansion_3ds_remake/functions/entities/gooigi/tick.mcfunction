@@ -3,7 +3,9 @@ execute facing entity @e[tag=same_room,tag=!spectator,sort=nearest,limit=1] feet
 
 execute if entity @a[tag=gooigi,limit=1] run kill @s
 
-function luigis_mansion_3ds_remake:animations/gooigi
+execute if entity @s[tag=spawn_animation,scores={PosX=1..}] run function luigis_mansion_3ds_remake:entities/gooigi/spawn_animation
+
+execute if entity @s[scores={PosX=1..}] run function luigis_mansion_3ds_remake:animations/gooigi
 
 scoreboard players operation @s OtherX = @s PosX
 scoreboard players operation @s OtherY = @s PosY
