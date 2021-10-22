@@ -7,6 +7,7 @@ execute if entity @s[scores={AnimationProg=1}] run data merge entity @e[tag=this
 execute if entity @s[scores={AnimationProg=1}] run data merge entity @e[tag=this_model,tag=tail,limit=1] {Pose:{Head:[-90.0f,0.0f,0.01f]}}
 execute if entity @s[scores={AnimationProg=1}] run data merge entity @e[tag=this_model,tag=right_leg,limit=1] {Pose:{Head:[-90.0f,0.0f,0.01f]}}
 execute if entity @s[scores={AnimationProg=1}] run data merge entity @e[tag=this_model,tag=left_leg,limit=1] {Pose:{Head:[-90.0f,0.0f,0.01f]}}
+execute if entity @s[scores={AnimationProg=1}] run data merge entity @e[tag=this_model,tag=gold_bone,limit=1] {Pose:{Head:[0.0f,0.01f,0.0f]}}
 execute store result score #temp Time run data get entity @s Pose.Head[0]
 execute if entity @s[scores={AnimationProg=1..10}] store result entity @s Pose.Head[0] float 1 run scoreboard players add #temp Time 9
 execute if entity @s[scores={AnimationProg=38..40}] store result entity @s Pose.Head[0] float 1 run scoreboard players remove #temp Time 5
@@ -148,6 +149,8 @@ execute if entity @s[scores={AnimationProg=316..325}] store result entity @e[tag
 execute if entity @s[scores={AnimationProg=326..335}] store result entity @e[tag=this_model,tag=left_leg,limit=1] Pose.Head[0] float 1 run scoreboard players remove #temp Time 5
 execute if entity @s[scores={AnimationProg=336..340}] store result entity @e[tag=this_model,tag=left_leg,limit=1] Pose.Head[0] float 1 run scoreboard players add #temp Time 5
 execute if entity @s[scores={AnimationProg=331..340}] store result entity @e[tag=this_model,tag=left_leg,limit=1] Pose.Head[0] float 1 run scoreboard players add #temp Time 9
+execute store result score #temp Time run data get entity @e[tag=this_model,tag=gold_bone,limit=1] Pose.Head[2]
+execute if entity @s[scores={AnimationProg=186..220}] store result entity @e[tag=this_model,tag=gold_bone,limit=1] Pose.Head[2] float 1 run scoreboard players remove #temp Time 18
 scoreboard players reset #temp Time
 
 execute at @s[scores={AnimationProg=1..5}] run teleport @s ^ ^0.4 ^0.1
@@ -171,6 +174,12 @@ execute at @s[scores={AnimationProg=266}] run teleport @s ~ ~ ~ ~-10 ~
 execute at @s[scores={AnimationProg=300..309}] run teleport @s ^ ^-0.05 ^0.1
 execute at @s[scores={AnimationProg=310..330}] run teleport @s ^ ^ ^0.1
 execute at @s[scores={AnimationProg=331..340}] run teleport @s ^ ^-0.2 ^0.1
+data modify entity @s Rotation[1] set from entity @s Pose.Head[0]
+execute at @s unless entity @s[scores={AnimationProg=181..230}] run teleport @e[tag=this_model,tag=gold_bone,limit=1] ^ ^-0.05 ^0.3 ~ ~
+execute if entity @s[scores={AnimationProg=181}] as @e[tag=this_model,tag=gold_bone,limit=1] at @s run teleport @s ^ ^ ^ ~5 ~
+execute if entity @s[scores={AnimationProg=181..205}] as @e[tag=this_model,tag=gold_bone,limit=1] at @s run teleport @s ^-0.03 ^0.1 ^ ~ ~
+execute if entity @s[scores={AnimationProg=206..230}] as @e[tag=this_model,tag=gold_bone,limit=1] at @s run teleport @s ^-0.03 ^-0.2 ^ ~ ~
+data modify entity @s Rotation[1] set value 0f
 execute at @s run teleport @e[tag=this_model,tag=body,limit=1] ^ ^ ^ ~ ~
 execute as @e[tag=this_model,tag=body,limit=1] run data modify entity @s Rotation[1] set from entity @s Pose.Head[0]
 execute at @e[tag=this_model,tag=body,limit=1] run teleport @e[tag=this_model,tag=right_arm,limit=1] ^-0.2 ^-0.1 ^-0.2 ~ ~
@@ -182,9 +191,11 @@ execute at @e[tag=this_model,tag=body,limit=1] run teleport @e[tag=this_model,ta
 data modify entity @s[scores={AnimationProg=38}] ArmorItems[3].tag merge value {CustomModelData:152}
 data modify entity @s[scores={AnimationProg=42}] ArmorItems[3].tag merge value {CustomModelData:149}
 data modify entity @s[scores={AnimationProg=145}] ArmorItems[3].tag merge value {CustomModelData:152}
+execute if entity @s[scores={AnimationProg=145}] run data modify entity @e[tag=this_model,tag=gold_bone,limit=1] ArmorItems[3] set value {id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:5,CustomModelData:32}}
 data modify entity @s[scores={AnimationProg=185}] ArmorItems[3].tag merge value {CustomModelData:149}
 data modify entity @s[scores={AnimationProg=200}] ArmorItems[3].tag merge value {CustomModelData:152}
 data modify entity @s[scores={AnimationProg=220}] ArmorItems[3].tag merge value {CustomModelData:149}
+execute if entity @s[scores={AnimationProg=225}] run data modify entity @e[tag=this_model,tag=gold_bone,limit=1] ArmorItems[3] set value {}
 data modify entity @s[scores={AnimationProg=240}] ArmorItems[3].tag merge value {Damage:2,CustomModelData:153}
 data modify entity @s[scores={AnimationProg=250}] ArmorItems[3].tag merge value {Damage:1,CustomModelData:149}
 data modify entity @s[scores={AnimationProg=278}] ArmorItems[3].tag merge value {CustomModelData:153}
@@ -219,7 +230,6 @@ execute if entity @s[scores={AnimationProg=240}] run playsound luigis_mansion_3d
 execute if entity @s[scores={AnimationProg=260}] run playsound luigis_mansion_3ds_remake:entity.polterpup.jump_bark neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={AnimationProg=280}] run playsound luigis_mansion_3ds_remake:entity.polterpup.lick2 neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={AnimationProg=300}] run playsound luigis_mansion_3ds_remake:entity.polterpup.last_bark neutral @a[tag=same_room] ~ ~ ~ 1
-execute if entity @s[scores={AnimationProg=320}] run playsound luigis_mansion_3ds_remake:entity.polterpup.last_bark2 neutral @a[tag=same_room] ~ ~ ~ 1
 
 tag @s[scores={AnimationProg=340..}] add remove_from_existence
 scoreboard players set @s[scores={AnimationProg=340..}] AnimationProg 0
