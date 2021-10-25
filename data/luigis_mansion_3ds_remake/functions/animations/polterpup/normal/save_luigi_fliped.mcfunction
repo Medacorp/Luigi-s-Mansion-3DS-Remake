@@ -177,8 +177,8 @@ execute at @s[scores={AnimationProg=331..340}] run teleport @s ^ ^0.2 ^0.1
 data modify entity @s Rotation[1] set from entity @s Pose.Head[0]
 execute at @s unless entity @s[scores={AnimationProg=181..230}] run teleport @e[tag=this_model,tag=gold_bone,limit=1] ^ ^0.05 ^0.3 ~ ~
 execute if entity @s[scores={AnimationProg=181}] as @e[tag=this_model,tag=gold_bone,limit=1] at @s run teleport @s ^ ^ ^ ~-5 ~
-execute if entity @s[scores={AnimationProg=181..119}] as @e[tag=this_model,tag=gold_bone,limit=1] at @s run teleport @s ^0.03 ^-0.1 ^ ~ ~
-execute if entity @s[scores={AnimationProg=200..230}] as @e[tag=this_model,tag=gold_bone,limit=1] at @s run teleport @s ^0.03 ^0.2 ^ ~ ~
+execute if entity @s[scores={AnimationProg=181..205}] as @e[tag=this_model,tag=gold_bone,limit=1] at @s run teleport @s ^0.03 ^-0.1 ^ ~ ~
+execute if entity @s[scores={AnimationProg=206..230}] as @e[tag=this_model,tag=gold_bone,limit=1] at @s run teleport @s ^0.03 ^0.2 ^ ~ ~
 data modify entity @s Rotation[1] set value 0f
 execute at @s run teleport @e[tag=this_model,tag=body,limit=1] ^ ^ ^ ~ ~
 execute as @e[tag=this_model,tag=body,limit=1] store result entity @s Rotation[1] float -1 run data get entity @s Pose.Head[0]
