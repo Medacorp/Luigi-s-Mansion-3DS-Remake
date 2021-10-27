@@ -2,7 +2,7 @@ execute unless entity @s[scores={MusicGroup=0,MusicType=8}] unless entity @s[sco
 title @s[tag=!seen_room_name] title {"translate":"luigis_mansion:location.balcony"}
 tag @s add seen_room_name
 
-execute if data storage luigis_mansion:data current_state.current_data.rooms.balcony_2{seen:0b} run function luigis_mansion_3ds_remake:room/hidden/balcony_2/set_seen
+execute if data storage luigis_mansion:data current_state.current_data.rooms.balcony_2{seen:0b} run function luigis_mansion:room/normal/balcony_2/set_seen
 
 execute if entity @s[x=681.5,y=120,z=28.0,distance=..4] if data storage luigis_mansion:data current_state.current_data.obtained_keys{hallway_18:1b} unless entity @a[tag=blackout_lightning,limit=1] unless data storage luigis_mansion:data current_state.current_data.rooms.breaker_room{cleared:1b} run tag @a[limit=1,tag=!blackout] add blackout_lightning
 

@@ -1,7 +1,7 @@
 execute unless entity @e[tag=gooigi_model,limit=1] run function luigis_mansion_3ds_remake:spawn_entities/gooigi/player
 
 execute if entity @a[tag=same_room,tag=!gooigi,limit=1] run scoreboard players operation @s FollowID = @a[tag=same_room,tag=!gooigi,limit=1] ID
-execute if score #players Totals matches 1.. unless entity @a[tag=same_room,tag=!gooigi,limit=1] run function luigis_mansion_3ds_remake:entities/player/gooigi_follow
+execute if entity @s[tag=!spawn_animation,tag=!death_animation] if score #players Totals matches 1.. unless entity @a[tag=same_room,tag=!gooigi,limit=1] run function luigis_mansion_3ds_remake:entities/player/gooigi_follow
 
 execute if score #non_gooigis Totals matches 0 if score #all_non_gooigis Totals matches 1.. run scoreboard players set @s Health 0
 execute if score #non_gooigis Totals matches 0 if score #all_non_gooigis Totals matches 0 run function luigis_mansion_3ds_remake:entities/player/un_gooigi

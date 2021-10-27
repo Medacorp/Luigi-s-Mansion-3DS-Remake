@@ -1,3 +1,4 @@
+scoreboard players set #freeze_timer Selected 1
 scoreboard players add @s Time 1
 execute if entity @s[scores={Time=2}] run stopsound @a[scores={Room=45}] music
 execute if entity @s[scores={Time=2}] run scoreboard players set @a[scores={Room=45}] Music 140
@@ -18,6 +19,6 @@ execute if entity @s[scores={Time=120}] positioned 669 22 99 run function luigis
 execute if entity @s[scores={Time=120}] positioned 665 22 101 run function luigis_mansion:spawn_furniture/lit_candles
 execute if entity @s[scores={Time=120}] positioned 662 22 97 run function luigis_mansion:spawn_furniture/lit_candles
 execute if entity @s[scores={Time=120}] run function luigis_mansion_3ds_remake:room/hidden/astral_hall/wave_2
-teleport @s[x=666.5,y=20.5,z=97.5,distance=1..] 666 20.5 97
+teleport @s[x=666.5,y=20.5,z=-81.5,distance=1..] 666 20.5 -82
 tag @s[scores={Time=120}] remove astral_hall_ambush
 scoreboard players reset @s[scores={Time=120}] Time

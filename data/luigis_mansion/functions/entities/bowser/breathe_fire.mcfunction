@@ -2,7 +2,7 @@ scoreboard players add @s ActionTime 1
 scoreboard players set @s[scores={ActionTime=1}] AnimationProg 0
 execute if entity @s[scores={ActionTime=1}] run playsound luigis_mansion:entity.bowser.breathe_fire hostile @a[tag=same_room] ~ ~ ~ 3
 teleport @s[scores={ActionTime=1..20}] ^ ^-0.15 ^0.1
-data modify entity @s[scores={ActionTime=15}] ArmorItems[3].tag.CustomModelData set value 90
+data modify entity @s[scores={ActionTime=15}] ArmorItems[3].tag.CustomModelData set value 91
 tag @s[scores={AnimationProg=21}] add can_decapitate
 execute if entity @s[scores={ActionTime=20}] run scoreboard players set @s Time 0
 execute if entity @s[scores={ActionTime=21..41}] run scoreboard players add @s Time 15

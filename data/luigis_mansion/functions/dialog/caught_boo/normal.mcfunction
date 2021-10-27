@@ -1,7 +1,7 @@
 scoreboard players set #freeze_timer Selected 1
 execute store result score #temp Boos run data get storage luigis_mansion:data current_state.current_data.boo_counter
 execute unless entity @s[scores={Variant=-10..}] if score #temp Boos matches 1 run scoreboard players set @s Variant -1
-execute if score #temp Boos matches 5 run scoreboard players set @s[scores={Dialog=10096}] Variant -2
+execute if score #temp Boos matches 5 run scoreboard players set @s[scores={GBHDialog=10096}] Variant -2
 execute unless entity @s[scores={Variant=-10..}] if score #temp Boos matches 10 run scoreboard players set @s Variant -4
 execute unless entity @s[scores={Variant=-10..}] if score #temp Boos matches 15 run scoreboard players set @s Variant -3
 execute unless entity @s[scores={Variant=-10..}] if score #temp Boos matches 17 run scoreboard players set @s Variant -6
