@@ -10,4 +10,5 @@ execute if entity @a[tag=follow_me,limit=1,tag=flipped_gravity] run tag @s add f
 scoreboard players operation @s Room = @a[tag=follow_me,limit=1] Room
 tag @a[tag=follow_me,limit=1] remove follow_me
 scoreboard players reset #temp FollowID
+playsound luigis_mansion_3ds_remake:entity.gooigi.vanish player @a[tag=same_room] ~ ~ ~ 1
 tag @e[tag=gooigi_model] add dead

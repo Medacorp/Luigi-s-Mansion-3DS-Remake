@@ -8,6 +8,10 @@ execute if score #non_gooigis Totals matches 0 if score #all_non_gooigis Totals 
 
 execute if entity @s[scores={Invulnerable=1..}] run function luigis_mansion_3ds_remake:entities/player/gooigi_melt
 
+execute unless entity @s[tag=!walking,tag=!running] if entity @s[scores={Sound=0}] run playsound luigis_mansion_3ds_remake:entity.gooigi.walk player @a[tag=same_room] ~ ~ ~ 1
+scoreboard players set @s[tag=walking,scores={Sound=0}] Sound 5
+scoreboard players set @s[tag=running,scores={Sound=0}] Sound 2
+
 # Gooigi cannot speak, so he cannot choose
 trigger ClairvoyaChoice add 0
 trigger EGaddCallChoice add 0
