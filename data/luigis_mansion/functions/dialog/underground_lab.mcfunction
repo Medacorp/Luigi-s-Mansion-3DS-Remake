@@ -96,6 +96,7 @@ execute if entity @s[scores={Dialog=124}] if entity @a[scores={EGaddLabChoice=0}
 execute if entity @s[scores={Dialog=124}] if entity @a[scores={EGaddLabChoice=0},limit=1] run scoreboard players set @s Dialog 201
 execute if entity @a[scores={EGaddLabChoice=1..4},limit=1] run tag @s[scores={Dialog=202}] remove listen
 execute if entity @a[scores={EGaddLabChoice=1..4},limit=1] run tag @s[scores={Dialog=202}] add nod
+execute if entity @s[scores={Dialog=202}] if entity @a[scores={EGaddLabChoice=5},limit=1] run scoreboard players set @s Dialog 57
 execute if entity @s[scores={Dialog=202}] if entity @a[scores={EGaddLabChoice=1..4},limit=1] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0
 execute if entity @s[scores={Dialog=202}] if entity @a[scores={EGaddLabChoice=1},limit=1] if score #toad_amiibo Selected matches 0 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.underground_lab.change_amiibo.2.toad.on"}]}
 execute if entity @s[scores={Dialog=202}] if entity @a[scores={EGaddLabChoice=1},limit=1] if score #toad_amiibo Selected matches 0 run playsound luigis_mansion:entity.e_gadd.talk.oh_yah_yaboh_yaboh neutral @a[tag=same_room] ~ ~ ~ 1
