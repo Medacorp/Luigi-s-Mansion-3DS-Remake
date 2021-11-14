@@ -110,6 +110,7 @@ data remove storage luigis_mansion:data new_high_scores
 execute if score #temp Time matches ..216000 if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_7:0b} run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.master.task_7 set value 1b
 scoreboard players reset #temp Time
 scoreboard players reset #temp Money
+scoreboard players set #can_get_platinum_boss Selected 0
 execute if score #mansion_type Selected matches 1 run function luigis_mansion_3ds_remake:other/upgrade_path/convert_hidden_data
 execute if entity @a[advancements={luigis_mansion:lab/cleared_hidden_mansion=true}] unless data storage luigis_mansion:data current_state.high_scores[{data_index:1}] run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.hard.task_5 set value 1b
 execute if entity @a[advancements={luigis_mansion:lab/cleared_hidden_mansion=true}] unless data storage luigis_mansion:data current_state.high_scores[{data_index:1}] if data storage luigis_mansion:data current_state.high_scores[{data_index:0}] run function luigis_mansion_3ds_remake:other/upgrade_path/clone_high_score
@@ -118,4 +119,3 @@ execute if data storage luigis_mansion:data rooms.training_room{cleared:1b} run 
 execute if data storage luigis_mansion:data saved_state.mansion_data[{data_index:0}].boos[{name:"booligan"}] run data modify storage luigis_mansion:data saved_state.mansion_data[{data_index:0}].boos[{name:"booligan"}].name set value boolldog
 execute if data storage luigis_mansion:data current_state.mansion_data[{data_index:0}].boos[{name:"booligan"}] run data modify storage luigis_mansion:data current_state.mansion_data[{data_index:0}].boos[{name:"booligan"}].name set value boolldog
 execute if data storage luigis_mansion:data current_state.current_data{data_index:0}.boos[{name:"booligan"}] run data modify storage luigis_mansion:data current_state.current_data{data_index:0}.boos[{name:"booligan"}].name set value boolldog
-scoreboard players set #can_get_platinum_boss Selected 1

@@ -1,5 +1,5 @@
 scoreboard players add @s[scores={Dialog=1..}] Dialog 1
-execute unless entity @s[scores={Dialog=1..}] if entity @a[gamemode=!spectator,distance=..2] run scoreboard players add @s Dialog 1
+execute unless entity @s[scores={Dialog=1..}] if entity @a[tag=!spectator,distance=..2] run scoreboard players add @s Dialog 1
 tag @s[scores={Dialog=1}] add shot_out
 execute if entity @s[scores={Dialog=1}] run playsound luigis_mansion:entity.mario.wowch neutral @a[tag=same_room] ~ ~ ~ 1
 scoreboard players set @s[scores={Dialog=20}] AnimationProg 0

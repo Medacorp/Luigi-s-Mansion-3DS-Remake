@@ -203,3 +203,4 @@ execute if score #sitting_room Ticking matches 1 run function #luigis_mansion:ro
 execute if score #guest_room Ticking matches 1 run function #luigis_mansion:room/hidden/guest_room/reset
 execute if score #artists_studio Ticking matches 1 run function #luigis_mansion:room/hidden/artists_studio/reset
 execute if score #secret_altar Ticking matches 1 run function #luigis_mansion:room/hidden/secret_altar/reset
+scoreboard players set #can_get_platinum_boss Selected 1
