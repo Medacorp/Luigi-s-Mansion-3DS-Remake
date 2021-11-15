@@ -7,7 +7,6 @@ execute store result score #multiply_damage Selected run data get storage luigis
 execute store result score #can_warp Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.can_warp
 execute store result score #can_revive Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.can_revive
 execute store result score #changing_max_health Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.changing_max_health
-execute store result score #can_get_platinum_boss Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.can_get_platinum_boss
 execute store result score #ghost_heart_size Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.ghost_heart_size
 execute store result score #radar_type Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.radar_type
 execute store result score #gbh_clock Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.gbh_clock

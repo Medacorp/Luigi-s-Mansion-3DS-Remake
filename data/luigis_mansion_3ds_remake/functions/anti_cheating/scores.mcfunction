@@ -9,7 +9,6 @@ scoreboard objectives add StrobulbCharge dummy
 team add NoCollision
 team modify NoCollision collisionRule never
 
-execute unless score #can_get_platinum_boss Selected matches 0..1 run scoreboard players set #can_get_platinum_boss Selected 0
 execute unless score #luigi_amiibo Selected matches 0..1 run scoreboard players set #luigi_amiibo Selected 0
 execute unless score #mario_amiibo Selected matches 0..1 run scoreboard players set #mario_amiibo Selected 0
 execute unless score #toad_amiibo Selected matches 0..1 run scoreboard players set #toad_amiibo Selected 0

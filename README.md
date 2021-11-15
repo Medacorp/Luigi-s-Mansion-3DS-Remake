@@ -8,7 +8,7 @@ WARNING! This data pack will always load itself right after the Luigi's Mansion 
 Ghost behavioral changes the add-on applies:
 * Using a flashlight on a temper terror, flash or blue blaze makes them "smug", laugh and then disappear, rather than ignore and continue moving/attacking; the functions for being smug exist in the base map.
 * Portrait ghost rank is also determined by top vacuum damage not just largest pearl grabbed; if you deal 90 damage in one go, you get gold, even if you leave the pearl behind.
-* Portrait ghosts have platinum rank for 140 damage in 1 go, or less than 5 damage for bosses if `#can_get_platinum_boss` is set to 1.
+* Portrait ghosts have platinum rank for 140 damage in 1 go, or less than 5 damage for bosses in the hidden mansion.
 * Strobulb flashlight type added, which ghosts can react to.
 
 Room -4 is the gallery, regardless of add-on or not. The add-on will simply teleport players in the old gallery to the new one, and never start ticking the old one.
