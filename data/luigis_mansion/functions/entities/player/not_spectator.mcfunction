@@ -1,9 +1,9 @@
 tag @s remove dark_room
 function #luigis_mansion:room/dark_room
 
-execute if entity @s[tag=!looking_at_map,tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function #luigis_mansion:items
-execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function luigis_mansion:items/gameboy_horror
-execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function luigis_mansion:blocks/gravity_swap
+execute if entity @s[tag=!looking_at_map,tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] run function #luigis_mansion:items
+execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] run function luigis_mansion:items/gameboy_horror
+execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] run function luigis_mansion:blocks/gravity_swap
 execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function luigis_mansion:blocks/blockade
 execute if entity @s[tag=warp] run function luigis_mansion:items/gameboy_horror/warp
 execute if entity @s[tag=grabbed] run function luigis_mansion:entities/player/grabbed
@@ -12,36 +12,16 @@ execute if entity @s[scores={Talk=1..},tag=!death_animation,tag=!revive_animatio
 scoreboard players set @s[scores={Talk=1..}] Talk 0
 
 execute rotated ~ 0 positioned ^ ^ ^-4 run function luigis_mansion:entities/player/spawn_ghosts
-execute if score #changing_max_health Selected matches 0 run title @s[gamemode=!creative,tag=!gooigi] actionbar {"translate":"luigis_mansion:message.health","with":[{"score":{"name":"@s","objective":"Health"}}],"color":"red"}
-execute if score #changing_max_health Selected matches 1 run title @s[gamemode=!creative,tag=!gooigi] actionbar {"translate":"luigis_mansion:message.health.out_of","with":[{"score":{"name":"@s","objective":"Health"}},{"score":{"name":"@s","objective":"MaxHealth"}}],"color":"red"}
-execute if score #changing_max_health Selected matches 0 run title @s[gamemode=!creative,tag=gooigi] actionbar {"translate":"luigis_mansion:message.health","with":[{"score":{"name":"@s","objective":"Health"}}],"color":"green"}
-execute if score #changing_max_health Selected matches 1 run title @s[gamemode=!creative,tag=gooigi] actionbar {"translate":"luigis_mansion:message.health.out_of","with":[{"score":{"name":"@s","objective":"Health"}},{"score":{"name":"@s","objective":"MaxHealth"}}],"color":"green"}
 
 scoreboard players remove @s[scores={RoomNoise=1..}] RoomNoise 1
 scoreboard players remove @s[scores={Sound=1..}] Sound 1
-execute if entity @s[tag=poltergust_malfunction] run function luigis_mansion:entities/player/poltergust_breakage
-execute if entity @s[scores={Pull=20..},gamemode=!creative] run function luigis_mansion:entities/player/pulled_damage
-scoreboard players remove @s[scores={Pull=1..}] Pull 1
-tag @s remove pulled
 
 execute if entity @s[scores={Health=..0},tag=!death_animation,tag=!revive_animation] run function luigis_mansion:entities/player/death
 execute if entity @s[scores={Health=1..},tag=already_added_to_list] run function luigis_mansion:entities/player/remove_dead_entry
 tag @s[scores={Health=1..}] remove already_added_to_list
 
-execute store result score #temp ActionTime run clear @s minecraft:carrot_on_a_stick{luigis_mansion:{id:"luigis_mansion:flashlight"}} 0
-execute if score #temp ActionTime matches 0 unless entity @s[scores={Shrunk=1..}] run give @s[tag=!gooigi] minecraft:carrot_on_a_stick{HideFlags:63,Unbreakable:1b,Damage:1,CustomModelData:1,display:{Name:'{"italic":false,"color":"white","translate":"luigis_mansion:item.flashlight"}'},luigis_mansion:{id:"luigis_mansion:flashlight"}}
-execute if score #temp ActionTime matches 0 unless entity @s[scores={Shrunk=1..}] run give @s[tag=gooigi] minecraft:carrot_on_a_stick{HideFlags:63,Unbreakable:1b,Damage:1,CustomModelData:3,display:{Name:'{"italic":false,"color":"white","translate":"luigis_mansion:item.flashlight"}'},luigis_mansion:{id:"luigis_mansion:flashlight"}}
-execute store result score #temp ActionTime run clear @s minecraft:carrot_on_a_stick{luigis_mansion:{id:"luigis_mansion:poltergust_3000"}} 0
-execute if score #temp ActionTime matches 0 run experience set @s[advancements={luigis_mansion:lab/lab=true}] 0 levels
-execute if score #temp ActionTime matches 0 unless entity @s[scores={Shrunk=1..}] run give @s[advancements={luigis_mansion:lab/lab=true},tag=!gooigi] minecraft:carrot_on_a_stick{HideFlags:63,Unbreakable:1b,Damage:1,CustomModelData:0,display:{Name:'{"italic":false,"color":"white","translate":"luigis_mansion:item.poltergust_3000"}',Lore:['{"italic":false,"color":"gray","translate":"luigis_mansion:item.poltergust_3000.element","with":[{"translate":"luigis_mansion:item.poltergust_3000.element.none","color":"gray"}]}']},luigis_mansion:{id:"luigis_mansion:poltergust_3000",element:{type:0b}}}
-execute if score #temp ActionTime matches 0 unless entity @s[scores={Shrunk=1..}] run give @s[advancements={luigis_mansion:lab/lab=true},tag=gooigi] minecraft:carrot_on_a_stick{HideFlags:63,Unbreakable:1b,Damage:1,CustomModelData:2,display:{Name:'{"italic":false,"color":"white","translate":"luigis_mansion:item.poltergust_3000"}',Lore:['{"italic":false,"color":"gray","translate":"luigis_mansion:item.poltergust_3000.element","with":[{"translate":"luigis_mansion:item.poltergust_3000.element.none","color":"gray"}]}']},luigis_mansion:{id:"luigis_mansion:poltergust_3000",element:{type:0b}}}
-execute store result score #temp ActionTime run clear @s minecraft:carrot_on_a_stick{luigis_mansion:{id:"luigis_mansion:gameboy_horror"}} 0
-execute if score #temp ActionTime matches 0 unless entity @s[scores={Shrunk=1..}] run give @s[advancements={luigis_mansion:lab/lab=true}] minecraft:carrot_on_a_stick{HideFlags:63,Unbreakable:1b,Damage:2,CustomModelData:0,display:{Name:'{"italic":false,"color":"white","translate":"luigis_mansion:item.gameboy_horror"}'},luigis_mansion:{id:"luigis_mansion:gameboy_horror"}}
-clear @s[advancements={luigis_mansion:lab/lab=true}] minecraft:diamond_pickaxe{luigis_mansion:{id:"luigis_mansion:contest_reward_map"}}
-scoreboard players reset #temp ActionTime
-execute as @e[distance=..3,type=minecraft:item] unless entity @s[nbt=!{Item:{tag:{luigis_mansion:{id:"luigis_mansion:flashlight"}}}},nbt=!{Item:{tag:{luigis_mansion:{id:"luigis_mansion:poltergust_3000"}}}},nbt=!{Item:{tag:{luigis_mansion:{id:"luigis_mansion:gameboy_horror"}}}}] run kill @s
-
-execute if entity @s[scores={Shrunk=2..}] run function luigis_mansion:items/poison_mushroom/visual
+function luigis_mansion:entities/player/health_display
+function luigis_mansion:entities/player/give_items
 
 execute unless entity @s[scores={Invulnerable=0..}] run scoreboard players set @s Invulnerable 0
 scoreboard players remove @s[scores={Invulnerable=1..}] Invulnerable 1
@@ -59,6 +39,8 @@ scoreboard players set @s[scores={MaxHealthTime=200},tag=gooigi] MaxHealth 50
 scoreboard players reset @s[scores={MaxHealthTime=200}] MaxHealthTime
 
 execute if entity @s[tag=gooigi] run function luigis_mansion_3ds_remake:entities/player/gooigi
+
+execute if entity @s[scores={KnockbackTime=1..}] run function luigis_mansion:entities/player/knockback
 
 execute if entity @s[scores={Walk=1..},tag=!looking_at_map] run particle minecraft:dust 0.5 0.5 0.5 1.2 ~ ~0.2 ~ 0 0 0 0 1
 execute if entity @s[scores={Run=1..},tag=!looking_at_map] run particle minecraft:dust 0.5 0.5 0.5 2 ~ ~0.2 ~ 0 0 0 0 1

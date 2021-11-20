@@ -19,6 +19,8 @@ execute if data storage luigis_mansion:data luigi{gliding:0b,swimming:0b} run fu
 execute unless data storage luigis_mansion:data luigi{gliding:0b,swimming:0b} rotated ~ ~90 run function luigis_mansion_3ds_remake:animations/gooigi/call_part_function
 execute store result score #temp Time run data get entity @s Pose.Head[0]
 execute if entity @s[tag=!head] store result entity @s Pose.Head[0] float 1 run scoreboard players operation #temp Time += @s IncreaseAmount
+execute if data storage luigis_mansion:data luigi{invulnerable:1b} run function luigis_mansion_3ds_remake:animations/gooigi/invulnerability_blink
+execute if data storage luigis_mansion:data luigi{invulnerable:0b} if entity @s[nbt={ArmorItems:[{id:"minecraft:stone_button"}]}] run data modify entity @s[tag=was_invisible] ArmorItems[3].id set value "minecraft:diamond_pickaxe"
 scoreboard players reset #temp Time
 tag @s[tag=sneaking] add was_sneaking
 tag @s[tag=!sneaking] remove was_sneaking
