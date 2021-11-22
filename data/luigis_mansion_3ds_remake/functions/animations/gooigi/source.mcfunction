@@ -22,7 +22,7 @@ scoreboard players operation @s RotationDif = @s PlayerRotation
 execute if entity @s[scores={RotationDif=..90000,HomeRot=270000..}] run scoreboard players add @s RotationDif 360000
 execute if entity @s[scores={RotationDif=270000..,HomeRot=..90000}] run scoreboard players remove @s RotationDif 360000
 scoreboard players operation @s RotationDif -= @s HomeRot
-execute unless entity @s[scores={RotationDif=-50000..50000},tag=!looking_at_map] run function luigis_mansion:animations/luigi/rotate_body
+execute unless entity @s[scores={RotationDif=-50000..50000},tag=!looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/rotate_body
 scoreboard players remove @s[scores={PlayerRotation=360000..}] PlayerRotation 360000
 scoreboard players add @s[scores={PlayerRotation=..0}] PlayerRotation 360000
 execute store result entity @s[tag=!looking_at_map,tag=!moving_backwards] Rotation[0] float 0.001 run scoreboard players get @s PlayerRotation

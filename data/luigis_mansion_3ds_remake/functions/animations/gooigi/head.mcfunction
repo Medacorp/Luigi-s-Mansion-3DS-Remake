@@ -33,4 +33,11 @@ scoreboard players reset #temp PlayerRotation
 execute if entity @s[tag=!looking_at_map,tag=!flipped_gravity] store result entity @s Pose.Head[0] float 1 run data get entity @e[tag=gooigi,limit=1] Rotation[1] 1
 execute if entity @s[tag=!looking_at_map,tag=flipped_gravity] store result entity @s Pose.Head[0] float 1 run data get entity @e[tag=gooigi,limit=1] Rotation[1] -1
 teleport @s[tag=looking_at_map] ~ ~-1.67 ~ ~ ~
-execute if entity @s[tag=looking_at_map] run function luigis_mansion:animations/luigi/looking_at_map/head
+execute if entity @s[tag=looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/looking_at_map/head
+
+execute at @s[scores={KnockbackType=1}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/small/head
+execute at @s[scores={KnockbackType=2}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/medium/head
+execute at @s[scores={KnockbackType=3}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/large/head
+execute at @s[scores={KnockbackType=4}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/burn/head
+execute at @s[scores={KnockbackType=5}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/soak/head
+execute at @s[scores={KnockbackType=6}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/freeze/head
