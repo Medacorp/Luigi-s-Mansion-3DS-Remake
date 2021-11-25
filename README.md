@@ -72,3 +72,17 @@ Values | Add-on             | Namespace                 | Data pack name
 7      | trill_tower        | trill_tower               | "file/Thrill Tower"
 8      | extensive_training | extensive_training        | "file/Extensive Training"
 ```
+
+## Amiibo selection
+Value here refers to the AmiiboChoice score.
+
+```
+Value | Amiibo name | Add-on             | Namespace                 | Data pack name
+1     | Toad        | 3ds_remake         | luigis_mansion_3ds_remake | "file/Luigi's Mansion 3DS Remake"
+2     | Mario       | 3ds_remake         | luigis_mansion_3ds_remake | "file/Luigi's Mansion 3DS Remake"
+3     | Boo         | 3ds_remake         | luigis_mansion_3ds_remake | "file/Luigi's Mansion 3DS Remake"
+4     | Luigi       | 3ds_remake         | luigis_mansion_3ds_remake | "file/Luigi's Mansion 3DS Remake"
+5     | E. Gadd     | beta_mansion       | beta_mansion              | "file/Luigi's Beta Mansion"
+6     | Polterpup   | trill_tower        | trill_tower               | "file/Thrill Tower"
+7     | Koopa       | extensive_training | extensive_training        | "file/Extensive Training"
+```
