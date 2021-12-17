@@ -1,0 +1,1 @@
+execute store result score #heart_coin_size Selected run data get storage luigis_mansion_3ds_remake:data loaded_mansion.heart_coin_size

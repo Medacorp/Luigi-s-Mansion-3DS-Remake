@@ -191,7 +191,7 @@ execute at @e[tag=this_model,tag=body,limit=1] run teleport @e[tag=this_model,ta
 data modify entity @s[scores={AnimationProg=38}] ArmorItems[3].tag merge value {CustomModelData:152}
 data modify entity @s[scores={AnimationProg=42}] ArmorItems[3].tag merge value {CustomModelData:149}
 data modify entity @s[scores={AnimationProg=145}] ArmorItems[3].tag merge value {CustomModelData:152}
-execute if entity @s[scores={AnimationProg=145}] run data modify entity @e[tag=this_model,tag=gold_bone,limit=1] ArmorItems[3] set value {id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:5,CustomModelData:32}}
+execute if entity @s[scores={AnimationProg=145}] run data modify entity @e[tag=this_model,tag=gold_bone,limit=1] ArmorItems[3] set value {id:"minecraft:diamond_pickaxe",Count:1b,tag:{Unbreakable:1b,Damage:5,CustomModelData:33}}
 data modify entity @s[scores={AnimationProg=185}] ArmorItems[3].tag merge value {CustomModelData:149}
 data modify entity @s[scores={AnimationProg=200}] ArmorItems[3].tag merge value {CustomModelData:152}
 data modify entity @s[scores={AnimationProg=220}] ArmorItems[3].tag merge value {CustomModelData:149}
