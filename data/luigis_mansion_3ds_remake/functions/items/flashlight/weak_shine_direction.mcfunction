@@ -1,1 +1,2 @@
-function luigis_mansion_3ds_remake:items/flashlight/shine_direction/normal_weak
+execute if entity @s[tag=!flipped_gravity] run function luigis_mansion_3ds_remake:items/flashlight/shine_direction/normal_weak
+execute if entity @s[tag=flipped_gravity] run function luigis_mansion_3ds_remake:items/flashlight/shine_direction/normal_weak_flipped
