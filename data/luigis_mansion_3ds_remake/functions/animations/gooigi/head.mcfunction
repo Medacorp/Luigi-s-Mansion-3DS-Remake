@@ -1,3 +1,4 @@
+tag @s[tag=low_health,tag=!looking_at_map] add sneak_pos
 # Move with
 teleport @s[tag=!sneak_pos,nbt=!{Small:1b},tag=!flipped_gravity] ^ ^-1.67 ^
 teleport @s[tag=sneak_pos,nbt=!{Small:1b},tag=!flipped_gravity] ^ ^-1.73 ^
@@ -30,8 +31,11 @@ execute unless entity @s[scores={RotationDif=-60000..60000}] if entity @s[tag=!l
 scoreboard players reset #temp PlayerRotation
 
 # Look up/down
-execute if entity @s[tag=!looking_at_map,tag=!flipped_gravity] store result entity @s Pose.Head[0] float 1 run data get entity @e[tag=gooigi,limit=1] Rotation[1] 1
-execute if entity @s[tag=!looking_at_map,tag=flipped_gravity] store result entity @s Pose.Head[0] float 1 run data get entity @e[tag=gooigi,limit=1] Rotation[1] -1
+execute if entity @s[tag=!looking_at_map,tag=!flipped_gravity] store result score #temp Time run data get entity @e[tag=gooigi,limit=1] Rotation[1] 1
+execute if entity @s[tag=!looking_at_map,tag=flipped_gravity] store result score #temp Time run data get entity @e[tag=gooigi,limit=1] Rotation[1] -1
+execute if entity @s[tag=!looking_at_map,tag=low_health] run scoreboard players add #temp Time 20
+execute if entity @s[tag=!looking_at_map] store result entity @s Pose.Head[0] float 1 run scoreboard players get #temp Time
+scoreboard players reset #temp Time
 teleport @s[tag=looking_at_map] ~ ~-1.67 ~ ~ ~
 execute if entity @s[tag=looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/looking_at_map/head
 
@@ -41,3 +45,7 @@ execute at @s[scores={KnockbackType=3}] run function luigis_mansion_3ds_remake:a
 execute at @s[scores={KnockbackType=4}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/burn/head
 execute at @s[scores={KnockbackType=5}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/soak/head
 execute at @s[scores={KnockbackType=6}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/freeze/head
+
+execute at @s[tag=cold_room_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/cold_room/head
+execute at @s[tag=high_health_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/high_health/head
+execute at @s[tag=low_health_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/low_health/head
