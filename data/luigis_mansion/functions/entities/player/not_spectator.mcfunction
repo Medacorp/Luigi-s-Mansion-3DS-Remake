@@ -1,10 +1,10 @@
 tag @s remove dark_room
 function #luigis_mansion:room/dark_room
 
-execute if entity @s[tag=!looking_at_map,tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] run function #luigis_mansion:items
-execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] run function luigis_mansion:items/gameboy_horror
-execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] run function luigis_mansion:blocks/gravity_swap
-execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run function luigis_mansion:blocks/blockade
+execute if entity @s[tag=!looking_at_map,tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] unless entity @s[scores={ScareType=2..}] run function #luigis_mansion:items
+execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] unless entity @s[scores={ScareType=2..}] run function luigis_mansion:items/gameboy_horror
+execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={KnockbackType=2..}] unless entity @s[scores={ScareType=2..}] run function luigis_mansion:blocks/gravity_swap
+execute if entity @s[tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] unless entity @s[scores={ScareType=2..}] run function luigis_mansion:blocks/blockade
 execute if entity @s[tag=warp] run function luigis_mansion:items/gameboy_horror/warp
 execute if entity @s[tag=grabbed] run function luigis_mansion:entities/player/grabbed
 
@@ -57,6 +57,7 @@ effect give @s minecraft:invisibility 1000000 0 true
 execute if entity @s[tag=!gooigi] run function luigis_mansion:animations/luigi
 
 execute if entity @s[scores={KnockbackTime=1..}] run function luigis_mansion:entities/player/knockback
+execute if entity @s[scores={ScareTime=1..}] run function luigis_mansion:entities/player/scared
 execute if entity @s[tag=death_animation,tag=!gooigi] run function luigis_mansion:entities/player/death_animation
 execute if entity @s[tag=revive_animation] run function luigis_mansion:entities/player/revive_animation
 execute if entity @s[tag=polterpup_reviving] run function luigis_mansion_3ds_remake:dialog/polterpup_revival
