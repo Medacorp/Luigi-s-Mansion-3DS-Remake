@@ -81,7 +81,8 @@ execute at @s[scores={KnockbackTime=10..,KnockbackType=6}] run scoreboard player
 scoreboard players set @s[scores={KnockbackTime=10,KnockbackType=6}] Invulnerable 70
 execute at @s[scores={KnockbackTime=1..,KnockbackType=6}] run kill @e[tag=home,limit=1]
 
-execute at @s[scores={KnockbackTime=10,KnockbackType=7..9},tag=!gooigi] run playsound luigis_mansion:entity.player.grabbed player @a[tag=same_room] ~ ~ ~ 1
+execute at @s[scores={KnockbackTime=10,KnockbackType=7..9,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.grabbed player @a[tag=same_room] ~ ~ ~ 1
+execute at @s[scores={KnockbackTime=10,KnockbackType=7..9,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.grabbed player @a[tag=same_room] ~ ~ ~ 1 2
 execute at @s[scores={KnockbackTime=10,KnockbackType=8..9}] run effect give @s minecraft:instant_damage 1 0 true
 execute at @s[scores={KnockbackTime=10,KnockbackType=8}] run scoreboard players set @s ForcedDamage -1
 execute at @s[scores={KnockbackTime=10,KnockbackType=9}] run scoreboard players set @s ForcedDamage 4
