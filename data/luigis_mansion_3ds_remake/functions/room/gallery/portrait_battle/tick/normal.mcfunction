@@ -4,6 +4,6 @@ execute if score #mansion_type Selected matches 0 if entity @s[scores={SelectedF
 execute if score #mansion_type Selected matches 0 if entity @s[scores={SelectedFrame=9}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/tick/normal/nanas_room
 execute if score #mansion_type Selected matches 0 if entity @s[scores={SelectedFrame=11}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/tick/normal/king_boo_battle
 execute if score #mansion_type Selected matches 0 if entity @s[scores={SelectedFrame=14}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/tick/normal/butlers_room
-execute if score #mansion_type Selected matches 0 if entity @s[scores={SelectedFrame=16}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/tick/normal/twins_room
+execute if score #mansion_type Selected matches 0 if entity @s[scores={SelectedFrame=16}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/tick/normal/the_twins_room
 execute if score #mansion_type Selected matches 0 if entity @s[scores={SelectedFrame=17}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/tick/normal/conservatory
 execute if score #mansion_type Selected matches 0 if entity @s[scores={SelectedFrame=21}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/tick/normal/boolossus_battle

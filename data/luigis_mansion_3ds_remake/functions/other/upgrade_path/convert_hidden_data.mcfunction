@@ -126,7 +126,7 @@ data modify storage luigis_mansion:data current_state.current_data.boos[{name:"b
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"bootique"}].speed set value 6
 data modify storage luigis_mansion:data current_state.current_data.boos[{name:"booligan"}].name set value boolldog
 execute if data storage luigis_mansion:data current_state.current_data.money_spawned{courtyard_chest:1b} run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {projection_room_chest:1b}
-execute if data storage luigis_mansion:data current_state.current_data.money_spawned{billiards_room_chest:1b} run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {twins_room_chest:1b}
+execute if data storage luigis_mansion:data current_state.current_data.money_spawned{billiards_room_chest:1b} run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {the_twins_room_chest:1b}
 execute in luigis_mansion:hidden run forceload remove 831 159 432 16
 execute in luigis_mansion:hidden run forceload remove 831 15 432 -80
 execute in luigis_mansion:normal run forceload add 831 -144 432 -1
@@ -179,7 +179,7 @@ execute if score #astral_hall Ticking matches 1 run function #luigis_mansion:roo
 execute if score #observatory Ticking matches 1 run function #luigis_mansion:room/hidden/observatory/reset
 execute if score #billiards_room Ticking matches 1 run function #luigis_mansion:room/hidden/billiards_room/reset
 execute if score #projection_room Ticking matches 1 run function #luigis_mansion:room/hidden/projection_room/reset
-execute if score #twins_room Ticking matches 1 run function #luigis_mansion:room/hidden/twins_room/reset
+execute if score #the_twins_room Ticking matches 1 run function #luigis_mansion:room/hidden/the_twins_room/reset
 execute if score #safari_room Ticking matches 1 run function #luigis_mansion:room/hidden/safari_room/reset
 execute if score #hallway_16 Ticking matches 1 run function #luigis_mansion:room/hidden/hallway_16/reset
 execute if score #hallway_17 Ticking matches 1 run function #luigis_mansion:room/hidden/hallway_17/reset
@@ -201,6 +201,6 @@ execute if score #pipe_room Ticking matches 1 run function #luigis_mansion:room/
 execute if score #cold_storage Ticking matches 1 run function #luigis_mansion:room/hidden/cold_storage/reset
 execute if score #sitting_room Ticking matches 1 run function #luigis_mansion:room/hidden/sitting_room/reset
 execute if score #guest_room Ticking matches 1 run function #luigis_mansion:room/hidden/guest_room/reset
-execute if score #artists_studio Ticking matches 1 run function #luigis_mansion:room/hidden/artists_studio/reset
+execute if score #the_artists_studio Ticking matches 1 run function #luigis_mansion:room/hidden/the_artists_studio/reset
 execute if score #secret_altar Ticking matches 1 run function #luigis_mansion:room/hidden/secret_altar/reset
 scoreboard players set #can_get_platinum_boss Selected 1

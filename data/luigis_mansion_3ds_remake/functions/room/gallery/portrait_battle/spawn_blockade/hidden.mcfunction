@@ -10,9 +10,9 @@ execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedF
 execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=13}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/billiards_room
 execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=14}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/butlers_room
 execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=15}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/cold_storage
-execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=16}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/twins_room
+execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=16}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/the_twins_room
 execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=17}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/conservatory
-execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=18}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/artists_studio
+execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=18}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/the_artists_studio
 execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=19}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/fortune_tellers_room
 execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=20}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/dining_room
 execute if score #mansion_type Selected matches 1 if entity @s[scores={SelectedFrame=22}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle/spawn_blockade/hidden/wardrobe_room

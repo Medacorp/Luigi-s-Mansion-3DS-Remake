@@ -1,3 +1,0 @@
-scoreboard players set #twins_room Wave 1
-execute if data storage luigis_mansion:data current_state.current_data.portrait_ghosts.henry_and_orville{orville_health:0} run function luigis_mansion_3ds_remake:room/hidden/twins_room/wave_1_to_6
-execute if data storage luigis_mansion:data current_state.current_data.portrait_ghosts.henry_and_orville{henry_health:0} run function luigis_mansion_3ds_remake:room/hidden/twins_room/wave_1_to_6
