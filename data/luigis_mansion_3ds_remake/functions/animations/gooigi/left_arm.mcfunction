@@ -18,7 +18,7 @@ data modify entity @s[tag=!was_flipped,tag=flipped_gravity] Pose.Head[2] set val
 execute if entity @s[tag=!looking_at_map,tag=!cold_room_idle,tag=!high_health_idle,tag=!low_health_idle,tag=!low_health,scores={KnockbackType=0,Pull=0..9}] run function luigis_mansion_3ds_remake:animations/gooigi/idle/left_arm
 execute if entity @s[tag=!looking_at_map,tag=!cold_room_idle,tag=!high_health_idle,tag=!low_health_idle,tag=low_health,scores={KnockbackType=0,Pull=0..9}] run function luigis_mansion_3ds_remake:animations/gooigi/idle/hunched/left_arm
 
-ute if score #mirrored Selected matches 0 run data modify entity @s[tag=held_item,tag=!looking_at_map] ArmorItems[3] set from storage luigis_mansion:data luigi.offhand
+execute if score #mirrored Selected matches 0 run data modify entity @s[tag=held_item,tag=!looking_at_map] ArmorItems[3] set from storage luigis_mansion:data luigi.offhand
 execute if score #mirrored Selected matches 1 run data modify entity @s[tag=held_item,tag=!looking_at_map] ArmorItems[3] set from storage luigis_mansion:data luigi.mainhand
 execute if score #mirrored Selected matches 1 if entity @s[tag=attacking,tag=!looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/attack/left_arm
 execute if score #mirrored Selected matches 0 run tag @s remove attacking
