@@ -1,3 +1,5 @@
+gamemode spectator @s[scores={GBHChoice=5},limit=1]
+scoreboard players reset @s[scores={GBHChoice=5},limit=1] GBHChoice
 scoreboard players operation @s LastRoom = @s Room
 execute as @a[tag=gooigi] run function luigis_mansion_3ds_remake:entities/player/un_gooigi
 tag @e[tag=pearl_dropper] remove pearl_dropper

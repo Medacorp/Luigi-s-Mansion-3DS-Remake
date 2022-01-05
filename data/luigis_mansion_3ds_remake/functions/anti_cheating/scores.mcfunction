@@ -20,5 +20,3 @@ execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.mast
 
 execute unless data storage luigis_mansion_3ds_remake:data current_state run function luigis_mansion_3ds_remake:other/upgrade_path/newly_installed
 execute unless data storage luigis_mansion:data current_state.current_data.tracking_boos run data modify storage luigis_mansion:data current_state.current_data.tracking_boos set value []
-
-execute if data storage luigis_mansion_3ds_remake:data {shown_gameboy_horror_part:0b} run tag @a[tag=scanning] remove scanning

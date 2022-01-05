@@ -70,14 +70,14 @@ execute if entity @s[scores={Dialog=506}] if entity @a[scores={EGaddGallChoice=5
 execute if entity @s[scores={Dialog=642}] if entity @a[scores={EGaddGallChoice=5}] run scoreboard players set @s Dialog 1354
 execute if entity @s[scores={Dialog=82}] if score #players Totals matches 1 if entity @a[scores={EGaddGallChoice=6}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gallery.stand.1"}]}
 execute if entity @s[scores={Dialog=82}] if score #players Totals matches 2.. if entity @a[scores={EGaddGallChoice=6}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gallery.stand.1.more"}]}
-execute if entity @s[scores={Dialog=82}] if entity @a[scores={EGaddGallChoice=5}] run playsound luigis_mansion:entity.e_gadd.talk.hap_poh_oomahkah_tatta_tatta neutral @a[tag=same_room] ~ ~ ~ 1
+execute if entity @s[scores={Dialog=82}] if entity @a[scores={EGaddGallChoice=6}] run playsound luigis_mansion:entity.e_gadd.talk.hap_poh_oomahkah_tatta_tatta neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={Dialog=274}] if score #players Totals matches 1 if entity @a[scores={EGaddGallChoice=6}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gallery.stand.2"}]}
 execute if entity @s[scores={Dialog=274}] if score #players Totals matches 2.. if entity @a[scores={EGaddGallChoice=6}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gallery.stand.2.more"}]}
-execute if entity @s[scores={Dialog=274}] if entity @a[scores={EGaddGallChoice=5}] run playsound luigis_mansion:entity.e_gadd.talk.hey_hey_suu_tahmentahkeh_oydohroh neutral @a[tag=same_room] ~ ~ ~ 1
+execute if entity @s[scores={Dialog=274}] if entity @a[scores={EGaddGallChoice=6}] run playsound luigis_mansion:entity.e_gadd.talk.hey_hey_suu_tahmentahkeh_oydohroh neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={Dialog=538}] if entity @a[scores={EGaddGallChoice=6}] run scoreboard players set @s Dialog 1354
 execute if entity @s[scores={Dialog=1354}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gallery.repeat.2"}]}
 execute if entity @s[scores={Dialog=1354}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gallery.repeat.2.more"}]}
-execute if entity @s[scores={Dialog=1354}] if entity @a[scores={EGaddGallChoice=3}] run playsound luigis_mansion:entity.e_gadd.talk.oui_oydohroh_tahmentahkeh2 neutral @a[tag=same_room] ~ ~ ~ 1
+execute if entity @s[scores={Dialog=1354}] run playsound luigis_mansion:entity.e_gadd.talk.oui_oydohroh_tahmentahkeh2 neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={Dialog=1394..}] run scoreboard players set @a EGaddGallChoice 0
 scoreboard players set @s[scores={Dialog=1394}] Dialog 79
 tag @s[scores={Dialog=1395}] remove talk
