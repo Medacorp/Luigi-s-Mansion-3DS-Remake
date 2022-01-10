@@ -9,6 +9,9 @@ scoreboard objectives add StrobulbCharge dummy
 team add NoCollision
 team modify NoCollision collisionRule never
 
+bossbar add luigis_mansion_3ds_remake:portrait_battle {"translate":"luigis_mansion_3ds_remake:message.gallery.portrait_battle.time","color":"white","with":["0","0","0"]}
+bossbar set luigis_mansion_3ds_remake:portrait_battle color white
+
 execute unless score #toad_amiibo Selected matches 0..1 run scoreboard players set #toad_amiibo Selected 0
 execute unless score #mario_amiibo Selected matches 0..1 run scoreboard players set #mario_amiibo Selected 0
 execute unless score #boo_amiibo Selected matches 0..1 run scoreboard players set #boo_amiibo Selected 0
