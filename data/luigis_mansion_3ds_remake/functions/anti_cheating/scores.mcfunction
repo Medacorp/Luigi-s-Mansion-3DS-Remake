@@ -1,3 +1,4 @@
+scoreboard objectives add AmiiboChoice trigger
 scoreboard objectives add FollowID dummy
 scoreboard objectives add FrameChoice trigger
 scoreboard objectives add Glowing dummy

@@ -18,6 +18,7 @@ execute if data storage luigis_mansion:data current_state.current_data{in_mansio
 function #luigis_mansion_3ds_remake:portrait_battle_tick
 execute if entity @e[tag=portrait_ghost,tag=!dying,limit=1] run tag @s add portrait_ghost_spawned
 execute if entity @e[tag=portrait_ghost,tag=dying,limit=1] run tag @s add catching_the_portrait_ghost
+execute if entity @s[tag=portrait_ghost_spawned,tag=catching_the_portrait_ghost] unless entity @s[scores={MusicGroup=0,MusicType=14}] unless entity @e[tag=portrait_ghost,limit=1] run tag @e[tag=ghost] add remove_from_existence
 execute if entity @s[tag=portrait_ghost_spawned,tag=catching_the_portrait_ghost] unless entity @s[scores={MusicGroup=0,MusicType=14}] unless entity @e[tag=portrait_ghost,limit=1] run function luigis_mansion:spawn_entities/ghost/empty_marker
 execute if entity @s[tag=portrait_ghost_spawned,tag=catching_the_portrait_ghost] unless entity @s[scores={MusicGroup=0,MusicType=14}] unless entity @e[tag=portrait_ghost,limit=1] store result score #temp Money run data get storage luigis_mansion:data current_state.current_data.in_mansion_time
 execute if entity @s[tag=portrait_ghost_spawned,tag=catching_the_portrait_ghost] unless entity @s[scores={MusicGroup=0,MusicType=14}] unless entity @e[tag=portrait_ghost,limit=1] store result score #temp2 Money run data get storage luigis_mansion_3ds_remake:data loaded_mansion.high_scores.speed

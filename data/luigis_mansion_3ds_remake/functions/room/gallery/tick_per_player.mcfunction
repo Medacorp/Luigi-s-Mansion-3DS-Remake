@@ -8,5 +8,6 @@ execute if entity @s[scores={FrameChoice=1..}] run function luigis_mansion_3ds_r
 execute if entity @s[scores={SelectedFrame=0}] run scoreboard players reset @s FrameChoice
 execute unless entity @s[scores={SelectedFrame=0}] run scoreboard players enable @s FrameChoice
 execute unless entity @s[scores={PortraitBattle=-1}] run function luigis_mansion_3ds_remake:room/gallery/portrait_battle
+scoreboard players enable @s[scores={SelectedFrame=1..,PortraitBattle=-1}] PortraitBattle
+execute unless entity @s[scores={PortraitBattle=-1}] run trigger PortraitBattle add 0
 execute unless entity @s[scores={SelectedFrame=1..}] run scoreboard players set @s PortraitBattle -1
-scoreboard players enable @s[scores={SelectedFrame=1..}] PortraitBattle
