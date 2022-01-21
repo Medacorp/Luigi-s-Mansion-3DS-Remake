@@ -30,7 +30,6 @@ execute if entity @s[tag=portrait_ghost_spawned,tag=catching_the_portrait_ghost]
 execute if entity @s[tag=portrait_ghost_spawned,tag=catching_the_portrait_ghost] if entity @s[scores={MusicGroup=0,MusicType=14,PrevMusicType=14,Music=1}] in minecraft:overworld run function #luigis_mansion_3ds_remake:room/gallery/portrait_battle/return
 execute if entity @s[tag=portrait_ghost_spawned,tag=!catching_the_portrait_ghost] unless entity @s[scores={MusicGroup=0,MusicType=14}] unless entity @e[tag=portrait_ghost,limit=1] in minecraft:overworld run function #luigis_mansion_3ds_remake:room/gallery/portrait_battle/return
 execute if entity @s[gamemode=spectator] in minecraft:overworld run function #luigis_mansion_3ds_remake:room/gallery/portrait_battle/return
-scoreboard players reset * Searching
 scoreboard players reset #temp Money
 scoreboard players reset #temp2 Money
 scoreboard players reset #temp Health

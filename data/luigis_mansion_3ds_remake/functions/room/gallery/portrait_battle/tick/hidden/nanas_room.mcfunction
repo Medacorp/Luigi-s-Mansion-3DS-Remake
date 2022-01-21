@@ -1,1 +1,0 @@
-execute if score #nanas_room_table_1 Searching matches 1.. run function luigis_mansion_3ds_remake:room/hidden/nanas_room/search_table_1
