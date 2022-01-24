@@ -4,3 +4,4 @@ execute if entity @s[scores={PortraitBattle=1}] run data modify storage luigis_m
 execute if entity @s[scores={PortraitBattle=1}] in luigis_mansion:normal run teleport @a 710 29 60 90 0
 execute if entity @s[scores={PortraitBattle=1}] run function luigis_mansion:items/poltergust_3000/ice_element
 execute if entity @s[scores={PortraitBattle=1}] run data modify storage luigis_mansion:data current_state.current_data.obtained_items merge value {ice_element_medal:1b}
+execute if entity @s[scores={PortraitBattle=1}] run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {ceramics_studio_lamp:1b,ceramics_studio_jar_1:1b,ceramics_studio_jar_2:1b,ceramics_studio_jar_4:1b,ceramics_studio_jar_5:1b,ceramics_studio_jar_7:1b,ceramics_studio_jar_8:1b}
