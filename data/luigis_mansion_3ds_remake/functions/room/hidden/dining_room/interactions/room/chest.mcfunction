@@ -1,1 +1,1 @@
-execute if block 704 11 32 minecraft:trapped_chest unless block 704 11 32 minecraft:trapped_chest{LootTable:"luigis_mansion:search"} run function luigis_mansion_3ds_remake:room/hidden/dining_room/search_chest
+execute if block 704 11 32 minecraft:trapped_chest unless block 704 11 32 minecraft:trapped_chest{LootTable:"luigis_mansion:search"} run function luigis_mansion_3ds_remake:room/hidden/dining_room/search/chest
