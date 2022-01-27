@@ -9,4 +9,6 @@ execute if entity @s[tag=flashlight] as @e[type=minecraft:marker,tag=weak_flashl
 execute if entity @s[tag=flashlight] as @e[type=minecraft:marker,tag=weak_flashlight,tag=new,limit=1] store result score @s HomeY run data get entity @s Pos[1] 100
 execute if entity @s[tag=flashlight] as @e[type=minecraft:marker,tag=weak_flashlight,tag=new,limit=1] store result score @s HomeZ run data get entity @s Pos[2] 100
 execute if entity @s[tag=flashlight] as @e[type=minecraft:marker,tag=weak_flashlight,tag=new,limit=1] at @s run function luigis_mansion_3ds_remake:items/flashlight/effects/weak_light/path
+execute if entity @s[tag=flashlight] as @e[type=minecraft:marker,tag=weak_flashlight,tag=new,limit=1] at @s if score #temp MirrorX matches -2147483648.. run function luigis_mansion_3ds_remake:items/flashlight/effects/weak_light/mirror/x
+execute if entity @s[tag=flashlight] as @e[type=minecraft:marker,tag=weak_flashlight,tag=new,limit=1] at @s if score #temp MirrorZ matches -2147483648.. run function luigis_mansion_3ds_remake:items/flashlight/effects/weak_light/mirror/z
 execute if entity @s[tag=flashlight] run tag @e[type=minecraft:marker,tag=weak_flashlight,tag=new,limit=1] remove new

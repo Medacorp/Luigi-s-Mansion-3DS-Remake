@@ -17,9 +17,6 @@ scoreboard players set @s[scores={Talk=1..}] Talk 0
 
 execute unless entity @a[scores={GBHCall=1..},limit=1] rotated ~ 0 positioned ^ ^ ^-4 run function luigis_mansion:entities/player/spawn_ghosts
 
-scoreboard players remove @s[scores={RoomNoise=1..}] RoomNoise 1
-scoreboard players remove @s[scores={Sound=1..}] Sound 1
-
 execute if entity @s[scores={Health=..0},tag=!death_animation,tag=!revive_animation] unless entity @s[scores={KnockbackTime=1..}] run function luigis_mansion:entities/player/death
 execute if entity @s[scores={Health=1..},tag=already_added_to_list] run function luigis_mansion:entities/player/remove_dead_entry
 tag @s[scores={Health=1..}] remove already_added_to_list
@@ -47,10 +44,6 @@ execute if entity @s[tag=gooigi] run function luigis_mansion_3ds_remake:entities
 
 execute if entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0,GBHCall=0},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!warp,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust,tag=!gooigi] run function luigis_mansion:entities/player/idle
 execute unless entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0,GBHCall=0},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!warp,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust,tag=!gooigi] run function luigis_mansion:entities/player/idle/reset
-
-execute if entity @s[scores={Walk=1..},tag=!looking_at_map] run particle minecraft:dust 0.5 0.5 0.5 1.2 ~ ~0.2 ~ 0 0 0 0 1
-execute if entity @s[scores={Run=1..},tag=!looking_at_map] run particle minecraft:dust 0.5 0.5 0.5 2 ~ ~0.2 ~ 0 0 0 0 1
-execute if entity @s[scores={Sneak=1..},tag=!looking_at_map] run particle minecraft:dust 0.5 0.5 0.5 0.7 ~ ~0.2 ~ 0 0 0 0 1
 
 execute at @s[scores={LightX=-2147483648..}] unless entity @s[scores={Shrunk=1..}] run function luigis_mansion:other/cast_shadow/2_tall
 execute at @s[scores={LightX=-2147483648..,Shrunk=1..}] run function luigis_mansion:other/cast_shadow/1_tall
