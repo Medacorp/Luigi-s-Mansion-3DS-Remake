@@ -1,1 +1,1 @@
-execute if entity @s[x=747.5,y=20,z=43.5,distance=..0.7] positioned 747 20 43 if block ~ ~ ~ minecraft:chest if entity @e[distance=..0.7,tag=ghost,tag=hidden] run function luigis_mansion_3ds_remake:room/hidden/the_twins_room/twin_shake
+execute if entity @s[x=747.5,y=20,z=43.5,distance=..0.7,tag=vacuum] positioned 747 20 43 if block ~ ~ ~ minecraft:chest if entity @e[distance=..0.7,tag=ghost,tag=hidden] unless score #the_twins_room_box_2 Search matches 1 store success score #the_twins_room_box_2 Search run scoreboard players add #the_twins_room_box_2 Searching 1

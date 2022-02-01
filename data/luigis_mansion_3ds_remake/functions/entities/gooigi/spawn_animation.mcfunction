@@ -13,4 +13,4 @@ execute if entity @s[scores={DeathTime=1,Shrunk=1..}] run playsound luigis_mansi
 tag @s[scores={DeathTime=20}] remove spawn_animation
 scoreboard players reset @s[scores={DeathTime=20}] DeathTime
 execute if entity @s[scores={Shrunk=1..}] run function luigis_mansion:items/poison_mushroom/readd_inventory
-scoreboard players reset @s Shrunk
+scoreboard players set @s Shrunk 0
