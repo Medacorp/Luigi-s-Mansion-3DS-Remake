@@ -85,7 +85,7 @@ execute if entity @a[scores={EGaddLabChoice=7},limit=1] unless score #amiibo_ava
 execute if entity @a[scores={EGaddLabChoice=7},limit=1] if score #amiibo_available Selected matches 1 run tag @s[scores={Dialog=124}] add listen
 execute if entity @a[scores={EGaddLabChoice=7},limit=1] if score #amiibo_available Selected matches 1 run tag @s[scores={Dialog=124}] remove nod
 execute if entity @s[scores={Dialog=124}] if entity @a[scores={EGaddLabChoice=7},limit=1] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0
-execute if entity @s[scores={Dialog=124}] if entity @a[scores={EGaddLabChoice=7},limit=1] if score #amiibo_available Selected matches 1 run tellraw @a[tag=same_room] {"translate":"luigis_mansion:dialog.underground_lab.nowhere","color":"green","clickEvent":{"action":"run_command","value":"/trigger AmiiboChoice set -1"}}
+execute if entity @s[scores={Dialog=124}] if entity @a[scores={EGaddLabChoice=7},limit=1] if score #amiibo_available Selected matches 1 run tellraw @a[tag=same_room] {"translate":"luigis_mansion:dialog.underground_lab.nowhere","color":"green","clickEvent":{"action":"run_command","value":"/trigger AmiiboChoice set 1"}}
 execute if entity @s[scores={Dialog=124}] if entity @a[scores={EGaddLabChoice=7},limit=1] run scoreboard players enable @a[tag=same_room] AmiiboChoice
 execute if entity @a[scores={EGaddLabChoice=7},limit=1] run tag @s[scores={Dialog=124}] remove listen
 execute if entity @s[scores={Dialog=124}] if entity @a[scores={EGaddLabChoice=7},limit=1] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0

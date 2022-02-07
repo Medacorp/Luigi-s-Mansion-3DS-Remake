@@ -11,7 +11,7 @@ scoreboard players add @s[tag=!flashlight_off,scores={StrobulbCharge=10..}] Stro
 tag @s[tag=!grabbed,tag=!gameboy_horror_selected,tag=!poltergust_selected,tag=!flashlight_off,tag=dark_room] add flashlight
 tag @s[tag=!flashlight_off,scores={StrobulbCharge=10..},tag=dark_room] add flashlight
 execute if entity @s[tag=!flashlight_off,scores={StrobulbCharge=10..},tag=flashlight] anchored eyes run particle minecraft:flash ^ ^ ^1.5 0 0 0 0 2 force
-execute if entity @s[scores={StrobulbCharge=1..}] run function luigis_mansion:entities/player/idle/reset
+execute if entity @s[scores={StrobulbCharge=1..}] run function luigis_mansion:entities/player/idle_reset
 execute if entity @s[tag=!flashlight_off,scores={StrobulbCharge=10..},tag=flashlight] run function luigis_mansion:items/flashlight/shine_direction
 execute unless entity @s[scores={StrobulbCharge=3..}] run function luigis_mansion_3ds_remake:items/flashlight/weak_shine_direction
 tag @s remove had_flashlight_on
