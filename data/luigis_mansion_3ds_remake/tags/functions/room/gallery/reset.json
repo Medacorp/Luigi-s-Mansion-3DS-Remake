@@ -1,7 +1,9 @@
 {
     "values": [
         "luigis_mansion_3ds_remake:room/gallery/reset/unload",
+        "luigis_mansion_3ds_remake:room/gallery/reset/chair",
         "luigis_mansion_3ds_remake:room/gallery/reset/chest",
+        "luigis_mansion_3ds_remake:room/gallery/reset/generator_1",
         "luigis_mansion_3ds_remake:room/gallery/reset/painting_1",
         "luigis_mansion_3ds_remake:room/gallery/reset/painting_2",
         "luigis_mansion_3ds_remake:room/gallery/reset/painting_3",
@@ -27,6 +29,10 @@
         "luigis_mansion_3ds_remake:room/gallery/reset/painting_23",
         "luigis_mansion_3ds_remake:room/gallery/reset/painting_24",
         "luigis_mansion_3ds_remake:room/gallery/reset/painting_25",
-        "luigis_mansion_3ds_remake:room/gallery/reset/painting_26"
+        "luigis_mansion_3ds_remake:room/gallery/reset/painting_26",
+        "luigis_mansion_3ds_remake:room/gallery/reset/stacked_books_1",
+        "luigis_mansion_3ds_remake:room/gallery/reset/stacked_books_2",
+        "luigis_mansion_3ds_remake:room/gallery/reset/stacked_books_3",
+        "luigis_mansion_3ds_remake:room/gallery/reset/table"
     ]
 }
