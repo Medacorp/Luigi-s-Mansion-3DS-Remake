@@ -39,6 +39,18 @@ scoreboard players reset #temp Time
 teleport @s[tag=looking_at_map] ~ ~-1.67 ~ ~ ~
 execute if entity @s[tag=looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/looking_at_map/head
 
+execute at @s[tag=yelling] run function luigis_mansion_3ds_remake:animations/gooigi/wave/head
+execute at @s[tag=nod] run function luigis_mansion_3ds_remake:animations/gooigi/nod/head
+execute at @s[tag=thinking] run function luigis_mansion_3ds_remake:animations/gooigi/thinking/head
+execute at @s[tag=sigh] run function luigis_mansion_3ds_remake:animations/gooigi/sigh/head
+execute at @s[tag=enthusiastic] run function luigis_mansion_3ds_remake:animations/gooigi/enthusiastic/head
+execute at @s[tag=answer_phone] run function luigis_mansion_3ds_remake:animations/gooigi/answer_phone/head
+execute at @s[tag=gameboy_horror] run function luigis_mansion_3ds_remake:animations/gooigi/gameboy_horror/head
+execute at @s[tag=inspect] run function luigis_mansion_3ds_remake:animations/gooigi/inspect/head
+execute at @s[scores={KnockbackType=-8}] run function luigis_mansion_3ds_remake:animations/gooigi/search/small_chest/head
+execute at @s[scores={KnockbackType=-7}] run function luigis_mansion_3ds_remake:animations/gooigi/search/bash/head
+execute at @s[scores={KnockbackType=-6}] run function luigis_mansion_3ds_remake:animations/gooigi/search/hump/head
+execute at @s[scores={KnockbackType=-5..-4}] run function luigis_mansion_3ds_remake:animations/gooigi/search/knock/head
 execute at @s[scores={KnockbackType=-3..-2}] run function luigis_mansion_3ds_remake:animations/gooigi/scared/bashed/head
 execute at @s[scores={KnockbackType=-1}] run function luigis_mansion_3ds_remake:animations/gooigi/scared/head
 execute at @s[scores={KnockbackType=1}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/small/head

@@ -25,12 +25,24 @@ execute if entity @s[tag=!looking_at_map,tag=!cold_room_idle,tag=!high_health_id
 execute if entity @s[tag=!looking_at_map,tag=!cold_room_idle,tag=!high_health_idle,tag=!low_health_idle,scores={KnockbackType=0,Pull=0..9}] if entity @s[tag=low_health,tag=!holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/idle/hunched/left_arm
 
 # Move animations
-execute if entity @s[tag=sneaking,tag=!looking_at_map,tag=!low_health,tag=!riding_poltergust,tag=!holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/sneaking/left_arm
-execute if entity @s[tag=walking,tag=!looking_at_map,tag=!low_health,tag=!riding_poltergust,tag=!holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/walking/left_arm
-execute if entity @s[tag=running,tag=!looking_at_map,tag=!low_health,tag=!riding_poltergust,tag=!holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/running/left_arm
-execute if entity @s[tag=swimming,tag=!looking_at_map,tag=!riding_poltergust,tag=!holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/swimming/left_arm
+execute if entity @s[tag=sneaking,tag=!looking_at_map,tag=!low_health,tag=!riding_poltergust,tag=!holding_poltergust,tag=!yelling] run function luigis_mansion_3ds_remake:animations/gooigi/sneaking/left_arm
+execute if entity @s[tag=walking,tag=!looking_at_map,tag=!low_health,tag=!riding_poltergust,tag=!holding_poltergust,tag=!yelling] run function luigis_mansion_3ds_remake:animations/gooigi/walking/left_arm
+execute if entity @s[tag=running,tag=!looking_at_map,tag=!low_health,tag=!riding_poltergust,tag=!holding_poltergust,tag=!yelling] run function luigis_mansion_3ds_remake:animations/gooigi/running/left_arm
+execute if entity @s[tag=swimming,tag=!looking_at_map,tag=!riding_poltergust,tag=!holding_poltergust,tag=!yelling] run function luigis_mansion_3ds_remake:animations/gooigi/swimming/left_arm
 execute if entity @s[tag=looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/looking_at_map/left_arm
 
+execute at @s[tag=yelling] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/wave/left_arm
+execute at @s[tag=nod] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/nod/left_arm
+execute at @s[tag=thinking] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/thinking/left_arm
+execute at @s[tag=sigh] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/sigh/left_arm
+execute at @s[tag=enthusiastic] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/enthusiastic/left_arm
+execute at @s[tag=answer_phone] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/answer_phone/left_arm
+execute at @s[tag=gameboy_horror] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/gameboy_horror/left_arm
+execute at @s[tag=inspect] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/inspect/left_arm
+execute at @s[scores={KnockbackType=-8}] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/search/small_chest/left_arm
+execute at @s[scores={KnockbackType=-7}] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/search/bash/left_arm
+execute at @s[scores={KnockbackType=-6}] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/search/hump/left_arm
+execute at @s[scores={KnockbackType=-5..-4}] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/search/knock/left_arm
 execute at @s[scores={KnockbackType=-3..-2}] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/scared/bashed/left_arm
 execute at @s[scores={KnockbackType=-1}] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/scared/left_arm
 execute at @s[scores={KnockbackType=1}] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/small/left_arm

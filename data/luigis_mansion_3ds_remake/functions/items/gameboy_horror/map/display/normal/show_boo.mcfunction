@@ -53,4 +53,3 @@ execute if score #temp Time matches 68 positioned 3709 11 -6 run function luigis
 execute if score #temp Time matches 69 positioned 3712 111 -12 run function luigis_mansion_3ds_remake:spawn_entities/gameboy_horror_boo
 execute if score #temp Time matches 70 positioned 3712 111 -35.0 run function luigis_mansion_3ds_remake:spawn_entities/gameboy_horror_boo
 execute if score #temp Time matches 71 positioned 3691 161 -27.0 run function luigis_mansion_3ds_remake:spawn_entities/gameboy_horror_boo
-tellraw @s {"score":{"objective":"Time","name":"#temp"}}

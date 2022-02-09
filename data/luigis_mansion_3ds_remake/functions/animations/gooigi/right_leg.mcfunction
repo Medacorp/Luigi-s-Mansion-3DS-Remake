@@ -18,6 +18,17 @@ execute if entity @s[tag=walking,tag=!looking_at_map] run function luigis_mansio
 execute if entity @s[tag=running,tag=!looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/running/right_leg
 execute if entity @s[tag=swimming,tag=!looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/swimming/right_leg
 
+execute at @s[tag=nod] run function luigis_mansion_3ds_remake:animations/gooigi/nod/right_leg
+execute at @s[tag=thinking] run function luigis_mansion_3ds_remake:animations/gooigi/thinking/right_leg
+execute at @s[tag=sigh] run function luigis_mansion_3ds_remake:animations/gooigi/sigh/right_leg
+execute at @s[tag=enthusiastic] run function luigis_mansion_3ds_remake:animations/gooigi/enthusiastic/right_leg
+execute at @s[tag=answer_phone] run function luigis_mansion_3ds_remake:animations/gooigi/answer_phone/right_leg
+execute at @s[tag=gameboy_horror] run function luigis_mansion_3ds_remake:animations/gooigi/gameboy_horror/right_leg
+execute at @s[tag=inspect] run function luigis_mansion_3ds_remake:animations/gooigi/inspect/right_leg
+execute at @s[scores={KnockbackType=-8}] run function luigis_mansion_3ds_remake:animations/gooigi/search/small_chest/right_leg
+execute at @s[scores={KnockbackType=-7}] run function luigis_mansion_3ds_remake:animations/gooigi/search/bash/right_leg
+execute at @s[scores={KnockbackType=-6}] run function luigis_mansion_3ds_remake:animations/gooigi/search/hump/right_leg
+execute at @s[scores={KnockbackType=-5..-4}] run function luigis_mansion_3ds_remake:animations/gooigi/search/knock/right_leg
 execute at @s[scores={KnockbackType=-3..-2}] run function luigis_mansion_3ds_remake:animations/gooigi/scared/bashed/right_leg
 execute at @s[scores={KnockbackType=-1}] run function luigis_mansion_3ds_remake:animations/gooigi/scared/right_leg
 execute at @s[scores={KnockbackType=1}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/small/right_leg

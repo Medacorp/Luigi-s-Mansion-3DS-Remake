@@ -17,7 +17,7 @@ scoreboard players set @s[scores={Talk=1..}] Talk 0
 
 execute unless entity @a[scores={GBHCall=1..},limit=1] rotated ~ 0 positioned ^ ^ ^-4 run function luigis_mansion:entities/player/spawn_ghosts
 
-execute if entity @s[scores={Health=..0},tag=!death_animation,tag=!revive_animation] unless entity @s[scores={KnockbackTime=1..}] run function luigis_mansion:entities/player/death
+execute if entity @s[scores={Health=..0},tag=!death_animation,tag=!revive_animation] run function luigis_mansion:entities/player/death
 execute if entity @s[scores={Health=1..},tag=already_added_to_list] run function luigis_mansion:entities/player/remove_dead_entry
 tag @s[scores={Health=1..}] remove already_added_to_list
 
@@ -42,8 +42,9 @@ scoreboard players reset @s[scores={MaxHealthTime=200}] MaxHealthTime
 
 execute if entity @s[tag=gooigi] run function luigis_mansion_3ds_remake:entities/player/gooigi
 
-execute if entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0,GBHCall=0},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!warp,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust,tag=!gooigi] run function luigis_mansion:entities/player/idle
-execute unless entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0,GBHCall=0},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!warp,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust,tag=!gooigi] run function luigis_mansion:entities/player/idle_reset
+execute if entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0,IdleTime=0..},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!warp,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust,tag=!gooigi] run function luigis_mansion:entities/player/idle
+execute if entity @s[scores={IdleTime=..-1},tag=!gooigi] run function luigis_mansion:entities/player/idle
+execute unless entity @s[scores={IdleTime=..-1}] unless entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!warp,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust,tag=!gooigi] run function luigis_mansion:entities/player/idle_reset
 
 execute at @s[scores={LightX=-2147483648..}] unless entity @s[scores={Shrunk=1..}] run function luigis_mansion:other/cast_shadow/2_tall
 execute at @s[scores={LightX=-2147483648..,Shrunk=1..}] run function luigis_mansion:other/cast_shadow/1_tall

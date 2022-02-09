@@ -26,4 +26,4 @@ execute if entity @s[scores={Dialog=1244}] as @a[tag=same_room] at @s run playso
 execute if entity @s[scores={Dialog=1244}] run function luigis_mansion:room/normal/telephone_room/blackout
 execute if entity @s[scores={Dialog=1244}] run data modify storage luigis_mansion:data current_state.current_data.technical_data merge value {telephone_3:1b}
 tag @s[scores={Dialog=1244}] remove uncle_grimmly_dialog
-scoreboard players reset @s[scores={Dialog=1244}] Dialog
+scoreboard players set @s[scores={Dialog=1244}] Dialog 0
