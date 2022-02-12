@@ -5,6 +5,3 @@ execute if data storage luigis_mansion_3ds_remake:data current_state.selected_po
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{sir_weston:1b} run summon minecraft:item_frame 745 19 -31 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:168}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{sir_weston:2b} run summon minecraft:item_frame 745 19 -31 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:169}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{sir_weston:3b} run summon minecraft:item_frame 745 19 -31 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:170}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
-
-execute positioned 745 18 -31 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 745 18 -31 run tag @e[distance=..0.7,tag=gallery_check] add sir_weston_painting

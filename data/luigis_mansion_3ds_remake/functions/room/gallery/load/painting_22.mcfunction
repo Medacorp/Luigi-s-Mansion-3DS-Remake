@@ -5,6 +5,3 @@ execute if data storage luigis_mansion_3ds_remake:data current_state.selected_po
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{uncle_grimmly:1b} run summon minecraft:item_frame 749 14 -35 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:152}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{uncle_grimmly:2b} run summon minecraft:item_frame 749 14 -35 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:153}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{uncle_grimmly:3b} run summon minecraft:item_frame 749 14 -35 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:154}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
-
-execute positioned 749 13 -35 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 749 13 -35 run tag @e[distance=..0.7,tag=gallery_check] add uncle_grimmly_painting

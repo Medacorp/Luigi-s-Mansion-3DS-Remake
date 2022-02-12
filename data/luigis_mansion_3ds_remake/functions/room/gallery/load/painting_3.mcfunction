@@ -5,6 +5,3 @@ execute if data storage luigis_mansion_3ds_remake:data current_state.selected_po
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{chauncey:1b} run summon minecraft:item_frame 765 4 -22 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:96}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{chauncey:2b} run summon minecraft:item_frame 765 4 -22 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:97}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{chauncey:3b} run summon minecraft:item_frame 765 4 -22 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:98}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
-
-execute positioned 765 3 -22 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 765 3 -22 run tag @e[distance=..0.7,tag=gallery_check] add chauncey_painting

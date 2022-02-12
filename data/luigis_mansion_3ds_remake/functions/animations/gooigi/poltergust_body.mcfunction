@@ -49,11 +49,12 @@ execute at @s[tag=enthusiastic] run function luigis_mansion_3ds_remake:animation
 execute at @s[tag=answer_phone] run function luigis_mansion_3ds_remake:animations/gooigi/answer_phone/chest
 execute at @s[tag=gameboy_horror] run function luigis_mansion_3ds_remake:animations/gooigi/gameboy_horror/chest
 execute at @s[tag=inspect] run function luigis_mansion_3ds_remake:animations/gooigi/inspect/chest
-execute at @s[scores={KnockbackType=-8}] run function luigis_mansion_3ds_remake:animations/gooigi/search/small_chest/chest
-execute at @s[scores={KnockbackType=-7}] run function luigis_mansion_3ds_remake:animations/gooigi/search/bash/chest
-execute at @s[scores={KnockbackType=-6}] run function luigis_mansion_3ds_remake:animations/gooigi/search/hump/chest
-execute at @s[scores={KnockbackType=-5..-4}] run function luigis_mansion_3ds_remake:animations/gooigi/search/knock/chest
-execute at @s[scores={KnockbackType=-3..-2}] run function luigis_mansion_3ds_remake:animations/gooigi/scared/bashed/chest
+execute at @s[scores={KnockbackType=-9}] run function luigis_mansion_3ds_remake:animations/gooigi/search/small_chest/chest
+execute at @s[scores={KnockbackType=-8}] run function luigis_mansion_3ds_remake:animations/gooigi/search/bash/chest
+execute at @s[scores={KnockbackType=-7}] run function luigis_mansion_3ds_remake:animations/gooigi/search/hump/chest
+execute at @s[scores={KnockbackType=-6..-5}] run function luigis_mansion_3ds_remake:animations/gooigi/search/knock/chest
+execute at @s[scores={KnockbackType=-4..-3}] run function luigis_mansion_3ds_remake:animations/gooigi/scared/bashed/chest
+execute at @s[scores={KnockbackType=-2}] run function luigis_mansion_3ds_remake:animations/gooigi/scared/freeze/chest
 execute at @s[scores={KnockbackType=-1}] run function luigis_mansion_3ds_remake:animations/gooigi/scared/chest
 execute at @s[scores={KnockbackType=1}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/small/chest
 execute at @s[scores={KnockbackType=2..3}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/medium/chest
@@ -63,6 +64,7 @@ execute at @s[scores={KnockbackType=6}] run function luigis_mansion_3ds_remake:a
 execute at @s[scores={KnockbackType=7}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/freeze/chest
 execute at @s[scores={KnockbackType=8..9}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/grab/chest
 execute at @s[scores={KnockbackType=10}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/bite/chest
+execute at @s[scores={KnockbackType=11}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/slip/chest
 
 execute at @s[tag=cold_room_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/cold_room/chest
 execute at @s[tag=high_health_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/high_health/chest

@@ -18,8 +18,3 @@ execute if data storage luigis_mansion_3ds_remake:data current_state.selected_po
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{mansion_rank:1b} if data storage luigis_mansion:data current_state.mansion_ranks_achieved{g:1b} run summon minecraft:item_frame 766 3 -51 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:187}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{mansion_rank:0b} if data storage luigis_mansion:data current_state.mansion_ranks_achieved{h:1b} run summon minecraft:item_frame 766 3 -51 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:188}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{mansion_rank:-1b} run summon minecraft:item_frame 766 3 -51 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:179}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
-
-execute positioned 766 3 -50 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 766 3 -51 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 766 3 -52 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 766 3 -51 run tag @e[distance=..2,tag=gallery_check] add mansion_rank_painting

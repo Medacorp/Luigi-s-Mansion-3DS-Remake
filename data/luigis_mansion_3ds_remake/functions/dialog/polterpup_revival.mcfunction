@@ -8,7 +8,7 @@ execute at @e[tag=home,limit=1] run tp @s ~ ~ ~ ~ ~
 kill @e[tag=home,limit=1]
 scoreboard players add @s AnimationProg 1
 execute if entity @s[scores={AnimationProg=100..140}] run stopsound @a[tag=same_room] music
-execute if entity @s[scores={AnimationProg=100..140}] run scoreboard players set @a[tag=same_room] Music 360
+execute if entity @s[scores={AnimationProg=100..140}] run scoreboard players set @a[tag=same_room] Music 320
 execute if entity @s[scores={AnimationProg=120}] run scoreboard players operation #temp ID = @s ID
 execute if entity @s[scores={AnimationProg=120},tag=!flipped_gravity] if score #mirrored Selected matches 0 as @e[type=minecraft:armor_stand,tag=luigi_model,tag=head] if score @s ID = #temp ID at @s rotated ~ 0 positioned ^-2 ^-1 ^1 rotated ~-90 0 run function luigis_mansion_3ds_remake:spawn_entities/ghost/polterpup
 execute if entity @s[scores={AnimationProg=120},tag=flipped_gravity] if score #mirrored Selected matches 0 as @e[type=minecraft:armor_stand,tag=luigi_model,tag=head] if score @s ID = #temp ID at @s rotated ~ 0 positioned ^2 ^2.5 ^1 rotated ~90 0 run function luigis_mansion_3ds_remake:spawn_entities/ghost/polterpup

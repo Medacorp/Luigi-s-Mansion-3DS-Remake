@@ -5,6 +5,3 @@ execute if data storage luigis_mansion_3ds_remake:data current_state.selected_po
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{jarvis:1b} run summon minecraft:item_frame 745 19 -28 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:164}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{jarvis:2b} run summon minecraft:item_frame 745 19 -28 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:165}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
 execute if data storage luigis_mansion_3ds_remake:data current_state.selected_portraits{jarvis:3b} run summon minecraft:item_frame 745 19 -28 {Facing:5b,Silent:1b,Invulnerable:1b,Item:{id:"minecraft:painting",Count:1b,tag:{CustomModelData:166}},CustomName:'{"translate":"luigis_mansion:entity.painting"}',Invisible:1b,Fixed:1b}
-
-execute positioned 745 18 -28 run function luigis_mansion_3ds_remake:spawn_entities/gallery_check
-execute positioned 745 18 -28 run tag @e[distance=..0.7,tag=gallery_check] add jarvis_painting
