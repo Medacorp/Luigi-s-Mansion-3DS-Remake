@@ -9,6 +9,6 @@ execute as @a[gamemode=!spectator,x=643.5,y=20,z=-79.5,distance=..0.7,y_rotation
 
 function #luigis_mansion_3ds_remake:room/hidden/observatory/interactions/room
 
-function luigis_mansion_3ds_remake:room/hidden/observatory/ghosts
+execute if entity @a[gamemode=!spectator,scores={Room=46}] run function luigis_mansion_3ds_remake:room/hidden/observatory/ghosts
 
 function luigis_mansion_3ds_remake:room/hidden/door/astral_hall_observatory

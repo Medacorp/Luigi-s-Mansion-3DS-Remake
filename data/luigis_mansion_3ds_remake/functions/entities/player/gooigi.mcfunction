@@ -13,9 +13,10 @@ execute unless entity @s[tag=!walking,tag=!running,tag=!riding_poltergust] if en
 scoreboard players set @s[tag=walking,scores={Sound=0}] Sound 5
 scoreboard players set @s[tag=running,scores={Sound=0}] Sound 2
 
-execute if entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0,GBHCall=0,IdleTime=0..},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!spawn_animation,tag=!death_animation,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust] run function luigis_mansion_3ds_remake:entities/player/gooigi_idle
+execute if entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0,IdleTime=0..},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!warp,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust] run function luigis_mansion_3ds_remake:entities/player/gooigi_idle
+execute unless entity @s[scores={IdleTime=..-1},tag=!idle] unless entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!warp,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust] run function luigis_mansion:entities/player/animation/set/none
+execute if entity @s[scores={IdleTime=..-1},tag=!idle] run function luigis_mansion:entities/player/animation/freeze_player
 execute if entity @s[scores={IdleTime=..-1}] run function luigis_mansion_3ds_remake:entities/player/gooigi_idle
-execute unless entity @s[scores={IdleTime=..-1}] unless entity @s[scores={Walk=0,Run=0,Sneak=0,Jump=0,GBHCall=0},tag=!sneak_pos,tag=!spectator,tag=!looking_at_map,tag=!spawn_animation,tag=!death_animation,tag=!scanning,tag=!grabbed,tag=!poltergust_selected,tag=!riding_poltergust] run function luigis_mansion:entities/player/animation/set/noneanimation/set/none
 
 # Gooigi cannot speak, so he cannot choose
 trigger ClairvoyaChoice add 0

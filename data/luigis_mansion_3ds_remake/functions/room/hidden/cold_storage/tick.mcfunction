@@ -7,6 +7,6 @@ execute as @a[gamemode=!spectator,scores={Room=68}] run function luigis_mansion_
 
 function #luigis_mansion_3ds_remake:room/hidden/cold_storage/interactions/room
 
-function luigis_mansion_3ds_remake:room/hidden/cold_storage/ghosts
+execute if entity @a[gamemode=!spectator,scores={Room=68},limit=1] run function luigis_mansion_3ds_remake:room/hidden/cold_storage/ghosts
 
 function luigis_mansion_3ds_remake:room/hidden/door/hallway_20_cold_storage

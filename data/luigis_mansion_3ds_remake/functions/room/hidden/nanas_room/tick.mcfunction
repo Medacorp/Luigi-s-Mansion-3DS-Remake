@@ -7,6 +7,6 @@ execute as @a[gamemode=!spectator,scores={Room=44}] run function luigis_mansion_
 
 function #luigis_mansion_3ds_remake:room/hidden/nanas_room/interactions/room
 
-function luigis_mansion_3ds_remake:room/hidden/nanas_room/ghosts
+execute if entity @a[gamemode=!spectator,scores={Room=44},limit=1] run function luigis_mansion_3ds_remake:room/hidden/nanas_room/ghosts
 
 function luigis_mansion_3ds_remake:room/hidden/door/hallway_10_nanas_room

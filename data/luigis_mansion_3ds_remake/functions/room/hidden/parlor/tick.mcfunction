@@ -14,7 +14,7 @@ function #luigis_mansion_3ds_remake:room/hidden/parlor/interactions/room
 execute if block 714 22 29 minecraft:brewing_stand[has_bottle_0=true,has_bottle_1=true,has_bottle_2=true] positioned 714 22 29 run function luigis_mansion:spawn_furniture/purple_candles
 execute if block 714 22 26 minecraft:brewing_stand[has_bottle_0=true,has_bottle_1=true,has_bottle_2=true] positioned 714 22 26 run function luigis_mansion:spawn_furniture/purple_candles
 
-function luigis_mansion_3ds_remake:room/hidden/parlor/ghosts
+execute if entity @a[gamemode=!spectator,scores={Room=3}] run function luigis_mansion_3ds_remake:room/hidden/parlor/ghosts
 
 function luigis_mansion_3ds_remake:room/hidden/door/hallway_1_parlor
 function luigis_mansion_3ds_remake:room/hidden/door/parlor_anteroom
