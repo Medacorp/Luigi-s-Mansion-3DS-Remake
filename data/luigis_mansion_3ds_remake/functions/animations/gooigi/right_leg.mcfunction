@@ -1,4 +1,4 @@
-tag @s[tag=low_health,tag=!looking_at_map] add sneak_pos
+tag @s[tag=low_health,tag=!stop_model] add sneak_pos
 # Move with
 teleport @s[nbt=!{Small:1b},tag=!flipped_gravity] ^-0.11 ^-2.34 ^ ~ ~
 teleport @s[nbt={Small:1b},tag=!flipped_gravity] ^-0.08 ^-1.34 ^ ~ ~
@@ -13,10 +13,10 @@ data modify entity @s[tag=!was_flipped,tag=flipped_gravity] Pose.Head[2] set val
 # Move animations
 data modify entity @s[tag=riding_poltergust] Pose.Head[0] set value -30.0f
 data modify entity @s[tag=riding_poltergust] Pose.Head[1] set value 30.0f
-execute if entity @s[tag=sneaking,tag=!looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/sneaking/right_leg
-execute if entity @s[tag=walking,tag=!looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/walking/right_leg
-execute if entity @s[tag=running,tag=!looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/running/right_leg
-execute if entity @s[tag=swimming,tag=!looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/swimming/right_leg
+execute if entity @s[tag=sneaking,tag=!stop_model] run function luigis_mansion_3ds_remake:animations/gooigi/sneaking/right_leg
+execute if entity @s[tag=walking,tag=!stop_model] run function luigis_mansion_3ds_remake:animations/gooigi/walking/right_leg
+execute if entity @s[tag=running,tag=!stop_model] run function luigis_mansion_3ds_remake:animations/gooigi/running/right_leg
+execute if entity @s[tag=swimming,tag=!stop_model] run function luigis_mansion_3ds_remake:animations/gooigi/swimming/right_leg
 
 execute at @s[tag=nod] run function luigis_mansion_3ds_remake:animations/gooigi/nod/right_leg
 execute at @s[tag=thinking] run function luigis_mansion_3ds_remake:animations/gooigi/thinking/right_leg
@@ -25,6 +25,7 @@ execute at @s[tag=enthusiastic] run function luigis_mansion_3ds_remake:animation
 execute at @s[tag=answer_phone] run function luigis_mansion_3ds_remake:animations/gooigi/answer_phone/right_leg
 execute at @s[tag=gameboy_horror] run function luigis_mansion_3ds_remake:animations/gooigi/gameboy_horror/right_leg
 execute at @s[tag=inspect] run function luigis_mansion_3ds_remake:animations/gooigi/inspect/right_leg
+execute at @s[tag=look] run function luigis_mansion_3ds_remake:animations/gooigi/look/right_leg
 execute at @s[scores={KnockbackType=-9}] run function luigis_mansion_3ds_remake:animations/gooigi/search/small_chest/right_leg
 execute at @s[scores={KnockbackType=-8}] run function luigis_mansion_3ds_remake:animations/gooigi/search/bash/right_leg
 execute at @s[scores={KnockbackType=-7}] run function luigis_mansion_3ds_remake:animations/gooigi/search/hump/right_leg
@@ -41,6 +42,7 @@ execute at @s[scores={KnockbackType=7}] run function luigis_mansion_3ds_remake:a
 execute at @s[scores={KnockbackType=8..9}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/grab/right_leg
 execute at @s[scores={KnockbackType=10}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/bite/right_leg
 execute at @s[scores={KnockbackType=11}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/slip/right_leg
+execute at @s[scores={KnockbackType=12..13}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/flee/right_leg
 
 execute at @s[tag=cold_room_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/cold_room/right_leg
 execute at @s[tag=high_health_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/high_health/right_leg

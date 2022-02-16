@@ -10,6 +10,8 @@ execute unless entity @a[tag=looking_at_map,limit=1] unless entity @s[scores={Ro
 execute unless entity @s[scores={Room=0}] run function #luigis_mansion:items/gameboy_horror/map/warp
 execute unless entity @s[scores={Room=0}] run function #luigis_mansion_3ds_remake:items/gameboy_horror/map/show_tracked_boos
 execute unless entity @s[scores={Room=0}] run tag @s[tag=!cancel] add looking_at_map
+execute unless entity @s[scores={Room=0}] run tag @s[tag=!cancel] add stop_model
+execute unless entity @s[scores={Room=0}] if entity @s[tag=!cancel] run function luigis_mansion:entities/player/animation/set/gameboy_horror
 execute unless entity @s[scores={Room=0}] if entity @s[tag=!cancel] run playsound luigis_mansion:item.gameboy_horror.map.open player @a[tag=same_room] ~ ~ ~ 1
 execute unless entity @s[scores={Room=0}] at @s[tag=!cancel] run playsound luigis_mansion:item.gameboy_horror.map.open player @s ~ ~ ~ 1
 tag @s remove opening_map

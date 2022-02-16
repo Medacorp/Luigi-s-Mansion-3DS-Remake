@@ -1,4 +1,4 @@
-tag @s[tag=low_health,tag=!looking_at_map] add sneak_pos
+tag @s[tag=low_health,tag=!stop_model] add sneak_pos
 # Move with
 teleport @s[tag=!sneak_pos,nbt=!{Small:1b},tag=!flipped_gravity] ^ ^-1.67 ^
 teleport @s[tag=sneak_pos,nbt=!{Small:1b},tag=!flipped_gravity] ^ ^-1.73 ^
@@ -26,18 +26,16 @@ execute if entity @s[scores={RotationDif=..-60000}] run scoreboard players add #
 execute if entity @s[scores={RotationDif=60000..}] run scoreboard players remove #temp PlayerRotation 60000
 execute if score #temp PlayerRotation matches 360000.. run scoreboard players remove #temp PlayerRotation 360000
 execute if score #temp PlayerRotation matches ..0 run scoreboard players add #temp PlayerRotation 360000
-execute if entity @s[scores={RotationDif=-60000..60000}] if entity @s[tag=!looking_at_map] store result entity @s Rotation[0] float 0.001 run scoreboard players get @s HomeRot
-execute unless entity @s[scores={RotationDif=-60000..60000}] if entity @s[tag=!looking_at_map] store result entity @s Rotation[0] float 0.001 run scoreboard players get #temp PlayerRotation
+execute if entity @s[scores={RotationDif=-60000..60000}] if entity @s[tag=!stop_model] store result entity @s Rotation[0] float 0.001 run scoreboard players get @s HomeRot
+execute unless entity @s[scores={RotationDif=-60000..60000}] if entity @s[tag=!stop_model] store result entity @s Rotation[0] float 0.001 run scoreboard players get #temp PlayerRotation
 scoreboard players reset #temp PlayerRotation
 
 # Look up/down
-execute if entity @s[tag=!looking_at_map,tag=!flipped_gravity] store result score #temp Time run data get entity @e[tag=gooigi,limit=1] Rotation[1] 1
-execute if entity @s[tag=!looking_at_map,tag=flipped_gravity] store result score #temp Time run data get entity @e[tag=gooigi,limit=1] Rotation[1] -1
-execute if entity @s[tag=!looking_at_map,tag=low_health] run scoreboard players add #temp Time 20
-execute if entity @s[tag=!looking_at_map] store result entity @s Pose.Head[0] float 1 run scoreboard players get #temp Time
+execute if entity @s[tag=!stop_model,tag=!flipped_gravity] store result score #temp Time run data get entity @e[tag=gooigi,limit=1] Rotation[1] 1
+execute if entity @s[tag=!stop_model,tag=flipped_gravity] store result score #temp Time run data get entity @e[tag=gooigi,limit=1] Rotation[1] -1
+execute if entity @s[tag=!stop_model,tag=low_health] run scoreboard players add #temp Time 20
+execute if entity @s[tag=!stop_model] store result entity @s Pose.Head[0] float 1 run scoreboard players get #temp Time
 scoreboard players reset #temp Time
-teleport @s[tag=looking_at_map] ~ ~-1.67 ~ ~ ~
-execute if entity @s[tag=looking_at_map] run function luigis_mansion_3ds_remake:animations/gooigi/looking_at_map/head
 
 execute at @s[tag=yelling] run function luigis_mansion_3ds_remake:animations/gooigi/wave/head
 execute at @s[tag=nod] run function luigis_mansion_3ds_remake:animations/gooigi/nod/head
@@ -47,6 +45,7 @@ execute at @s[tag=enthusiastic] run function luigis_mansion_3ds_remake:animation
 execute at @s[tag=answer_phone] run function luigis_mansion_3ds_remake:animations/gooigi/answer_phone/head
 execute at @s[tag=gameboy_horror] run function luigis_mansion_3ds_remake:animations/gooigi/gameboy_horror/head
 execute at @s[tag=inspect] run function luigis_mansion_3ds_remake:animations/gooigi/inspect/head
+execute at @s[tag=look] run function luigis_mansion_3ds_remake:animations/gooigi/look/head
 execute at @s[scores={KnockbackType=-9}] run function luigis_mansion_3ds_remake:animations/gooigi/search/small_chest/head
 execute at @s[scores={KnockbackType=-8}] run function luigis_mansion_3ds_remake:animations/gooigi/search/bash/head
 execute at @s[scores={KnockbackType=-7}] run function luigis_mansion_3ds_remake:animations/gooigi/search/hump/head
@@ -63,6 +62,7 @@ execute at @s[scores={KnockbackType=7}] run function luigis_mansion_3ds_remake:a
 execute at @s[scores={KnockbackType=8..9}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/grab/head
 execute at @s[scores={KnockbackType=10}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/bite/head
 execute at @s[scores={KnockbackType=11}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/slip/head
+execute at @s[scores={KnockbackType=12..13}] run function luigis_mansion_3ds_remake:animations/gooigi/knockback/flee/head
 
 execute at @s[tag=cold_room_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/cold_room/head
 execute at @s[tag=high_health_idle] run function luigis_mansion_3ds_remake:animations/gooigi/idle/high_health/head
