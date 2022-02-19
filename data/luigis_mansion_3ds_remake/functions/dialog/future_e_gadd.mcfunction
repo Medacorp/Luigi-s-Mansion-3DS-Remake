@@ -3,11 +3,13 @@ execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s Dial
 scoreboard players operation #temp Dialog = @s Dialog
 scoreboard players operation #temp Dialog %= #10 Constants
 tag @s[scores={Dialog=1}] add nod
+execute if entity @s[scores={Dialog=1..2111}] as @a[tag=same_room,gamemode=!spectator,scores={IdleTime=0..},tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/stand_still
 execute if entity @s[scores={Dialog=1}] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.1","with":[{"selector":"@a[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.1.more"}]}
 execute if entity @s[scores={Dialog=1}] run playsound luigis_mansion:entity.e_gadd.talk.luigi neutral @a[tag=same_room] ~ ~ ~ 1
 tag @s[scores={Dialog=56}] remove nod
+execute if entity @s[scores={Dialog=56}] as @a[tag=same_room,tag=!spectator] run function luigis_mansion:entities/player/scare/normal
 execute if entity @s[scores={Dialog=56}] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0
 execute if entity @s[scores={Dialog=56..168}] as @a[tag=same_room] unless entity @s[scores={MusicGroup=0,MusicType=-1}] run function luigis_mansion:other/music/set/non_overwritten_silence
 execute if entity @s[scores={Dialog=56..168}] if score #temp Dialog matches 0..4 run scoreboard players set @a[tag=same_room] ForceScreen 1
@@ -21,6 +23,7 @@ execute if entity @s[scores={Dialog=208}] run tellraw @a[tag=same_room] {"transl
 execute if entity @s[scores={Dialog=208}] as @a[tag=same_room] at @s run playsound luigis_mansion:entity.e_gadd.talk.shortlaugh neutral @s ~ ~ ~ 1
 tag @s[scores={Dialog=228}] remove listen
 tag @s[scores={Dialog=228}] add hit
+execute if entity @s[scores={Dialog=228}] as @a[tag=same_room,tag=!spectator] run function luigis_mansion:entities/player/scare/bash_no_move
 execute if entity @s[scores={Dialog=228}] run scoreboard players set @e[tag=this_model,tag=e_gadd_head,limit=1] AnimationProg 0
 tag @s[scores={Dialog=248}] remove hit
 tag @s[scores={Dialog=248}] add sitting
@@ -78,6 +81,7 @@ execute if entity @s[scores={Dialog=1912}] if score #players Totals matches 1 ru
 execute if entity @s[scores={Dialog=1912}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.22.more"}]}
 execute if entity @s[scores={Dialog=1912}] run playsound luigis_mansion:entity.e_gadd.talk.oui_oydohroh_tahmentahkeh neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={Dialog=2112}] run data modify storage luigis_mansion_3ds_remake:data spoke_with_future_e_gadd set value 1b
+execute if entity @s[scores={Dialog=2112}] as @a[tag=same_room,tag=!spectator,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
 tag @s[scores={Dialog=2112}] add talk
 scoreboard players reset @s[scores={Dialog=2112}] Dialog
 scoreboard players reset #temp Dialog
