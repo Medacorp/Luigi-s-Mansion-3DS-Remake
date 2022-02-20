@@ -2,7 +2,6 @@
 	"values": [
 	    "luigis_mansion_3ds_remake:room/hidden/projection_room/load/set_loaded",
         "luigis_mansion_3ds_remake:room/hidden/projection_room/load/lights",
-        "luigis_mansion_3ds_remake:room/hidden/projection_room/load/chest",
-        "luigis_mansion_3ds_remake:room/hidden/projection_room/load/closet"
-	]
+        "luigis_mansion_3ds_remake:room/hidden/projection_room/load/chest"
+    ]
 }
