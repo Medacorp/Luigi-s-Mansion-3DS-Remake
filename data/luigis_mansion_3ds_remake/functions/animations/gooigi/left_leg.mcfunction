@@ -26,7 +26,7 @@ execute at @s[tag=answer_phone] run function luigis_mansion_3ds_remake:animation
 execute at @s[tag=gameboy_horror] run function luigis_mansion_3ds_remake:animations/gooigi/gameboy_horror/left_leg
 execute at @s[tag=inspect] run function luigis_mansion_3ds_remake:animations/gooigi/inspect/left_leg
 execute at @s[tag=look] run function luigis_mansion_3ds_remake:animations/gooigi/look/left_leg
-execute at @s[scores={KnockbackType=-9}] run function luigis_mansion_3ds_remake:animations/gooigi/search/small_chest/left_leg
+execute at @s[scores={KnockbackType=-9}] run function luigis_mansion_3ds_remake:animations/gooigi/search/chest/left_leg
 execute at @s[scores={KnockbackType=-8}] run function luigis_mansion_3ds_remake:animations/gooigi/search/bash/left_leg
 execute at @s[scores={KnockbackType=-7}] run function luigis_mansion_3ds_remake:animations/gooigi/search/hump/left_leg
 execute at @s[scores={KnockbackType=-6..-5}] run function luigis_mansion_3ds_remake:animations/gooigi/search/knock/left_leg

@@ -50,7 +50,7 @@ execute at @s[tag=answer_phone] run function luigis_mansion:animations/luigi/ans
 execute at @s[tag=gameboy_horror] run function luigis_mansion:animations/luigi/gameboy_horror/chest
 execute at @s[tag=inspect] run function luigis_mansion:animations/luigi/inspect/chest
 execute at @s[tag=look] run function luigis_mansion:animations/luigi/look/chest
-execute at @s[scores={KnockbackType=-9}] run function luigis_mansion_3ds_remake:animations/luigi/search/small_chest/chest
+execute at @s[scores={KnockbackType=-9}] run function luigis_mansion_3ds_remake:animations/luigi/search/chest/chest
 execute at @s[scores={KnockbackType=-8}] run function luigis_mansion:animations/luigi/search/bash/chest
 execute at @s[scores={KnockbackType=-7}] run function luigis_mansion:animations/luigi/search/hump/chest
 execute at @s[scores={KnockbackType=-6..-5}] run function luigis_mansion:animations/luigi/search/knock/chest

@@ -10,7 +10,7 @@ kill @e[tag=home,limit=1]
 #type 2 = wall
 #type 3 = hump
 #type 4 = knock
-#type 5 = small chest
+#type 5 = chest
 #none set = randomly 2, 3 or 4
 #out of range = 3
 execute unless entity @s[scores={InteractionType=1..}] if predicate luigis_mansion:1_3 run scoreboard players set @s[scores={IdleTime=0..}] InteractionType 2
