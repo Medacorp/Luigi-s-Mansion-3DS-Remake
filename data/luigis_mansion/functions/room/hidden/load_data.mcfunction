@@ -8,7 +8,6 @@ scoreboard players set #mansion_data_index Selected 1
 execute unless score #mansion_data_index Selected = #previous_mansion_index Selected if data storage luigis_mansion:data current_state.mansion_data[-1] run function luigis_mansion:room/load_mansion_data
 function #luigis_mansion:room/reset_variable_to_default
 scoreboard players set #multiply_hurt Selected 200
-scoreboard players set #multiply_damage Selected 125
 scoreboard players set #can_warp Selected 1
 scoreboard players set #heart_coin_count Selected 1000
 scoreboard players reset * Ticking

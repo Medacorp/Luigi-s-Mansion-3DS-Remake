@@ -1,5 +1,7 @@
 scoreboard players set #mansion_data_index Selected 1
-data modify storage luigis_mansion:data current_state.current_data merge value {data_index:1,portrait_ghosts:{neville:{max_health:15000},lydia:{max_health:15000},chauncey:{max_health:15000},floating_whirlindas:{max_health:15000},shivers:{max_health:15000},melody_pianissima:{max_health:15000},mr_luggs:{max_health:15000},spooky:{max_health:15000},bogmire:{max_health:15000},biff_atlas:{max_health:15000},miss_petunia:{max_health:15000},nana:{max_health:15000},slim_bankshot:{max_health:15000},henry_and_orville:{henry_max_health:15000,orville_max_health:15000},madame_clairvoya:{max_health:15000},uncle_grimmly:{max_health:15000},clockwork_soldiers:{pink_max_health:15000,blue_max_health:15000,green_max_health:15000},jarvis:{max_health:15000},sir_weston:{max_health:15000},sue_pea:{max_health:15000},vincent_van_gore:{max_health:15000},king_boo:{max_health:75000}},ghosts:{gold_ghost:{health:1500},temper_terror:{health:1500},speedy_spirit:{health:1500},purple_puncher:{health:3000},flash:{health:3000},blue_twirler:{health:4500},blue_blaze:{health:4500},garbage_can_ghost:{health:6000},ceiling_surprise:{health:1},purple_bomber:{health:1},bowling_ghost:{health:1},grabbing_ghost:{health:1500},red_grabbing_ghost:{health:3000},mirror_ghost:{health:3000},cinema_ghost:{health:3000},ghost_guy:{health:3000},dancing_ghost_guy:{health:3000},mr_bones:{health:4500},waiter:{health:1500}}}
+scoreboard players set #multiply_damage Selected 100
+scoreboard players set #can_get_platinum_boss Selected 1
+data modify storage luigis_mansion:data current_state.current_data merge value {data_index:1,portrait_ghosts:{neville:{max_health:15000},lydia:{max_health:15000},chauncey:{max_health:15000},floating_whirlindas:{max_health:15000},shivers:{max_health:15000},melody_pianissima:{max_health:15000},mr_luggs:{max_health:15000},spooky:{max_health:15000},bogmire:{max_health:15000},biff_atlas:{max_health:15000},miss_petunia:{max_health:15000},nana:{max_health:15000},slim_bankshot:{max_health:15000},henry_and_orville:{henry_max_health:15000,orville_max_health:15000},madame_clairvoya:{max_health:15000},uncle_grimmly:{max_health:15000},clockwork_soldiers:{pink_max_health:15000,blue_max_health:15000,green_max_health:15000},jarvis:{max_health:15000},sir_weston:{max_health:15000},sue_pea:{max_health:15000},vincent_van_gore:{max_health:15000},king_boo:{max_health:75000}},ghosts:{gold_ghost:{health:1500},temper_terror:{health:1500},speedy_spirit:{health:1500},purple_puncher:{health:3000},flash:{health:3000},blue_twirler:{health:4500},blue_blaze:{health:4500},garbage_can_ghost:{health:6000},ceiling_surprise:{health:1,loot:{small_heart:0,poison_mushroom:1}},purple_bomber:{health:1},bowling_ghost:{health:1},grabbing_ghost:{health:1500},red_grabbing_ghost:{health:3000},mirror_ghost:{health:3000},cinema_ghost:{health:3000},ghost_guy:{health:3000},dancing_ghost_guy:{health:3000},mr_bones:{health:4500},waiter:{health:1500}}}
 data modify storage luigis_mansion:data current_state.current_data.portrait_ghosts.neville{health:10000}.health set value 15000
 data modify storage luigis_mansion:data current_state.current_data.portrait_ghosts.lydia{health:10000}.health set value 15000
 data modify storage luigis_mansion:data current_state.current_data.portrait_ghosts.chauncey{health:10000}.health set value 15000
@@ -129,8 +131,10 @@ execute if data storage luigis_mansion:data current_state.current_data.money_spa
 execute if data storage luigis_mansion:data current_state.current_data.money_spawned{billiards_room_chest:1b} run data modify storage luigis_mansion:data current_state.current_data.money_spawned merge value {the_twins_room_chest:1b}
 execute in luigis_mansion:hidden run forceload remove 831 159 432 16
 execute in luigis_mansion:hidden run forceload remove 831 15 432 -80
+execute in luigis_mansion:hidden run forceload remove 3777 -100 3585 115
 execute in luigis_mansion:normal run forceload add 831 -144 432 -1
 execute in luigis_mansion:normal run forceload add 831 0 432 95
+execute in luigis_mansion:normal run forceload add 3777 -100 3585 115
 execute if score #foyer Ticking matches 1 run function #luigis_mansion:room/hidden/foyer/reset
 execute if score #hallway_1 Ticking matches 1 run function #luigis_mansion:room/hidden/hallway_1/reset
 execute if score #parlor Ticking matches 1 run function #luigis_mansion:room/hidden/parlor/reset
@@ -203,4 +207,3 @@ execute if score #sitting_room Ticking matches 1 run function #luigis_mansion:ro
 execute if score #guest_room Ticking matches 1 run function #luigis_mansion:room/hidden/guest_room/reset
 execute if score #the_artists_studio Ticking matches 1 run function #luigis_mansion:room/hidden/the_artists_studio/reset
 execute if score #secret_altar Ticking matches 1 run function #luigis_mansion:room/hidden/secret_altar/reset
-scoreboard players set #can_get_platinum_boss Selected 1
