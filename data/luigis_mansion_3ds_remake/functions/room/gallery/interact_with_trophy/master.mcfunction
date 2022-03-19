@@ -31,15 +31,15 @@ execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.mast
 scoreboard players reset #temp Time
 scoreboard players reset #temp Money
 scoreboard players set #temp Time 0
-scoreboard players set #temp Money 80
+scoreboard players set #temp ActionTime 80
 execute if data storage luigis_mansion:data high_scores[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_lowest_health
 execute if data storage luigis_mansion:data new_high_scores run data modify storage luigis_mansion:data high_scores set from storage luigis_mansion:data new_high_scores
 data remove storage luigis_mansion:data new_high_scores
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_6:0b} run tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.hover_event","with":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.master.expert_player","hoverEvent":{"action":"show_text","contents":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.master.expert_player.description"}]}}]}]}
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_6:1b} run tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.hover_event","with":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.master.expert_player","color":"gold","hoverEvent":{"action":"show_text","contents":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.master.expert_player.description"}]}}]}]}
 scoreboard players reset #temp Time
-scoreboard players reset #temp Money
-scoreboard players reset #temp2 Money
+scoreboard players reset #temp ActionTime
+scoreboard players reset #temp2 ActionTime
 scoreboard players set #temp Time 2147483647
 execute if data storage luigis_mansion:data high_scores[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_quickest_time
 execute if data storage luigis_mansion:data new_high_scores run data modify storage luigis_mansion:data high_scores set from storage luigis_mansion:data new_high_scores
@@ -47,7 +47,7 @@ data remove storage luigis_mansion:data new_high_scores
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_7:0b} run tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.hover_event","with":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.master.speedrunner","hoverEvent":{"action":"show_text","contents":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.master.speedrunner.description"}]}}]}]}
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_7:1b} run tellraw @s {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:message.hover_event","with":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.master.speedrunner","color":"gold","hoverEvent":{"action":"show_text","contents":[{"translate":"luigis_mansion_3ds_remake:message.gallery.trophy.master.speedrunner.description"}]}}]}]}
 scoreboard players reset #temp Time
-scoreboard players reset #temp Money
+scoreboard players reset #temp ActionTime
 scoreboard players set #temp Money 3800
 scoreboard players set #temp Time 0
 function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_portrait_speed_count
