@@ -81,7 +81,7 @@ execute if entity @s[scores={Dialog=1912}] if score #players Totals matches 1 ru
 execute if entity @s[scores={Dialog=1912}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.future_e_gadd.22.more"}]}
 execute if entity @s[scores={Dialog=1912}] run playsound luigis_mansion:entity.e_gadd.talk.oui_oydohroh_tahmentahkeh neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={Dialog=2112}] run data modify storage luigis_mansion_3ds_remake:data spoke_with_future_e_gadd set value 1b
-execute if entity @s[scores={Dialog=2112}] as @a[tag=same_room,tag=!spectator,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
+execute if entity @s[scores={Dialog=2112}] as @a[tag=same_room,gamemode=!spectator,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
 tag @s[scores={Dialog=2112}] add talk
 scoreboard players reset @s[scores={Dialog=2112}] Dialog
 scoreboard players reset #temp Dialog

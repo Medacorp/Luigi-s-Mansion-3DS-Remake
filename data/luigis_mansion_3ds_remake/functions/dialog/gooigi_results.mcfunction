@@ -3,7 +3,7 @@ scoreboard players add @s[scores={Dialog=1..561}] Dialog 1
 execute unless entity @s[scores={Dialog=1..}] run scoreboard players add @s Dialog 1
 scoreboard players set @a[tag=same_room] ForceScreen 1
 execute facing entity @e[tag=same_room,tag=!spectator,sort=nearest,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
-execute if entity @s[scores={Dialog=1..562}] as @a[tag=same_room,gamemode=!spectator,scores={IdleTime=0..},tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/gameboy_horror
+execute if entity @s[scores={Dialog=1..562}] as @a[tag=same_room,gamemode=!spectator,tag=!gameboy_horror,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/gameboy_horror
 execute if entity @s[scores={Dialog=1..559}] as @a[tag=same_room] unless entity @s[scores={MusicGroup=1,MusicType=1}] run function luigis_mansion_3ds_remake:other/music/set/future_e_gadd
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.1","with":[{"selector":"@a[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=1}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion_3ds_remake:entity.future_e_gadd","color":"green"},{"translate":"luigis_mansion_3ds_remake:dialog.gooigi_results.1.more"}]}
@@ -40,7 +40,7 @@ execute if entity @s[scores={Dialog=561}] run tellraw @a[tag=same_room] {"transl
 execute if entity @s[scores={Dialog=561}] run scoreboard players enable @a[tag=same_room] EGaddGPRChoice
 execute if entity @s[scores={Dialog=562}] unless entity @a[tag=same_room,limit=1] run scoreboard players set @s Dialog 563
 execute if entity @s[scores={Dialog=563}] as @a[scores={EGaddGPRChoice=1},limit=1] run function luigis_mansion:data/save
-execute if entity @s[scores={Dialog=563}] as @a[tag=same_room,tag=!spectator,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
+execute if entity @s[scores={Dialog=563}] as @a[tag=same_room,gamemode=!spectator,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
 tag @s[scores={Dialog=563}] remove gooigi_results
 execute if entity @s[scores={Dialog=563}] run scoreboard players reset @a[tag=same_room] EGaddGPRChoice
 scoreboard players reset @s[scores={Dialog=563}] Dialog
