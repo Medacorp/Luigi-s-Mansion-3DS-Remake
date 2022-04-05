@@ -24,7 +24,7 @@ execute if entity @s[scores={Dialog=139}] if score #toad_amiibo Selected matches
 execute if entity @s[scores={Dialog=234}] if score #toad_amiibo Selected matches 1 at @a[gamemode=!spectator,tag=!looking_at_map] run function luigis_mansion:spawn_entities/item/big_heart
 execute if entity @s[scores={Dialog=234}] if score #toad_amiibo Selected matches 1 at @e[tag=gameboy_horror_location] run function luigis_mansion:spawn_entities/item/big_heart
 execute if score #toad_amiibo Selected matches 1 unless entity @a[tag=!gooigi,scores={Health=..99}] unless entity @a[tag=gooigi,scores={Health=..49}] run scoreboard players set @s[scores={Dialog=138}] Dialog 226
-execute if score #toad_amiibo Selected matches 0 run scoreboard players set @s[scores={Dialog=138}] Dialog 226
+execute if score #toad_amiibo Selected matches 0 run scoreboard players set @s[scores={Dialog=138}] Dialog 234
 execute if entity @s[scores={Dialog=234}] as @a[tag=same_room,tag=!spectator,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
 tag @s[scores={Dialog=234}] remove talk
 execute unless entity @e[tag=same_room,tag=!spectator,distance=..7,limit=1] run tag @s remove talk
