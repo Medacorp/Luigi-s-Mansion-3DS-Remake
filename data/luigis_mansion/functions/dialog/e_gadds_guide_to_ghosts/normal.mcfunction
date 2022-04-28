@@ -15,7 +15,7 @@ tellraw @s[scores={Dialog=298}] {"translate":"chat.type.text","with":[{"translat
 tellraw @s[scores={Dialog=490}] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:dialog.e_gadds_guide_to_ghosts.6"}]}
 tellraw @s[scores={Dialog=570}] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.mansion","color":"green"},{"translate":"luigis_mansion:dialog.e_gadds_guide_to_ghosts.7"}]}
 execute if entity @s[scores={Dialog=801}] run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.normal.read_books.e_gadds_guide_to_ghosts set value 1b
-execute if entity @s[scores={Dialog=801}] run execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.normal.read_books{book_of_riddles:1b,darkness_is_their_cheese:1b,e_gadds_guide_to_ghosts:1b,lydias_child_care_diary:1b,moldy_old_journal:1b,nevilles_big_baby_care_diary:1b,the_book_of_pericles:1b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/task_8
+execute if entity @s[scores={Dialog=801}] if data storage luigis_mansion_3ds_remake:data current_state.trophy.normal.read_books{book_of_riddles:1b,darkness_is_their_cheese:1b,e_gadds_guide_to_ghosts:1b,lydias_child_care_diary:1b,moldy_old_journal:1b,nevilles_big_baby_care_diary:1b,the_book_of_pericles:1b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/task_8
 execute if entity @s[scores={Dialog=802},tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
 scoreboard players reset @s[scores={Dialog=802}] BookChoice
 tag @s[scores={Dialog=802}] remove e_gadds_guide_to_ghosts

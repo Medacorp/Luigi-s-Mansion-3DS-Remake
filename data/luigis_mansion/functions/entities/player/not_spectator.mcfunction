@@ -18,7 +18,7 @@ execute if entity @s[tag=riding_poltergust,scores={KnockbackType=0},tag=!looking
 execute unless entity @s[tag=riding_poltergust,scores={KnockbackType=0},tag=!looking_at_map,tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run scoreboard players set @s SlipX 0
 execute unless entity @s[tag=riding_poltergust,scores={KnockbackType=0},tag=!looking_at_map,tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving] run scoreboard players set @s SlipZ 0
 
-execute if entity @s[scores={Talk=1..},tag=!death_animation,tag=!revive_animation,tag=!gooigi] run function luigis_mansion:target_villager
+execute if entity @s[scores={Talk=1..},tag=!death_animation,tag=!revive_animation,tag=!polterpup_reviving,tag=!gooigi] run function luigis_mansion:target_villager
 scoreboard players set @s[scores={Talk=1..}] Talk 0
 
 execute unless entity @a[scores={GBHCall=1..},limit=1] rotated ~ 0 positioned ^ ^ ^-4 run function luigis_mansion:entities/player/spawn_ghosts
