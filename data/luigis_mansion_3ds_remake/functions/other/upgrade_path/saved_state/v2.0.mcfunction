@@ -1,0 +1,2 @@
+data modify storage luigis_mansion:data saved_state.mansion_data[{data_index:1}] merge value {ghosts:{fake_door:{health:750,loot:{}}}}
+data modify storage luigis_mansion:data saved_state.mansion_data[{data_index:1}].data_version set value 3

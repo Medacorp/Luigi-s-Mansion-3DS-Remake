@@ -1,0 +1,1 @@
+execute in luigis_mansion:normal run function luigis_mansion:entities/door/normal/go_through

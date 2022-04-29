@@ -238,12 +238,41 @@ execute at @s[scores={KnockbackType=12..13}] run function luigis_mansion:entitie
 execute at @s[scores={KnockbackTime=51..60,KnockbackType=12}] facing entity @e[type=minecraft:marker,tag=temp,limit=1] feet rotated ~-180 0 run teleport @s ^ ^ ^0.16 ~ ~
 execute at @s[scores={KnockbackTime=..50,KnockbackType=12..13}] facing entity @e[type=minecraft:marker,tag=temp,limit=1] feet rotated ~-180 0 run teleport @s ^ ^ ^0.16 ~ ~
 
-execute at @s if block ~ ~1 ~ #luigis_mansion:all_ignore unless block ~ ~1.9 ~ #luigis_mansion:all_ignore run teleport @s ~ ~-0.16 ~
-execute at @s unless block ~ ~ ~ #luigis_mansion:all_ignore if block ~ ~0.3 ~ #luigis_mansion:all_ignore run teleport @s ~ ~0.16 ~
-execute at @s unless block ~0.3 ~ ~ #luigis_mansion:all_ignore if block ~ ~ ~ #luigis_mansion:all_ignore run teleport @s ~-0.16 ~ ~
-execute at @s unless block ~-0.3 ~ ~ #luigis_mansion:all_ignore if block ~ ~ ~ #luigis_mansion:all_ignore run teleport @s ~0.16 ~ ~
-execute at @s unless block ~ ~ ~0.3 #luigis_mansion:all_ignore if block ~ ~ ~ #luigis_mansion:all_ignore run teleport @s ~ ~ ~-0.16
-execute at @s unless block ~ ~ ~-0.3 #luigis_mansion:all_ignore if block ~ ~ ~ #luigis_mansion:all_ignore run teleport @s ~ ~ ~0.16
+execute at @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0,Health=41..,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.scare.high_health player @a[tag=same_room] ~ ~ ~ 1
+execute at @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0,Health=41..,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.scare.high_health player @a[tag=same_room] ~ ~ ~ 1 2
+execute at @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0,Health=..40,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.scare.low_health player @a[tag=same_room] ~ ~ ~ 1
+execute at @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0,Health=..40,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.scare.low_health player @a[tag=same_room] ~ ~ ~ 1 2
+scoreboard players set @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0},tag=!gooigi] Sound 8
+effect give @s[scores={KnockbackTime=125,KnockbackType=14}] minecraft:instant_damage 1 0 true
+scoreboard players set @s[scores={KnockbackTime=125,KnockbackType=14}] ForcedDamage 4
+execute at @s[scores={KnockbackType=14}] run summon minecraft:marker ~ ~ ~ {Tags:["home"]}
+execute at @s[scores={KnockbackType=14}] store result entity @e[tag=home,limit=1] Pos[0] double 0.01 run scoreboard players get @s PosX
+execute at @s[scores={KnockbackType=14}] store result entity @e[tag=home,limit=1] Pos[1] double 0.01 run scoreboard players get @s PosY
+execute at @s[scores={KnockbackType=14}] store result entity @e[tag=home,limit=1] Pos[2] double 0.01 run scoreboard players get @s PosZ
+execute at @s[scores={KnockbackType=14}] store result entity @e[tag=home,limit=1] Rotation[0] float 0.01 run scoreboard players get @s RotY
+execute at @s[scores={KnockbackType=14}] store result entity @e[tag=home,limit=1] Rotation[1] float 0.01 run scoreboard players get @s RotX
+execute at @s[scores={KnockbackType=14}] at @e[tag=home,limit=1] run tp @s ~ 0 ~ ~ ~
+execute at @s[scores={KnockbackType=14}] at @e[tag=home,limit=1] run tp @s ~ ~ ~ ~ ~
+execute at @s[scores={KnockbackTime=126..135,KnockbackType=14},tag=left_door] rotated ~-18 0 run teleport @s ^ ^ ^-0.15 ~ ~
+execute at @s[scores={KnockbackTime=126..135,KnockbackType=14},tag=!left_door] rotated ~18 0 run teleport @s ^ ^ ^-0.15 ~ ~
+execute at @s[scores={KnockbackTime=125,KnockbackType=14,Sound=0,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.hurt_fake_door.high_health player @a[tag=same_room] ~ ~ ~ 1
+execute at @s[scores={KnockbackTime=125,KnockbackType=14,Sound=0,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.hurt_fake_door.high_health player @a[tag=same_room] ~ ~ ~ 1 2
+scoreboard players set @s[scores={KnockbackTime=125,KnockbackType=14,Sound=0},tag=!gooigi] Sound 105
+execute at @s[scores={KnockbackTime=125,KnockbackType=14}] rotated ~ 0 run teleport @s ^ ^ ^-0.2 ~ ~
+execute at @s[scores={KnockbackTime=40..69,KnockbackType=14}] rotated ~ 0 run teleport @s ^ ^ ^0.05 ~ ~
+execute at @s[scores={KnockbackTime=20,KnockbackType=14,Sound=0,Health=41..,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.sigh.high_health player @a[tag=same_room] ~ ~ ~ 1
+execute at @s[scores={KnockbackTime=20,KnockbackType=14,Sound=0,Health=41..,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.sigh.high_health player @a[tag=same_room] ~ ~ ~ 1 2
+execute at @s[scores={KnockbackTime=20,KnockbackType=14,Sound=0,Health=..40,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.sigh.low_health player @a[tag=same_room] ~ ~ ~ 1
+execute at @s[scores={KnockbackTime=20,KnockbackType=14,Sound=0,Health=..40,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.sigh.low_health player @a[tag=same_room] ~ ~ ~ 1 2
+scoreboard players set @s[scores={KnockbackTime=20,KnockbackType=14,Sound=0},tag=!gooigi] Sound 20
+tag @s[scores={KnockbackTime=1,KnockbackType=14}] remove left_door
+
+execute at @s unless entity @s[scores={KnockbackType=14}] if block ~ ~1 ~ #luigis_mansion:all_ignore unless block ~ ~1.9 ~ #luigis_mansion:all_ignore run teleport @s ~ ~-0.16 ~
+execute at @s unless entity @s[scores={KnockbackType=14}] unless block ~ ~ ~ #luigis_mansion:all_ignore if block ~ ~0.3 ~ #luigis_mansion:all_ignore run teleport @s ~ ~0.16 ~
+execute at @s unless entity @s[scores={KnockbackType=14}] unless block ~0.3 ~ ~ #luigis_mansion:all_ignore if block ~ ~ ~ #luigis_mansion:all_ignore run teleport @s ~-0.16 ~ ~
+execute at @s unless entity @s[scores={KnockbackType=14}] unless block ~-0.3 ~ ~ #luigis_mansion:all_ignore if block ~ ~ ~ #luigis_mansion:all_ignore run teleport @s ~0.16 ~ ~
+execute at @s unless entity @s[scores={KnockbackType=14}] unless block ~ ~ ~0.3 #luigis_mansion:all_ignore if block ~ ~ ~ #luigis_mansion:all_ignore run teleport @s ~ ~ ~-0.16
+execute at @s unless entity @s[scores={KnockbackType=14}] unless block ~ ~ ~-0.3 #luigis_mansion:all_ignore if block ~ ~ ~ #luigis_mansion:all_ignore run teleport @s ~ ~ ~0.16
 kill @e[type=minecraft:marker,tag=temp,limit=1]
 scoreboard players remove @s KnockbackTime 1
 scoreboard players reset @s[scores={KnockbackType=..6}] GrabbedShake

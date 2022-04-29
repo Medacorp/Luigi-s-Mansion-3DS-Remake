@@ -7,9 +7,6 @@ scoreboard objectives add RespawnTimer dummy
 scoreboard objectives add SelectedFrame dummy
 scoreboard objectives add StrobulbCharge dummy
 
-team add NoCollision
-team modify NoCollision collisionRule never
-
 bossbar add luigis_mansion_3ds_remake:portrait_battle {"translate":"luigis_mansion_3ds_remake:message.gallery.portrait_battle.time","color":"white","with":["0","0","0"]}
 bossbar set luigis_mansion_3ds_remake:portrait_battle color white
 
