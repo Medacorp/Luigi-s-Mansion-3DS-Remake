@@ -59,7 +59,7 @@ execute if data storage luigis_mansion:data current_state.ghosts_caught[0] run f
 execute if data storage luigis_mansion:data current_state.new_ghosts_caught run data modify storage luigis_mansion:data current_state.ghosts_caught set from storage luigis_mansion:data current_state.new_ghosts_caught
 data remove storage luigis_mansion:data current_state.new_ghosts_caught
 execute if score #temp Time matches 1.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.task_5 set value 1b
-execute if score #temp Time matches 20.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.easy.task_7 set value 1b
+execute if score #temp Time matches 20.. run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.hard.task_7 set value 1b
 scoreboard players reset #temp Time
 scoreboard players reset #temp Money
 execute if data storage luigis_mansion:data current_state.ghosts_caught[0] run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_ghost_count/speedy_spirit

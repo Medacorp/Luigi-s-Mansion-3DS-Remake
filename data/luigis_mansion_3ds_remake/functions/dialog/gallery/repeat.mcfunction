@@ -59,7 +59,7 @@ execute if entity @s[scores={Dialog=826}] if score #players Totals matches 1 if 
 execute if entity @s[scores={Dialog=826}] if score #players Totals matches 2.. if entity @a[scores={EGaddGallChoice=2}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.gallery.what.5.more"}]}
 execute if entity @s[scores={Dialog=826}] if entity @a[scores={EGaddGallChoice=2}] run playsound luigis_mansion:entity.e_gadd.talk.mee_kehkeh neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={Dialog=866}] if entity @a[scores={EGaddGallChoice=2}] as @a[tag=same_room,tag=!spectator,tag=!entusiastic,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/entusiastic
-execute if entity @s[scores={Dialog=886}] if entity @a[scores={EGaddGallChoice=2}] run scoreboard players set @s Dialog 1354
+execute if entity @s[scores={Dialog=906}] if entity @a[scores={EGaddGallChoice=2}] run scoreboard players set @s Dialog 1354
 execute if entity @s[scores={Dialog=82..105}] if entity @a[scores={EGaddGallChoice=3}] as @a[tag=same_room,tag=!spectator,tag=!thinking,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/thinking
 execute if entity @s[scores={Dialog=82}] if entity @a[scores={EGaddGallChoice=3}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.gallery.leave.1"}]}
 execute if entity @s[scores={Dialog=82}] if entity @a[scores={EGaddGallChoice=3}] run playsound luigis_mansion:entity.e_gadd.talk.yahboh_yahboh neutral @a[tag=same_room] ~ ~ ~ 1

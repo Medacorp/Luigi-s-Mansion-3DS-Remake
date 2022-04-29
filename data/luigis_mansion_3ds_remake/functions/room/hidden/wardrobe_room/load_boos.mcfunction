@@ -34,6 +34,6 @@ execute if data storage luigis_mansion:data current_state.current_data.boos[{nam
 execute if data storage luigis_mansion:data current_state.current_data.boos[{name:"turboo",room:5}] unless entity @e[tag=turboo,scores={Room=5}] run summon minecraft:marker 682 20 67.0 {CustomName:'{"translate":"luigis_mansion:entity.hidden_boo"}',Tags:["hidden_boo","turboo","new"]}
 execute if data storage luigis_mansion:data current_state.current_data.boos[{name:"underboo",room:5}] unless entity @e[tag=underboo,scores={Room=5}] run summon minecraft:marker 682 20 67.0 {CustomName:'{"translate":"luigis_mansion:entity.hidden_boo"}',Tags:["hidden_boo","underboo","new"]}
 execute if data storage luigis_mansion:data current_state.current_data.boos[{name:"gameboo_advance",trap_found:0b}] unless entity @e[tag=gameboo_advance_trap,scores={Room=5}] run summon minecraft:marker 682 20 67.0 {CustomName:'{"translate":"luigis_mansion:entity.hidden_boo"}',Tags:["hidden_boo","gameboo_advance_trap","trap","new"]}
-scoreboard players set @e[tag=hidden_boo,tag=new] Room 4
+scoreboard players set @e[tag=hidden_boo,tag=new] Room 5
 scoreboard players set @e[tag=hidden_boo,tag=new] HideTime 0
 tag @e[tag=hidden_boo,tag=new] remove new 

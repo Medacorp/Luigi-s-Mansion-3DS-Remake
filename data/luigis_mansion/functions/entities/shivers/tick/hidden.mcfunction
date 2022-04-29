@@ -1,1 +1,1 @@
-function luigis_mansion:entities/shivers/wander/normal
+function luigis_mansion:entities/shivers/tick/normal

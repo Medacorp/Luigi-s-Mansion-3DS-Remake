@@ -1,1 +1,2 @@
+scoreboard players add @s[scores={OpenMapFocus=1..}] OpenMapFocus 1
 execute if score #mansion_type Selected matches 1 in luigis_mansion:normal run function luigis_mansion:items/gameboy_horror/map/display/normal/warp

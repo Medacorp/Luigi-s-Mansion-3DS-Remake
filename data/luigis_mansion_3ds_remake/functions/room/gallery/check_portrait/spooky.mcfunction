@@ -6,6 +6,6 @@ execute if score #temp Time matches 1.. run tellraw @p[gamemode=!spectator] {"tr
 execute if score #temp Time matches 1.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.change_frame.silver","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 2"}}
 execute if score #temp Time matches 2.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.change_frame.gold","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 3"}}
 execute if score #temp Time matches 3.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.change_frame.platinum","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 4"}}
-execute if score #temp Time matches 0.. run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.portrait_battle","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 5"}}
+execute if score #temp Time matches 0.. if data storage luigis_mansion_3ds_remake:data current_state.portrait_ghosts_defeated_in.spooky[{}] run tellraw @p[gamemode=!spectator] {"translate":"luigis_mansion_3ds_remake:message.gallery.portrait_battle","color":"green","clickEvent":{"action":"run_command","value":"/trigger FrameChoice set 5"}}
 scoreboard players reset #temp Time
 scoreboard players set @p[gamemode=!spectator] SelectedFrame 23
