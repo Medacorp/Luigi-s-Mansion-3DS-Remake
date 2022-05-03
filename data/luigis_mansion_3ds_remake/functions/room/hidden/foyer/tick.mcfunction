@@ -11,6 +11,3 @@ execute if entity @a[gamemode=!spectator,x=751.0,y=11,z=9.0,distance=..5] run ta
 function #luigis_mansion_3ds_remake:room/hidden/foyer/interactions/room
 
 function luigis_mansion_3ds_remake:room/hidden/foyer/ghosts
-
-function luigis_mansion_3ds_remake:room/hidden/door/boo_woods_foyer
-function luigis_mansion_3ds_remake:room/hidden/door/foyer_hallway_3

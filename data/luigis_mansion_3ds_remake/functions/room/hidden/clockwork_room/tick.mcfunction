@@ -13,7 +13,5 @@ scoreboard players reset #temp Room
 execute if entity @a[tag=same_room,limit=1] run function luigis_mansion_3ds_remake:room/hidden/clockwork_room/ghosts
 tag @a[tag=same_room] remove same_room
 
-function luigis_mansion_3ds_remake:room/hidden/door/telephone_room_clockwork_room
-
 execute unless score #clockwork_room_elevator Time matches 1.. if entity @a[gamemode=!spectator,x=685.0,y=120,z=7.0,dx=1,dy=0,dz=1,gamemode=!spectator] run scoreboard players set #clockwork_room_elevator Searched 1
 execute if score #clockwork_room_elevator Time matches 100 if entity @a[gamemode=!spectator,x=687.0,y=120,z=7.0,dx=1,dy=0,dz=1,gamemode=!spectator] run scoreboard players set #clockwork_room_elevator Searched -1

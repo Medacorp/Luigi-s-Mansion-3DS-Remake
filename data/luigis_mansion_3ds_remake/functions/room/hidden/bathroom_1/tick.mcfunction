@@ -12,5 +12,3 @@ function #luigis_mansion_3ds_remake:room/hidden/bathroom_1/interactions/room
 clone 654 12 21 654 16 27 644 12 21
 
 execute if entity @a[gamemode=!spectator,scores={Room=16}] run function luigis_mansion_3ds_remake:room/hidden/bathroom_1/ghosts
-
-function luigis_mansion_3ds_remake:room/hidden/door/hallway_6_bathroom_1

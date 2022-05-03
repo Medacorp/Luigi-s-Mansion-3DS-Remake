@@ -13,8 +13,3 @@ execute as @a[gamemode=!spectator] run function #luigis_mansion:get_same_room
 scoreboard players reset #temp Room
 execute if entity @a[tag=same_room,limit=1] run function luigis_mansion_3ds_remake:room/hidden/hallway_3/ghosts
 tag @a[tag=same_room] remove same_room
-
-function luigis_mansion_3ds_remake:room/hidden/door/foyer_hallway_3
-function luigis_mansion_3ds_remake:room/hidden/door/hallway_3_hallway_7
-function luigis_mansion_3ds_remake:room/hidden/door/hallway_3_fortune_tellers_room
-function luigis_mansion_3ds_remake:room/hidden/door/hallway_3_laundry_room

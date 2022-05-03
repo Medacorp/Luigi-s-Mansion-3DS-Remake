@@ -2,6 +2,7 @@
 	"values": [
 	    "luigis_mansion_3ds_remake:room/gallery/load/set_loaded",
         "luigis_mansion_3ds_remake:room/gallery/load/spawn_e_gadd",
+        "luigis_mansion_3ds_remake:room/gallery/load/doors",
         "luigis_mansion_3ds_remake:room/gallery/load/chest",
         "luigis_mansion_3ds_remake:room/gallery/load/painting_1",
         "luigis_mansion_3ds_remake:room/gallery/load/painting_2",

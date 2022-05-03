@@ -12,5 +12,3 @@ scoreboard players reset #temp Wave
 function #luigis_mansion_3ds_remake:room/hidden/nursery/interactions/room
 
 execute if entity @a[gamemode=!spectator,scores={Room=10}] run function luigis_mansion_3ds_remake:room/hidden/nursery/ghosts
-
-function luigis_mansion_3ds_remake:room/hidden/door/hallway_2_nursery

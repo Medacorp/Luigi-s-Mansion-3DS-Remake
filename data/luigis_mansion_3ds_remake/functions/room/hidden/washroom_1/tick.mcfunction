@@ -16,5 +16,3 @@ execute if block 663 14 36 minecraft:oak_trapdoor[open=true] run setblock 659 14
 execute if block 663 14 36 minecraft:oak_trapdoor[open=false] run setblock 659 14 36 minecraft:oak_trapdoor[open=false,facing=west,half=top]
 
 execute if entity @a[gamemode=!spectator,scores={Room=19}] run function luigis_mansion_3ds_remake:room/hidden/washroom_1/ghosts
-
-function luigis_mansion_3ds_remake:room/hidden/door/hallway_5_washroom_1
