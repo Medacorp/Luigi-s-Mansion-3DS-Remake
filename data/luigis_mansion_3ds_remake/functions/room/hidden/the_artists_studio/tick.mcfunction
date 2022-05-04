@@ -21,4 +21,8 @@ execute if score #freeze_timer Selected matches 1 as @a unless entity @s[scores=
 
 function #luigis_mansion_3ds_remake:room/hidden/the_artists_studio/interactions/room
 
-execute if entity @a[gamemode=!spectator,scores={Room=71}] run function luigis_mansion_3ds_remake:room/hidden/the_artists_studio/ghosts
+scoreboard players set #temp Room 71
+execute as @a[gamemode=!spectator,tag=!pull_open_door,tag=!push_open_door] run function #luigis_mansion:get_same_room
+scoreboard players reset #temp Room
+execute if entity @a[tag=same_room,limit=1] run function luigis_mansion_3ds_remake:room/hidden/the_artists_studio/ghosts
+tag @a[tag=same_room] remove same_room
