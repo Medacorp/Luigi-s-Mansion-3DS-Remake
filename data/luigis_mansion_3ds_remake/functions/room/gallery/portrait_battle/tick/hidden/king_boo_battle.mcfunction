@@ -1,4 +1,4 @@
-teleport @e[tag=bowser,tag=!intro_done] 488 37 10 -160 0 
+teleport @e[tag=bowser,tag=!intro_done] 488 40 10 -160 0 
 scoreboard players reset @e[tag=bowser,tag=!intro_done] Dialog
 tag @e[tag=bowser,tag=!intro_done] add breathe_fire
 scoreboard players set @s[tag=bowser,tag=!intro_done] ActionTime 1
