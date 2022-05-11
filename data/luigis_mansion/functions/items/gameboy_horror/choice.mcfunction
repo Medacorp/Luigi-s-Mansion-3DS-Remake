@@ -6,3 +6,4 @@ tellraw @s[tag=!portrait_battle] {"translate":"luigis_mansion:message.gameboy_ho
 tellraw @s {"translate":"luigis_mansion:message.gameboy_horror.show_settings","color":"green","clickEvent":{"action":"run_command","value":"/trigger SettingsCheck set -1"}}
 scoreboard players enable @s GBHChoice
 scoreboard players reset @s UseItem
+tag @s add open_gbh_menu

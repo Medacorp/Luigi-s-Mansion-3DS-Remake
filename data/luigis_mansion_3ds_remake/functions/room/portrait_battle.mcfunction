@@ -11,10 +11,11 @@ scoreboard players reset #temp Money
 scoreboard players operation @s LastRoom = @s Room
 execute as @a[tag=gooigi] run function luigis_mansion_3ds_remake:entities/player/un_gooigi
 tag @e[tag=pearl_dropper] remove pearl_dropper
-execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:1} as @a at @s run playsound luigis_mansion:entity.ghost.laugh hostile @s ~ ~ ~ 3
-execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:1} store result bossbar luigis_mansion_3ds_remake:portrait_battle max run data get storage luigis_mansion_3ds_remake:data loaded_mansion.high_scores.speed
-execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:1} if data storage luigis_mansion_3ds_remake:data loaded_mansion.high_scores{speed:-1} run bossbar set luigis_mansion_3ds_remake:portrait_battle max 2147483647
-execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:1} run function #luigis_mansion_3ds_remake:spawn_portrait_battle_blockades
+execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:2} as @a at @s run playsound luigis_mansion:entity.ghost.laugh hostile @s ~ ~ ~ 3
+execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:2} store result bossbar luigis_mansion_3ds_remake:portrait_battle max run data get storage luigis_mansion_3ds_remake:data loaded_mansion.high_scores.speed
+execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:2} if data storage luigis_mansion_3ds_remake:data loaded_mansion.high_scores{speed:-1} run bossbar set luigis_mansion_3ds_remake:portrait_battle max 2147483647
+execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:2} run tag @e[tag=door,tag=!blockade,type=minecraft:villager,limit=1] remove can_play_blockade_sound
+execute if data storage luigis_mansion:data current_state.current_data{in_mansion_time:2} run tag @e[tag=door,tag=!blockade,type=minecraft:villager,limit=1] add blockade
 function #luigis_mansion_3ds_remake:portrait_battle_tick
 execute if entity @e[tag=portrait_ghost,tag=!dying,limit=1] run tag @s add portrait_ghost_spawned
 execute if entity @e[tag=portrait_ghost,tag=dying,limit=1] run tag @s add catching_the_portrait_ghost

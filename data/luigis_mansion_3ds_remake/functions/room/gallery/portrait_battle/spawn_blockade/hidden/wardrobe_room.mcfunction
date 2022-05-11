@@ -1,8 +1,0 @@
-setblock 682 20 57 minecraft:iron_trapdoor[facing=south,open=true,half=bottom]
-setblock 682 21 57 minecraft:iron_trapdoor[facing=south,open=true,half=bottom]
-setblock 682 20 74 minecraft:iron_trapdoor[facing=north,open=true,half=bottom]
-setblock 682 21 74 minecraft:iron_trapdoor[facing=north,open=true,half=bottom]
-setblock 672 20 57 minecraft:iron_trapdoor[facing=south,open=true,half=bottom]
-setblock 672 21 57 minecraft:iron_trapdoor[facing=south,open=true,half=bottom]
-setblock 672 20 74 minecraft:iron_trapdoor[facing=north,open=true,half=bottom]
-setblock 672 21 74 minecraft:iron_trapdoor[facing=north,open=true,half=bottom]
