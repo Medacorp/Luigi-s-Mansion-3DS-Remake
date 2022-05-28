@@ -9,10 +9,7 @@ execute as @a[gamemode=!spectator,scores={Room=30}] run function luigis_mansion_
 function #luigis_mansion_3ds_remake:room/hidden/courtyard/interactions/room
 
 scoreboard players set #temp Room 30
-execute as @a[gamemode=!spectator] run function #luigis_mansion:get_same_room
+execute as @a[gamemode=!spectator,tag=!pull_open_door,tag=!push_open_door] run function #luigis_mansion:get_same_room
 scoreboard players reset #temp Room
 execute if entity @a[tag=same_room,limit=1] run function luigis_mansion_3ds_remake:room/hidden/courtyard/ghosts
 tag @a[tag=same_room] remove same_room
-
-function luigis_mansion_3ds_remake:room/hidden/door/hallway_6_courtyard
-function luigis_mansion_3ds_remake:room/hidden/door/courtyard_rec_room

@@ -1,1 +1,0 @@
-execute unless score #laundry_room FakeDoors matches 1 run function luigis_mansion_3ds_remake:room/hidden/laundry_room/fake_doors

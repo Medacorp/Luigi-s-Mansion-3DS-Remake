@@ -1,1 +1,0 @@
-function luigis_mansion_3ds_remake:room/hidden/the_twins_room/remove_blockade

@@ -6,8 +6,3 @@ scoreboard players set #temp Room -4
 execute as @a[gamemode=!spectator,scores={Room=-4}] run function luigis_mansion_3ds_remake:room/gallery/tick_per_player
 
 function #luigis_mansion_3ds_remake:room/gallery/interactions/room
-
-function luigis_mansion_3ds_remake:room/door/ghost_portrificationizer_room_gallery
-function luigis_mansion_3ds_remake:room/door/gallery_1
-function luigis_mansion_3ds_remake:room/door/gallery_2
-function luigis_mansion_3ds_remake:room/door/gallery_3

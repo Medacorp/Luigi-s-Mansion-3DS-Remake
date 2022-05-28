@@ -1,4 +1,3 @@
-function #luigis_mansion_3ds_remake:remove_portrait_battle_blockades
 tag @a remove portrait_battle
 tag @a remove portrait_ghost_spawned
 tag @a remove catching_the_portrait_ghost

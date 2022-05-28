@@ -1,1 +1,0 @@
-function luigis_mansion_3ds_remake:room/hidden/the_artists_studio/remove_blockade

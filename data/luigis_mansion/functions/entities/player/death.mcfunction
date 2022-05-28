@@ -14,4 +14,4 @@ scoreboard players set @e[tag=this_luigi] Time 0
 scoreboard players set @e[tag=this_luigi] AnimationProg 0
 tag @e[tag=this_luigi] remove this_luigi
 scoreboard players reset #temp ID
-execute if entity @s[tag=!portrait_battle,tag=!gooigi] if score #luigi_amiibo Selected matches 1 unless data storage luigis_mansion:data current_state.current_data{polterpup_revived:1b} run function luigis_mansion_3ds_remake:entities/player/revived_by_polterpup
+execute if entity @s[tag=!portrait_battle,tag=!gooigi,scores={Room=1..}] if score #luigi_amiibo Selected matches 1 unless data storage luigis_mansion:data current_state.current_data{polterpup_revived:1b} run function luigis_mansion_3ds_remake:entities/player/revived_by_polterpup

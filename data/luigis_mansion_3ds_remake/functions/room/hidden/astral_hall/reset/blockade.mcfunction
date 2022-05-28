@@ -1,1 +1,1 @@
-function luigis_mansion_3ds_remake:room/hidden/astral_hall/remove_blockade
+tag @e[scores={Room=45},tag=door,type=minecraft:villager] remove blockade
