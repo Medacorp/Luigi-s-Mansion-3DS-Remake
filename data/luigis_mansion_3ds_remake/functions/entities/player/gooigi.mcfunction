@@ -39,4 +39,4 @@ trigger TwinsChoice add 0
 execute if entity @s[tag=death_animation] run function luigis_mansion_3ds_remake:entities/player/gooigi_death_animation
 execute if entity @s[tag=spawn_animation] run function luigis_mansion_3ds_remake:entities/gooigi/spawn_animation
 
-function luigis_mansion_3ds_remake:animations/gooigi
+execute if entity @s[tag=!camera] run function luigis_mansion_3ds_remake:animations/gooigi
