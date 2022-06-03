@@ -43,7 +43,7 @@ The lowest health and fastest time scores are grabbed from the builtin `lowest_h
 
 The fastest time value has an additional 5 seconds removed, as that's the time it adds to clear the battle.
 
-Portrait ghosts store in which `mansion_data_index` they have been defeated, NOT `mansion_type`.
+Portrait ghosts store in which `mansion_type` AND `mansion_data_index` they have been defeated, any combination is a different battle.
 
 If you want the battle to be selected separately, use a new data index.
 
