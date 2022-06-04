@@ -21,7 +21,8 @@ execute if entity @s[scores={Dialog=304}] if score #players Totals matches 2.. r
 execute if entity @s[scores={Dialog=440}] as @a[tag=same_room,tag=!spectator,tag=!stand_still,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/stand_still
 execute if entity @s[scores={Dialog=440}] run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.melody_pianissima","color":"green"},{"translate":"luigis_mansion:dialog.melody_pianissima.4"}]}
 execute if entity @s[scores={Dialog=471..1000}] as @a[tag=same_room,tag=!spectator,tag=!thinking,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/thinking
-execute if entity @s[scores={Dialog=471}] run function luigis_mansion_3ds_remake:room/hidden/conservatory/stop_music
+execute if entity @s[scores={Dialog=471}] if score #mansion_data_index Selected matches 1 run function luigis_mansion_3ds_remake:room/hidden/conservatory/stop_music
+execute if entity @s[scores={Dialog=471}] if score #mansion_data_index Selected matches 0 run function luigis_mansion:room/hidden/conservatory/stop_music
 execute if entity @s[scores={Dialog=472}] run scoreboard players set #conservatory Wave 3
 execute if entity @s[scores={Dialog=472}] run summon minecraft:marker ~ ~ ~ {"Tags":["1","option"]}
 execute if entity @s[scores={Dialog=472}] run summon minecraft:marker ~ ~ ~ {"Tags":["2","option"]}
@@ -72,12 +73,18 @@ scoreboard players set @s[scores={Dialog=2228}] AnimationProg 0
 tag @s[scores={Dialog=2228}] remove nod
 execute if entity @s[scores={Dialog=2228}] as @a[tag=same_room,tag=!spectator,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
 execute if entity @s[scores={Dialog=2228}] run scoreboard players set #conservatory Wave 4
-execute if entity @s[scores={Dialog=2228}] positioned 657 11 -25 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
-execute if entity @s[scores={Dialog=2228}] positioned 657 11 -26 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
-execute if entity @s[scores={Dialog=2228}] positioned 657 11 -27 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
-execute if entity @s[scores={Dialog=2228}] positioned 656 11 -25 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
-execute if entity @s[scores={Dialog=2228}] positioned 656 11 -26 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
-execute if entity @s[scores={Dialog=2228}] positioned 656 11 -27 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 1 positioned 657 11 -25 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 1 positioned 657 11 -26 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 1 positioned 657 11 -27 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 1 positioned 656 11 -25 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 1 positioned 656 11 -26 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 1 positioned 656 11 -27 rotated 0 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 0 positioned 657 11 40 rotated -180 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 0 positioned 657 11 41 rotated -180 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 0 positioned 657 11 42 rotated -180 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 0 positioned 656 11 40 rotated -180 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 0 positioned 656 11 41 rotated -180 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
+execute if entity @s[scores={Dialog=2228}] if score #mansion_data_index Selected matches 0 positioned 656 11 42 rotated -180 0 run function luigis_mansion:spawn_entities/vacuumable/haunted_object/haunted_music_sheet
 scoreboard players reset @s[scores={Dialog=2228}] Dialog
 
 execute if score #conservatory Wave matches 4 run function luigis_mansion:entities/melody_pianissima/battle

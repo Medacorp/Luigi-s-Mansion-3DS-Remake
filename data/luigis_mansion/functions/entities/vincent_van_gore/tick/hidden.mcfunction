@@ -21,10 +21,12 @@ scoreboard players set @s[scores={Dialog=272}] AnimationProg 0
 execute if entity @s[scores={Dialog=272}] run playsound luigis_mansion:entity.vincent_van_gore.awake hostile @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={Dialog=332}] run data modify storage luigis_mansion:data current_state.current_data.technical_data merge value {vincent_van_gore_spoke:1b}
 execute if entity @s[scores={Dialog=332}] as @a[tag=same_room,tag=!spectator,tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
-execute if entity @s[scores={Dialog=332}] run function luigis_mansion_3ds_remake:room/hidden/the_artists_studio/wave_2 
+execute if entity @s[scores={Dialog=332}] if score #mansion_data_index Selected matches 1 run function luigis_mansion_3ds_remake:room/hidden/the_artists_studio/wave_2 
+execute if entity @s[scores={Dialog=332}] if score #mansion_data_index Selected matches 0 run function luigis_mansion:room/hidden/the_artists_studio/wave_2 
 execute if entity @s[scores={Dialog=332}] as @a[tag=same_room,tag=!spectator] run function luigis_mansion:other/music/set/mini_game
 scoreboard players set @s[scores={Dialog=332}] AnimationProg 0
-execute if entity @s[scores={Dialog=333}] run teleport @s ~ ~ ~ -180 ~
+execute if entity @s[scores={Dialog=333}] if score #mansion_data_index Selected matches 1 run teleport @s ~ ~ ~ -180 ~
+execute if entity @s[scores={Dialog=333}] if score #mansion_data_index Selected matches 0 run teleport @s ~ ~ ~ 0 ~
 scoreboard players set @s[scores={Dialog=334}] AnimationProg 0
 execute if entity @s[scores={Dialog=334..},tag=!vanish] facing entity @e[tag=same_room,tag=!spectator,sort=nearest,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
 execute if entity @s[scores={Dialog=334}] run playsound luigis_mansion:entity.vincent_van_gore.talk hostile @a[tag=same_room] ~ ~ ~ 1
