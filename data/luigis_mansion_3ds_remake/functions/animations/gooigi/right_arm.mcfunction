@@ -32,6 +32,8 @@ execute if entity @s[tag=walking,tag=!stop_model,tag=!low_health,tag=!riding_pol
 execute if entity @s[tag=running,tag=!stop_model,tag=!low_health,tag=!riding_poltergust,tag=!holding_poltergust,tag=!yelling] run function luigis_mansion_3ds_remake:animations/gooigi/running/right_arm
 execute if entity @s[tag=swimming,tag=!stop_model,tag=!riding_poltergust,tag=!holding_poltergust,tag=!yelling] run function luigis_mansion_3ds_remake:animations/gooigi/swimming/right_arm
 
+execute if score #mirrored Selected matches 0 run data modify entity @s[tag=gameboy_horror,tag=held_item] ArmorItems[3] set from entity @a[tag=gooigi,nbt={Inventory:[{tag:{luigis_mansion:{id:"luigis_mansion:gameboy_horror"}}}]},limit=1] Inventory[{tag:{luigis_mansion:{id:"luigis_mansion:gameboy_horror"}}}]
+execute if score #mirrored Selected matches 1 run data modify entity @s[tag=gameboy_horror,tag=held_item] ArmorItems[3] set value {}
 execute at @s[tag=yelling] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/wave/right_arm
 execute at @s[tag=nod] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/nod/right_arm
 execute at @s[tag=thinking] unless entity @s[tag=held_item,tag=holding_poltergust] run function luigis_mansion_3ds_remake:animations/gooigi/thinking/right_arm

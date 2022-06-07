@@ -5,4 +5,3 @@ scoreboard players set #mansion_data_index Selected 0
 function #luigis_mansion:room/reset_variable_to_default
 execute as @a[tag=looking_at_map] run function luigis_mansion:items/gameboy_horror/map/close
 scoreboard players set @a Health 100
-gamemode adventure @a[gamemode=spectator]

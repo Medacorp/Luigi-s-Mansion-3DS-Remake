@@ -39,8 +39,10 @@ execute if entity @s[scores={Dialog=946}] if entity @a[scores={Toad1Choice=1}] r
 execute if entity @s[scores={Dialog=966}] if entity @a[scores={Toad1Choice=1}] run playsound luigis_mansion:entity.toad.yahoo neutral @a[tag=same_room] ~ ~ ~ 1
 execute if entity @s[scores={Dialog=966}] if entity @a[scores={Toad1Choice=1}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.toad","color":"green"},{"translate":"luigis_mansion:dialog.toad_1.yes.1","with":[{"selector":"@p[gamemode=!spectator]"}]}]}
 execute if entity @s[scores={Dialog=966}] if entity @a[scores={Toad1Choice=1}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.toad","color":"green"},{"translate":"luigis_mansion:dialog.toad_1.yes.1.more"}]}
-execute if entity @s[scores={Dialog=1062}] run function luigis_mansion_3ds_remake:room/hidden/foyer/clear
-execute if entity @s[scores={Dialog=1062}] run function luigis_mansion_3ds_remake:room/hidden/hallway_1/clear
+execute if entity @s[scores={Dialog=1062}] if score #mansion_data_index Selected matches 1 run function luigis_mansion_3ds_remake:room/hidden/foyer/clear
+execute if entity @s[scores={Dialog=1062}] if score #mansion_data_index Selected matches 0 run function luigis_mansion:room/hidden/foyer/clear
+execute if entity @s[scores={Dialog=1062}] if score #mansion_data_index Selected matches 1 run function luigis_mansion_3ds_remake:room/hidden/hallway_1/clear
+execute if entity @s[scores={Dialog=1062}] if score #mansion_data_index Selected matches 0 run function luigis_mansion:room/hidden/hallway_1/clear
 tag @s[scores={Dialog=1082}] add explaining
 execute if entity @s[scores={Dialog=1082}] run scoreboard players set @e[tag=this_model,tag=toad_head,limit=1] AnimationProg 0
 execute if entity @s[scores={Dialog=1082}] if score #players Totals matches 1 run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.toad","color":"green"},{"translate":"luigis_mansion:dialog.toad_1.yes.2"}]}

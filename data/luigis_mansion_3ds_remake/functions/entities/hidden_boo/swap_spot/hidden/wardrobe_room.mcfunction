@@ -1,1 +1,1 @@
-function luigis_mansion:entities/hidden_boo/swap_spot/normal/warderobe_room
+function luigis_mansion:entities/hidden_boo/swap_spot/normal/wardrobe_room

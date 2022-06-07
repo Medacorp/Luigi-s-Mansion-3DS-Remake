@@ -1,3 +1,4 @@
 execute if entity @a[advancements={luigis_mansion:lab/cleared_hidden_mansion=true}] unless data storage luigis_mansion:data current_state.high_scores[{data_index:1}] run data modify storage luigis_mansion_3ds_remake:data current_state.trophy.hard.task_5 set value 1b
 execute if entity @a[advancements={luigis_mansion:lab/cleared_hidden_mansion=true}] unless data storage luigis_mansion:data current_state.high_scores[{data_index:1}] if data storage luigis_mansion:data current_state.high_scores[{data_index:0}] run function luigis_mansion_3ds_remake:other/upgrade_path/clone_high_score
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.hard{task_5:1b} run advancement grant @a only luigis_mansion_3ds_remake:lab/cleared_hidden_mansion
+execute if entity @a[advancements={luigis_mansion_3ds_remake:lab/unlocked_gcn_hidden_mansion=true}] run advancement grant @a only luigis_mansion_3ds_remake:lab/unlocked_gcn_hidden_mansion 

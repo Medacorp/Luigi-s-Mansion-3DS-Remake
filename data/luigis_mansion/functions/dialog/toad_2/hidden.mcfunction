@@ -13,7 +13,8 @@ execute if entity @s[scores={Dialog=88}] if score #players Totals matches 1 run 
 execute if entity @s[scores={Dialog=88}] if score #players Totals matches 2.. run tellraw @a {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.toad","color":"green"},{"translate":"luigis_mansion:dialog.toad_2.3.more"}]}
 tag @s[scores={Dialog=216}] add turning_on_lights
 execute if entity @s[scores={Dialog=216}] run scoreboard players set @e[tag=this_model,tag=toad_head,limit=1] AnimationProg 0
-execute if entity @s[scores={Dialog=216}] run function luigis_mansion_3ds_remake:room/hidden/balcony_1/clear
+execute if entity @s[scores={Dialog=216}] if score #mansion_data_index Selected matches 1 run function luigis_mansion_3ds_remake:room/hidden/balcony_1/clear
+execute if entity @s[scores={Dialog=216}] if score #mansion_data_index Selected matches 0 run function luigis_mansion:room/hidden/balcony_1/clear
 tag @s[scores={Dialog=236}] add explaining
 execute if entity @s[scores={Dialog=236}] run scoreboard players set @e[tag=this_model,tag=toad_head,limit=1] AnimationProg 0
 execute if entity @s[scores={Dialog=236}] run tellraw @a {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.toad","color":"green"},{"translate":"luigis_mansion:dialog.toad_2.4"}]}

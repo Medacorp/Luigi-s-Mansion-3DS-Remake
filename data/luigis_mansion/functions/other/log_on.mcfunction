@@ -16,6 +16,8 @@ tag @s remove seen_room_name
 execute if entity @a[name=Dhranios] run gamerule sendCommandFeedback true
 execute unless entity @a[name=Dhranios] run gamerule sendCommandFeedback false
 execute if entity @a[tag=gooigi] if entity @a[tag=gooigi,distance=0.1..,limit=1] run function luigis_mansion_3ds_remake:entities/player/un_gooigi
+title @s[tag=!looking_at_map] times 40 40 40
+title @s[tag=looking_at_map] times 0 40 40
 
 function #luigis_mansion:login_data_sync
 

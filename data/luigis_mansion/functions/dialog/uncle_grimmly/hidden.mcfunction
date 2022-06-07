@@ -24,7 +24,7 @@ execute if entity @s[scores={Dialog=1144}] if score #players Totals matches 1 ru
 execute if entity @s[scores={Dialog=1144}] if score #players Totals matches 2.. run tellraw @a[tag=same_room] {"translate":"chat.type.text","with":[{"translate":"luigis_mansion:entity.e_gadd","color":"green"},{"translate":"luigis_mansion:dialog.uncle_grimmly.9.more"}]}
 execute if entity @s[scores={Dialog=1144}] as @a[tag=same_room] at @s run playsound luigis_mansion:entity.e_gadd.talk.luigi_oui neutral @s ~ ~ ~ 1
 execute if entity @s[scores={Dialog=1264}] as @a[tag=same_room] at @s run playsound luigis_mansion:entity.ghost.laugh hostile @s ~ ~ ~ 3
-execute if entity @s[scores={Dialog=1264}] run function luigis_mansion_3ds_remake:room/hidden/telephone_room/blackout
+execute if entity @s[scores={Dialog=1264}] run function luigis_mansion:room/hidden/telephone_room/blackout
 execute if entity @s[scores={Dialog=1264}] run data modify storage luigis_mansion:data current_state.current_data.technical_data merge value {telephone_3:1b}
 execute if entity @s[scores={Dialog=1264},tag=!looking_at_map] run function luigis_mansion:entities/player/animation/set/none
 tag @s[scores={Dialog=1264}] remove uncle_grimmly_dialog

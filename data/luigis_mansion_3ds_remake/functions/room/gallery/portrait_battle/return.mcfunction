@@ -10,14 +10,15 @@ function luigis_mansion:items/poltergust_3000/no_element
 bossbar set luigis_mansion_3ds_remake:portrait_battle players
 schedule function luigis_mansion_3ds_remake:room/gallery/portrait_battle/load_current_data 2t
 
+function luigis_mansion_3ds_remake:entities/portrificationizing_ghost/try_to_clear_portrait_task
 scoreboard players set #temp Money 6000
 scoreboard players set #temp Time 0
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.normal{task_9:0b} run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_portrait_speed_count
-execute unless score #temp Time matches -1 if data storage luigis_mansion_3ds_remake:data current_state.trophy.normal{task_9:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/task_9
+execute if score #temp Time matches 23 if data storage luigis_mansion_3ds_remake:data current_state.trophy.normal{task_9:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/normal/task_9
 scoreboard players reset #temp Time
-scoreboard players set #temp Money 3800
+scoreboard players set #temp Money 3600
 scoreboard players set #temp Time 0
 execute if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_8:0b} run function luigis_mansion_3ds_remake:room/gallery/interact_with_trophy/get_portrait_speed_count
-execute unless score #temp Time matches -1 if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_8:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/master/task_8
+execute if score #temp Time matches 23 if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_8:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/master/task_8
 scoreboard players reset #temp Time
 scoreboard players reset #temp Money

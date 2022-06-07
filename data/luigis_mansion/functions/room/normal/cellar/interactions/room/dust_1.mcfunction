@@ -13,4 +13,4 @@ execute if score #cellar_dust_1 Searching matches 30 run setblock 746 2 -45 mine
 execute if score #cellar_dust_1 Searching matches 30 run setblock 745 2 -44 minecraft:air
 execute if score #cellar_dust_1 Searching matches 30 run setblock 745 2 -46 minecraft:air
 execute if score #cellar_dust_1 Searching matches 40 run setblock 745 2 -45 minecraft:air
-execute if score #cellar_dust_8 Searching matches 40 run data modify storage luigis_mansion:data current_state.current_data.technical_data merge value {vacuumed_cellar_dust_1:1b}
+execute if score #cellar_dust_1 Searching matches 40 run data modify storage luigis_mansion:data current_state.current_data.technical_data merge value {vacuumed_cellar_dust_1:1b}

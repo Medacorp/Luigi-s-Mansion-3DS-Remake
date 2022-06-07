@@ -1,6 +1,7 @@
 {
 	"values": [
 	    "luigis_mansion_3ds_remake:room/gallery/portrait_battle/option/bogmire/normal",
-        "luigis_mansion_3ds_remake:room/gallery/portrait_battle/option/bogmire/hidden"
+        "luigis_mansion_3ds_remake:room/gallery/portrait_battle/option/bogmire/gcn_hidden",
+        "luigis_mansion_3ds_remake:room/gallery/portrait_battle/option/bogmire/3ds_hidden"
 	]
 }
