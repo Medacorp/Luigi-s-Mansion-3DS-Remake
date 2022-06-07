@@ -55,7 +55,7 @@ If you want the battle to be selected separately, use a new data index.
 * `#luigis_mansion_3ds_remake:room/gallery/load_boo_painting` Adding Boos here will make them visibly show in the boo painting.
 * `#luigis_mansion_3ds_remake:room/gallery/check_portrait/small_ghosts` Adding ghosts here will make them show in the ghost painting check messages.
 * `#luigis_mansion_3ds_remake:room/gallery/load_small_ghost_painting` Adding ghosts here will make them visibly show in the ghost painting.
-* `#luigis_mansion_3ds_remake:room/gallery/portrait_battle/`, `luigis_mansion_3ds_remake:room/gallery/portrait_battle/` These tags and functions allow for portrait battles.
+* `#luigis_mansion_3ds_remake:room/gallery/portrait_battle/` These tags allow for portrait battles.
 * `#luigis_mansion_3ds_remake:room/gallery/check_painting`, This tag allows adding paintings to the interaction list.
 * `#luigis_mansion_3ds_remake:room/gallery/check_trophy`, `#luigis_mansion_3ds_remake:room/gallery/interact_with_trophy`, These tags allow adding tasks to the trophy.
 

@@ -1,2 +1,1 @@
-setblock 733 1 -60 minecraft:structure_block[mode=load]{mode:"LOAD",name:"luigis_mansion_3ds_remake:new_gallery"}
-setblock 733 2 -60 minecraft:redstone_block
+place template luigis_mansion_3ds_remake:new_gallery 733 1 -60
