@@ -12,8 +12,8 @@ execute if score #temp Money < #temp Time store result storage luigis_mansion:da
 data modify storage luigis_mansion:data current_state.high_scores append from storage luigis_mansion:data current_high_score
 
 execute store result score #temp Time run data get storage luigis_mansion:data current_high_score.health
-execute unless score #temp Time matches 50.. if score #mansion_data_index Selected matches 0..1 if data storage luigis_mansion_3ds_remake:data current_state.trophy.hard{task_6:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/hard/task_6
-execute unless score #temp Time matches 80.. if score #mansion_data_index Selected matches 0..1 if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_6:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/master/task_6
+execute if score #temp Time matches 50.. if score #mansion_data_index Selected matches 0..1 if data storage luigis_mansion_3ds_remake:data current_state.trophy.hard{task_6:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/hard/task_6
+execute if score #temp Time matches 80.. if score #mansion_data_index Selected matches 0..1 if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_6:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/master/task_6
 execute store result score #temp Time run data get storage luigis_mansion:data current_high_score.speed
 execute if score #temp Time matches ..216000 if score #mansion_data_index Selected matches 0..1 if data storage luigis_mansion_3ds_remake:data current_state.trophy.master{task_7:0b} run function luigis_mansion_3ds_remake:room/gallery/clear_task/master/task_7
 scoreboard players reset #temp Time
