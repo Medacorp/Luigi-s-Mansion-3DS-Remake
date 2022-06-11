@@ -7,4 +7,4 @@ tag @s[scores={ActionTime=40}] add vanish
 tag @s[scores={ActionTime=40}] remove attack
 scoreboard players set @s[scores={ActionTime=40}] ActionTime 0
 execute at @s facing entity @e[tag=same_room,tag=!spectator,sort=nearest,limit=1] feet rotated ~ 0 run teleport @s ~ ~ ~ ~ ~
-execute at @s positioned ^ ^ ^0.7 unless entity @a[distance=..0.7,tag=!spectator] run function luigis_mansion:entities/ghost/move
+execute at @s positioned ^ ^ ^0.7 unless entity @a[distance=..0.7,scores={Invulnerable=0},tag=!spectator] run function luigis_mansion:entities/ghost/move
