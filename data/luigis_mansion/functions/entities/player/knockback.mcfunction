@@ -239,6 +239,7 @@ execute at @s[scores={KnockbackType=12..13}] run function luigis_mansion:entitie
 execute at @s[scores={KnockbackTime=51..60,KnockbackType=12}] facing entity @e[type=minecraft:marker,tag=temp,limit=1] feet rotated ~-180 0 run teleport @s ^ ^ ^0.16 ~ ~
 execute at @s[scores={KnockbackTime=..50,KnockbackType=12..13}] facing entity @e[type=minecraft:marker,tag=temp,limit=1] feet rotated ~-180 0 run teleport @s ^ ^ ^0.16 ~ ~
 
+execute at @s[scores={KnockbackTime=140,KnockbackType=14},tag=gooigi] if score #debug Selected matches 1 run say [DEBUG] Gooigi triggered fake door knockback, this should not be possible!
 execute at @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0,Health=41..,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.scare.high_health player @a[tag=same_room] ~ ~ ~ 1
 execute at @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0,Health=41..,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.scare.high_health player @a[tag=same_room] ~ ~ ~ 1 2
 execute at @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0,Health=..40,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.scare.low_health player @a[tag=same_room] ~ ~ ~ 1
@@ -246,7 +247,7 @@ execute at @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0,Health=..40,Shr
 scoreboard players set @s[scores={KnockbackTime=135,KnockbackType=14,Sound=0},tag=!gooigi] Sound 8
 effect give @s[scores={KnockbackTime=125,KnockbackType=14}] minecraft:instant_damage 1 0 true
 scoreboard players set @s[scores={KnockbackTime=125,KnockbackType=14}] ForcedDamage 4
-execute at @s[scores={KnockbackType=14}] run summon minecraft:marker ~ ~ ~ {Tags:["home"]}
+execute at @s[scores={KnockbackType=14}] run summon minecraft:marker ~ ~ ~ {Tags:["home","remove_from_existence"]}
 execute at @s[scores={KnockbackType=14}] store result entity @e[tag=home,limit=1] Pos[0] double 0.01 run scoreboard players get @s PosX
 execute at @s[scores={KnockbackType=14}] store result entity @e[tag=home,limit=1] Pos[1] double 0.01 run scoreboard players get @s PosY
 execute at @s[scores={KnockbackType=14}] store result entity @e[tag=home,limit=1] Pos[2] double 0.01 run scoreboard players get @s PosZ
@@ -259,8 +260,9 @@ execute at @s[scores={KnockbackTime=126..135,KnockbackType=14},tag=!left_door] r
 execute at @s[scores={KnockbackTime=125,KnockbackType=14,Sound=0,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.hurt_fake_door.high_health player @a[tag=same_room] ~ ~ ~ 1
 execute at @s[scores={KnockbackTime=125,KnockbackType=14,Sound=0,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.hurt_fake_door.high_health player @a[tag=same_room] ~ ~ ~ 1 2
 scoreboard players set @s[scores={KnockbackTime=125,KnockbackType=14,Sound=0},tag=!gooigi] Sound 105
-execute at @s[scores={KnockbackTime=125,KnockbackType=14}] rotated ~ 0 run teleport @s ^ ^ ^-0.2 ~ ~
-execute at @s[scores={KnockbackTime=40..69,KnockbackType=14}] rotated ~ 0 run teleport @s ^ ^ ^0.05 ~ ~
+execute at @s[scores={KnockbackTime=50..79,KnockbackType=14}] rotated ~ 0 run teleport @s ^ ^ ^0.05
+execute at @s[scores={KnockbackTime=50..79,KnockbackType=14}] run teleport @s ^ ^ ^ ~ ~3
+execute at @s[scores={KnockbackTime=10..19,KnockbackType=14}] run teleport @s ^ ^ ^ ~ ~-9
 execute at @s[scores={KnockbackTime=20,KnockbackType=14,Sound=0,Health=41..,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.sigh.high_health player @a[tag=same_room] ~ ~ ~ 1
 execute at @s[scores={KnockbackTime=20,KnockbackType=14,Sound=0,Health=41..,Shrunk=1..},tag=!gooigi] run playsound luigis_mansion:entity.player.sigh.high_health player @a[tag=same_room] ~ ~ ~ 1 2
 execute at @s[scores={KnockbackTime=20,KnockbackType=14,Sound=0,Health=..40,Shrunk=0},tag=!gooigi] run playsound luigis_mansion:entity.player.sigh.low_health player @a[tag=same_room] ~ ~ ~ 1
