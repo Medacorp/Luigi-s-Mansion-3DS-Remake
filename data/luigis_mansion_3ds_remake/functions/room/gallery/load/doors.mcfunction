@@ -1,6 +1,6 @@
 execute positioned 772 2 -16 rotated -180 0 run function luigis_mansion:spawn_furniture/door/right/push/lab
 execute positioned 772 2 -16 rotated -180 0 run function luigis_mansion_3ds_remake:spawn_furniture/door_frame/red_metal
-tag @e[x=772.5,y=2,z=-16.0,distance=..0.7,type=minecraft:villager,tag=door,limit=1] add unopenable
+tag @e[x=772.5,y=2,z=-16.0,distance=..0.7,tag=door,tag=frame,limit=1] add unopenable
 execute positioned 746 2 -29 rotated -90 0 run function luigis_mansion_3ds_remake:spawn_furniture/door/left/pull/new_gallery
 execute positioned 746 2 -29 rotated -90 0 run function luigis_mansion_3ds_remake:spawn_furniture/door_frame/double_reinforced_planks
 execute positioned 746 2 -28 rotated -90 0 run function luigis_mansion_3ds_remake:spawn_furniture/door/right/push/new_gallery
