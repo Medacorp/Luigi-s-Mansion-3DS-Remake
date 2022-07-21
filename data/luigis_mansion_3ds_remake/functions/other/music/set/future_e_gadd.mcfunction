@@ -1,3 +1,3 @@
-scoreboard players set @s MusicType 1
-scoreboard players set @s Music 0
-scoreboard players set @s MusicGroup 1
+function #luigis_mansion_3ds_remake:other/music/cannot_overwrite/future_e_gadd
+execute if entity @s[tag=!cancel] run function luigis_mansion_3ds_remake:other/music/set/force/future_e_gadd
+tag @s remove cancel

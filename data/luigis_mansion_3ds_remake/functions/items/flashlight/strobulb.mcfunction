@@ -1,9 +1,9 @@
 tag @s remove flashlight
 tag @s remove flashlight_selected
-tag @s[nbt={SelectedItem:{tag:{luigis_mansion:{id:"luigis_mansion:flashlight"}}}}] add flashlight_selected
-tag @s[tag=flashlight_selected,scores={UseItem=1,StrobulbCharge=0},tag=!grabbed] add flashlight_off
-tag @s[tag=flashlight_selected,scores={UseItem=1,StrobulbCharge=1..},tag=!grabbed] remove flashlight_off
-scoreboard players set @s[tag=flashlight_selected,scores={UseItem=1}] UseItem 0
+tag @s[tag=!poltergust_selected,nbt={SelectedItem:{tag:{luigis_mansion:{id:"luigis_mansion:flashlight"}}}}] add flashlight_selected
+tag @s[tag=flashlight_selected,scores={UseItem=1..,StrobulbCharge=0},tag=!grabbed] add flashlight_off
+tag @s[tag=flashlight_selected,scores={UseItem=1..,StrobulbCharge=1..},tag=!grabbed] remove flashlight_off
+scoreboard players set @s[tag=flashlight_selected,scores={UseItem=1..}] UseItem 0
 execute unless entity @s[scores={StrobulbCharge=0..20},tag=dark_room] run scoreboard players set @s StrobulbCharge 0
 scoreboard players set @s[tag=!flashlight_off,scores={StrobulbCharge=..9}] StrobulbCharge 0
 scoreboard players add @s[tag=flashlight_off,scores={StrobulbCharge=..9}] StrobulbCharge 1
